@@ -23,55 +23,61 @@
 		</form>
 	</div>
 
-	<div id="container" style="min-width: 310px; max-width:80%; height: 400px; margin: 0 auto" class="border">
+	<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
 		<script src="https://code.highcharts.com/highcharts.js"> </script>
 		<script src="https://code.highcharts.com/modules/exporting.js"> </script>
 		<script src="https://code.highcharts.com/modules/export-data.js"> </script>
-
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 		<script>
-		_dates = {{dates|safe}};
-		_num_confirmed = {{num_confirmed|safe}};
-			Highcharts.chart('container', {
-			  chart: {
-		              type: 'line'
-			  },
-			  title: {
-		              text: 'Covid19 Cases'
-			  },
-			  subtitle: {
-		              text: 'Global data from Johns Hopkins, US Data from the New York Times'
-			  },
-			  xAxis: {
-		              categories: _dates,
-		              crosshair: true
-			  },
-			  yAxis: {
-		              min: 0,
-		              title: {
-				  text: '# Confirmed Cases'
-		              }
-			  },
-			  tooltip: {
-		              headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-		              pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-				  '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-		              footerFormat: '</table>',
-		              shared: true,
-		              useHTML: true
-			  },
-			  plotOptions: {
-		              column: {
-				  pointPadding: 0.2,
-				  borderWidth: 0
-		        }
-			  },
-			  series: [{
-		              name: '# Confirmed Cases',
-		              data: _num_confirmed
-			      
-			  }]
-	      });
-		</script>
+			_dates = {{dates|safe}};
+			_b1 = {{breakdown_1|safe}};
+			_b2 = {{breakdown_2|safe}};
+			_b3 = {{breakdown_3|safe}};
+			_b4 = {{breakdown_4|safe}};
+			_b5 = {{breakdown_5|safe}};
+			_b6 = {{breakdown_6|safe}};
+			_b1name = {{breakdown_1_name|safe}}
+			_b2name = {{breakdown_2_name|safe}}
+			_b3name = {{breakdown_3_name|safe}}
+			_b4name = {{breakdown_4_name|safe}}
+			_b5name = {{breakdown_5_name|safe}}
+			_b6name = {{breakdown_6_name|safe}}
 
-	</div>
+			Highcharts.chart('container', {
+			  	chart: {type: 'area'},
+			  	xAxis: {categories: _dates},
+			  	plotOptions: {
+			  		area: {
+			  			stacking: 'normal'
+			  		}
+			  	},
+			  	series: [{ 
+			  		name: _b1name,
+			  		data: _b1
+		  		},{
+		  			name: _b2name, 
+		  			data: _b2
+		  		},{ 
+			  		name: _b3name,
+			  		data: _b3
+		  		},{
+		  			name: _b4name, 
+		  			data: _b4
+		  		},{ 
+			  		name: _b5name,
+			  		data: _b5
+		  		},{
+		  			name: _b6name, 
+		  			data: _b6
+		  		}]
+	      	});
+		</script>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	    
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</div>
 {% endblock %}
