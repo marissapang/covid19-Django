@@ -17,9 +17,9 @@
 
 	<div class="container" style="padding-top: 1%; padding-bottom: 1%">
 		<!-- Content here -->
-		<form action = "", method = "GET">
-			Country filter: {{ country_filter_form.country_filter}}
-			<input type = "submit" value = "Filter by country" style="margin-left: 1.5%; padding-left: 1%; padding-right: 1%; color: #FFFFFF; background-color: #343a41;">
+		<form action = "", method = "GET", onChange="this.submit();">
+				Country filter: {{ country_filter_form.country_filter}}
+
 		</form>
 	</div>
 
@@ -45,11 +45,18 @@
 
 			Highcharts.chart('container', {
 			  	chart: {type: 'area'},
+			  	rangeSelector: { selected: 4},
+			  	title: {text: 'Number of Confirmed Cases', style: {fontSize:"24px"}},
+			  	subtitle: {text: 'Country-level data from Johns Hopkins, US state-level data from the New York Times'},
 			  	xAxis: {categories: _dates},
+			  	yAxis: {
+			  		title: {text: '# Confirmed Cases'}
+			  	},
 			  	plotOptions: {
 			  		area: {
 			  			stacking: 'normal'
-			  		}
+			  		}, 
+			  		series: {marker: {radius: 8}}
 			  	},
 			  	series: [{ 
 			  		name: _b1name,
