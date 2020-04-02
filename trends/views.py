@@ -10,7 +10,8 @@ def index(request):
         country = "Global"
      
     if country == "Global":
-        top_regions = df.groupby('Country')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed") 
+        df2 = df.groupby(['Country','Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed") 
+        top_regions = df2.groupby('Country')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed") 
         top_regions = top_regions.sort_values(by=['Num_Confirmed'], ascending=False)
         top_regions = list(top_regions.head(5)['Country'])
 

@@ -2,6 +2,7 @@ from django import forms
 import pandas as pd
 
 df = pd.read_csv("trends/data/confirmed_cases.csv")
+df = df.groupby(['Country', 'Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
 df = df.groupby('Country')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed")
 df = df.sort_values(by=['Num_Confirmed'], ascending=False)
 
