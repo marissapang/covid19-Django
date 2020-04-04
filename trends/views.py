@@ -113,5 +113,5 @@ def index(request):
         'country' : country,
         'country_filter_form' : country_filter_form
      } 
-    return render(request, 'index.html', context)
+    return render(request, 'trends-index.html', context)
 

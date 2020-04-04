@@ -19,8 +19,12 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
+from covid19 import views as root_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('trends/', include("trends.urls")),
-    path('', RedirectView.as_view(url='/trends/', permanent=True)),
+    path('', RedirectView.as_view(url='/trends/', permanent=True), name='home'),
+    path('dashboard/', include("dashboard.urls")),
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('signup/', root_views.signup, name='signup'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
