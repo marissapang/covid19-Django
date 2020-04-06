@@ -35,12 +35,6 @@
 		{% if user.is_authenticated %}
 			<strong> Logged in version of the dashboard </strong>
 
-			<ul>
-				{% for item in test_list %}
-					<li> {{ item }} </li>
-				{% endfor %}
-			</ul>
-
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Update country selection</button>
 
 			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -55,7 +49,7 @@
 		  			<div class="modal-body">		  				
 		  				<form action = "" method = "POST" class = "modalform"> 
 		  					{% csrf_token %}
-		  					country filter: {{ dashboard_country_filter_form.countries|default:"Global" }}
+		  					country filter: {{ dashboard_country_filter_form.countries}}
 		  					<input type="submit" value="save changes">
 		  				</form>
 
