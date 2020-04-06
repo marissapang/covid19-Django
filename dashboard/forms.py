@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+import requests
+import request
 
 class SignUpForm(UserCreationForm):
 	first_name = forms.CharField(max_length=50, required=False, help_text='Optional.')
@@ -22,5 +24,6 @@ country_choices = [('Global','Global')]+country_choices
 
 class UpdateDashboardCountryForm(forms.Form):
 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple)
+
 
 

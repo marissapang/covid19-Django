@@ -1,17 +1,50 @@
 {% extends 'base_generic.html' %}
 
+
 {% block header %}
 	<title> C19 Dashboard </title>
 {% endblock %}
 
 {% block content %}
+	<style>
+		form.modalform ul{
+			list-style-type:none;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			height: 400px;
+			align-items: start;
+		}
+
+		form.modalform li{
+			width: 220px;
+		}
+		
+		.modal-dialog {
+	    	overflow-y: initial !important
+		}
+
+		.modal-body {
+
+		    overflow-y: auto;
+		    overflow-x: auto;
+		}
+	</style>
+
 	<div class="container-fluid", style="padding: 5%">
 		{% if user.is_authenticated %}
 			<strong> Logged in version of the dashboard </strong>
+
+			<ul>
+				{% for item in test_list %}
+					<li> {{ item }} </li>
+				{% endfor %}
+			</ul>
+
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Update country selection</button>
 
 			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
+			  <div class="modal-dialog modal-xl">
 			    <div class="modal-content">
 			    	<div class="modal-header">
 			  			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
@@ -19,38 +52,12 @@
 			  				<span aria-hidden="true">&times;</span>
 			  			</button>
 			  		</div>
-		  			<div class="modal-body">
-		  				test content here
-		  			<style>
-		  					ul{
-		  						list-style-type:none;
-		  						display: flex;
-		  						flex-direction: column;
-		  						flex-wrap: wrap;
-		  					}
-		  					.modal-dialog{
-							    overflow-y: initial !important
-							}
-							.modal-body{
-							    height: 85%;
-							    overflow-y: auto;
-							    overflow-x: auto;
-							    flex-wrap: true;
-}
-		  				</style>
-
-		  				
-		  				<form id="country-modal", action = "", method = "GET", style="height:500px"> country filter: {{ dashboard_country_filter_form.countries}}
+		  			<div class="modal-body">		  				
+		  				<form action = "" method = "POST" class = "modalform"> 
+		  					{% csrf_token %}
+		  					country filter: {{ dashboard_country_filter_form.countries|default:"Global" }}
+		  					<input type="submit" value="save changes">
 		  				</form>
-
-<!-- 		  				<form action="", method="GET">
-		  					<ul>
-				  				{% for value, text in dashboard_country_filter_form.countries.field.choices %}
-				  					<li> {{ value }} : {{ text }} </li>
-			  					{% endfor %}
-			  				</ul>
-	  					</form> -->
-
 
 		  			</div>
 		  			<div class="modal-footer">
