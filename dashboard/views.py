@@ -19,10 +19,13 @@ def index(request):
 				request.session.modified = True # save session change
 		else: # if method is not post we just have to generate the form
 			if request.session.has_key(username):
+				print("there is a key for the username")
+				print(username)
 				country_selections = request.session.get(username)['country_selections']
 				if country_selections is None:
 					country_selections = ['Global', "United States"]
 			else: 
+				print("there isnt a key for the username")
 				country_selections = ['Global', "United States"]
 			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
 		
@@ -48,10 +51,8 @@ def index(request):
 		output_dict = {}
 		output_country_list = []
 
-		# print(len(country_selections))
 
 		for i in range(0, 6):
-			print(i)
 			if len(country_selections) > i:
 				key = "country_"+str(i) 
 				output_dict[key] = list(output_df[country_selections[i]])
@@ -65,6 +66,7 @@ def index(request):
 		##### DATA SERIES ENDS #####
 
 		context={
+			'tab' : 'dashboard',
 			'dashboard_country_filter_form' : dashboard_country_filter_form,
 			"dates": dates,
 			"country_1": output_dict['country_0'],
@@ -80,11 +82,6 @@ def index(request):
             "country_5_name": output_country_list[4],
             "country_6_name": output_country_list[5]
 		}
-
-		print(output_dict['country_0'])
-		print(output_country_list[0])
-	
-
 
 	else: # if user is not logged in we show nothing
 		context = {}

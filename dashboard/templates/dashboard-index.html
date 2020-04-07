@@ -33,36 +33,40 @@
 
 	<div class="container-fluid", style="padding: 5%">
 		{% if user.is_authenticated %}
+
+			<div class="container-fluid">
+				<h1> My Dashboard </h1>
+				<p></p>
+				<div style="margin-bottom:70px;">
+						Create your own customized data dashboard by selecting specific countries
+						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target=".bd-example-modal-lg" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
+				</div>
+			</div>
+
 			<!------------------------------------->
 			<!-- COUNTRY SELECTION BUTTON STARTS -->
-			<strong> Logged in version of the dashboard </strong>
-
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Update country selection</button>
-
 			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-xl">
-			    <div class="modal-content">
-			    	<div class="modal-header">
-			  			<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-			  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  				<span aria-hidden="true">&times;</span>
-			  			</button>
-			  		</div>
-		  			<div class="modal-body">		  				
-		  				<form action = "" method = "POST" class = "modalform"> 
+				<form action = "" method = "POST" class = "modalform"> 
+				  <div class="modal-dialog modal-xl">
+				    <div class="modal-content">
+				    	<div class="modal-header">
+				  			<h5 class="modal-title" id="exampleModalLabel">Country-level data to include on dashboard</h5>
+				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  				<span aria-hidden="true">&times;</span>
+				  			</button>
+				  		</div>
+			  			<div class="modal-body">		  				
 		  					{% csrf_token %}
-		  					country filter: {{ dashboard_country_filter_form.countries}}
-		  					<input type="submit" value="save changes">
-		  				</form>
+		  					{{ dashboard_country_filter_form.countries}}
 
-		  			</div>
-		  			<div class="modal-footer">
-		  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		  				<button type="button" class="btn btn-primary">Save changes</button>
-		  			</div>
-		  		</div>
-			      test content 1234
-			  </div>
+			  			</div>
+			  			<div class="modal-footer">
+			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  				<button type="submit" class="btn btn-primary"> Save changes </button>
+			  			</div>
+			  		</div>
+				  </div>
+				</form>
 			</div>
 			<!--- COUNTRY SELECTION BUTTON ENDS --->
 			<!------------------------------------->
@@ -114,38 +118,6 @@
 						]
 					})
 				</script>
-
-			<!-- <div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
-
-
-					// Highcharts.chart('container', {
-\
-					//   	series: [{ 
-					//   		name: "test",
-					//   		data: [1,2,3,4,5]
-				 //  		},{
-				 //  			name: _b2name, 
-				 //  			data: _b2
-				 //  		},{ 
-					//   		name: _b3name,
-					//   		data: _b3
-				 //  		},{
-				 //  			name: _b4name, 
-				 //  			data: _b4
-				 //  		},{ 
-					//   		name: _b5name,
-					//   		data: _b5
-				 //  		},{
-				 //  			name: _b6name, 
-				 //  			data: _b6 
-				 //  		}],
-			  //     	});
-				</script>
-			</div> -->
-
-
-
-
 
 			<!---------- LINE CHART ENDS ---------->
 			<!------------------------------------->

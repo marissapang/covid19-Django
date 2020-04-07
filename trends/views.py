@@ -97,6 +97,7 @@ def index(request):
 
     
     context = {
+        'tab': 'trends',
         'breakdown_1': breakdown_1,
         'breakdown_2': breakdown_2,
         'breakdown_3': breakdown_3,
