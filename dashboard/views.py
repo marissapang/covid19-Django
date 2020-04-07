@@ -18,7 +18,12 @@ def index(request):
 					request.session[username] = {"country_selections": country_selections}
 				request.session.modified = True # save session change
 		else: # if method is not post we just have to generate the form
-			country_selections = request.session.get(username)['country_selections']
+			if request.session.has_key(username):
+				country_selections = request.session.get(username)['country_selections']
+				if country_selections is None:
+					country_selections = ['Global', "United States"]
+			else: 
+				country_selections = ['Global', "United States"]
 			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
 		
 		##### POP-UP FORM ENDS #####
