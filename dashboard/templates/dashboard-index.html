@@ -33,6 +33,8 @@
 
 	<div class="container-fluid", style="padding: 5%">
 		{% if user.is_authenticated %}
+			<!------------------------------------->
+			<!-- COUNTRY SELECTION BUTTON STARTS -->
 			<strong> Logged in version of the dashboard </strong>
 
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Update country selection</button>
@@ -62,6 +64,95 @@
 			      test content 1234
 			  </div>
 			</div>
+			<!--- COUNTRY SELECTION BUTTON ENDS --->
+			<!------------------------------------->
+
+
+			<!------------------------------------->
+			<!--------- LINE CHART STARTS --------->
+
+			<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
+				<script src="https://code.highcharts.com/highcharts.js"> </script>
+				<script src="https://code.highcharts.com/modules/exporting.js"> </script>
+				<script src="https://code.highcharts.com/modules/export-data.js"> </script>
+				<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+				<script>
+					_dates = {{ dates|safe }};
+					_b1 = {{ country_1|safe }};
+					_b2 = {{country_2|safe}};
+					_b3 = {{country_3|safe}};
+					_b4 = {{country_4|safe}};
+					_b5 = {{country_5|safe}};
+					_b6 = {{country_6|safe}};
+					_b1name = {{country_1_name|safe}}
+					_b2name = {{country_2_name|safe}}
+					_b3name = {{country_3_name|safe}}
+					_b4name = {{country_4_name|safe}}
+					_b5name = {{country_5_name|safe}}
+					_b6name = {{country_6_name|safe}}
+					
+					Highcharts.chart('container', {
+						chart: {type: 'line'},
+						rangeSelector: { selected: 4},
+						title: {text: 'Cummulative Confirmed Cases', style: {fontSize:"24px"}},
+						subtitle: {text: 'Data from Johns Hopkins'},
+					  	xAxis: {categories: _dates},
+					  	yAxis: {
+					  		title: {text: '# Confirmed Cases'}
+					  	},
+					  	plotOptions: {
+					  		series: {marker: {radius: 1}}
+					  	},
+						series: [
+							{name: _b1name, data: _b1},
+							{name: _b2name, data: _b2},
+							{name: _b3name, data: _b3},
+							{name: _b4name, data: _b4},
+							{name: _b5name, data: _b5},
+							{name: _b6name, data: _b6},
+						]
+					})
+				</script>
+
+			<!-- <div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
+
+
+					// Highcharts.chart('container', {
+\
+					//   	series: [{ 
+					//   		name: "test",
+					//   		data: [1,2,3,4,5]
+				 //  		},{
+				 //  			name: _b2name, 
+				 //  			data: _b2
+				 //  		},{ 
+					//   		name: _b3name,
+					//   		data: _b3
+				 //  		},{
+				 //  			name: _b4name, 
+				 //  			data: _b4
+				 //  		},{ 
+					//   		name: _b5name,
+					//   		data: _b5
+				 //  		},{
+				 //  			name: _b6name, 
+				 //  			data: _b6 
+				 //  		}],
+			  //     	});
+				</script>
+			</div> -->
+
+
+
+
+
+			<!---------- LINE CHART ENDS ---------->
+			<!------------------------------------->
+
+
+
+
 		{% else %}
 			<strong> Please <a href="{% url 'login' %}"> log in </a> or <a href="{% url 'signup' %}"> sign up </a>to create your personalized dashboard for COVID-19 data </strong>
 		{% endif %}
