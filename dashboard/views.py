@@ -1,10 +1,19 @@
 from django.shortcuts import render
 import pandas as pd
 from .forms import UpdateDashboardCountryForm
+from django.contrib.auth.models import User
+from .models import Profile
+import ast
 
 def index(request):
 	if request.user.is_authenticated == True: # we only show content if the user is logged in
 		username = request.user.username
+		user = request.user.pk
+
+		current_profile = Profile.objects.get(user=user)
+
+		#country_selections = current_profile.dashboard_countries
+		
 
 		##### POP-UP FORM STARTS #####
 		if request.method == "POST":
@@ -12,21 +21,10 @@ def index(request):
 			if dashboard_country_filter_form.is_valid():
 				country_selections = dashboard_country_filter_form.cleaned_data.get('countries') # this is a list object
 				# add country selections to the username's dictionary
-				if request.session.has_key(username): 
-					request.session[username]['country_selections'] = country_selections
-				else: # if user do not already exists, we can just asign a dictionary object
-					request.session[username] = {"country_selections": country_selections}
-				request.session.modified = True # save session change
+				current_profile.dashboard_countries = str(country_selections)
+				current_profile.save() # save changes to profie attribute
 		else: # if method is not post we just have to generate the form
-			if request.session.has_key(username):
-				print("there is a key for the username")
-				print(username)
-				country_selections = request.session.get(username)['country_selections']
-				if country_selections is None:
-					country_selections = ['Global', "United States"]
-			else: 
-				print("there isnt a key for the username")
-				country_selections = ['Global', "United States"]
+			country_selections = ast.literal_eval(current_profile.dashboard_countries)
 			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
 		
 		##### POP-UP FORM ENDS #####

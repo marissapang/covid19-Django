@@ -39,13 +39,15 @@
 				<p></p>
 				<div style="margin-bottom:60px;">
 						Create your own customized data dashboard by selecting specific countries
-						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target=".bd-example-modal-lg" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
+						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#country-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
+
+						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target=".bd-example-modal-lg" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update state selection</button>
 				</div>
 			</div>
 
 			<!------------------------------------->
-			<!-- COUNTRY SELECTION BUTTON STARTS -->
-			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<!-- COUNTRY SELECTION MODAL STARTS -->
+			<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<form action = "" method = "POST" class = "modalform"> 
 				  <div class="modal-dialog modal-xl">
 				    <div class="modal-content">
