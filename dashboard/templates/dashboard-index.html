@@ -41,7 +41,7 @@
 						Create your own customized data dashboard by selecting specific countries
 						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#country-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
 
-						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target=".bd-example-modal-lg" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update state selection</button>
+						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#state-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update state selection</button>
 				</div>
 			</div>
 
@@ -75,6 +75,34 @@
 
 
 			<!------------------------------------->
+			<!--- STATE SELECTION MODAL STARTS ---->
+			<div id = "state-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<form action = "" method = "POST"> 
+				  <div class="modal-dialog modal-xl">
+				    <div class="modal-content">
+				    	<div class="modal-header">
+				  			<h5 class="modal-title" id="exampleModalLabel">State-level data to include on dashboard</h5>
+				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  				<span aria-hidden="true">&times;</span>
+				  			</button>
+				  		</div>
+			  			<div class="modal-body">	
+			  				{% csrf_token %}
+		  					{{ dashboard_state_filter_form.states}}	  				
+			  			</div>
+			  			<div class="modal-footer">
+			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  				<button type="submit" class="btn btn-primary"> Save changes </button>
+			  			</div>
+			  		</div>
+				  </div>
+				</form>
+			</div>
+			<!---- STATE SELECTION BUTTON ENDS ---->
+			<!------------------------------------->
+
+
+			<!------------------------------------->
 			<!--------- LINE CHART STARTS --------->
 
 			<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
@@ -85,18 +113,30 @@
 
 				<script>
 					_dates = {{ dates|safe }};
-					_b1 = {{ country_1|safe }};
-					_b2 = {{country_2|safe}};
-					_b3 = {{country_3|safe}};
-					_b4 = {{country_4|safe}};
-					_b5 = {{country_5|safe}};
-					_b6 = {{country_6|safe}};
-					_b1name = {{country_1_name|safe}}
-					_b2name = {{country_2_name|safe}}
-					_b3name = {{country_3_name|safe}}
-					_b4name = {{country_4_name|safe}}
-					_b5name = {{country_5_name|safe}}
-					_b6name = {{country_6_name|safe}}
+					_c1 = {{ country_1|safe }};
+					_c2 = {{country_2|safe}};
+					_c3 = {{country_3|safe}};
+					_c4 = {{country_4|safe}};
+					_c5 = {{country_5|safe}};
+					_c6 = {{country_6|safe}};
+					_c1name = {{country_1_name|safe}}
+					_c2name = {{country_2_name|safe}}
+					_c3name = {{country_3_name|safe}}
+					_c4name = {{country_4_name|safe}}
+					_c5name = {{country_5_name|safe}}
+					_c6name = {{country_6_name|safe}}
+					_s1 = {{ state_1|safe }};
+					_s2 = {{ state_2|safe }};
+					_s3 = {{ state_3|safe }};
+					_s4 = {{ state_4|safe }};
+					_s5 = {{ state_5|safe }};
+					_s6 = {{ state_6|safe }};
+					_s1name = {{state_1_name|safe}};
+					_s2name = {{state_2_name|safe}};
+					_s3name = {{state_3_name|safe}};
+					_s4name = {{state_4_name|safe}};
+					_s5name = {{state_5_name|safe}};
+					_s6name = {{state_6_name|safe}};
 					
 					Highcharts.chart('container', {
 						chart: {type: 'line'},
@@ -111,12 +151,18 @@
 					  		series: {marker: {radius: 1}}
 					  	},
 						series: [
-							{name: _b1name, data: _b1},
-							{name: _b2name, data: _b2},
-							{name: _b3name, data: _b3},
-							{name: _b4name, data: _b4},
-							{name: _b5name, data: _b5},
-							{name: _b6name, data: _b6},
+							{name: _c1name, data: _c1},
+							{name: _c2name, data: _c2},
+							{name: _c3name, data: _c3},
+							{name: _c4name, data: _c4},
+							{name: _c5name, data: _c5},
+							{name: _c6name, data: _c6},
+							{name: _s1name, data: _s1},
+							{name: _s2name, data: _s2},
+							{name: _s3name, data: _s3},
+							{name: _s4name, data: _s4},
+							{name: _s5name, data: _s5},
+							{name: _s6name, data: _s6},
 						]
 					})
 				</script>

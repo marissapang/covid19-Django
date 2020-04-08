@@ -20,8 +20,26 @@ unique_countries = df.index
 country_choices = list(zip(unique_countries, unique_countries))
 country_choices = [('Global','Global')]+country_choices
 
+df = pd.read_csv("trends/data/confirmed_cases.csv")
+df = df[df['Country'].isin(['Australia', 'Canada', 'United States', 'China'])]
+
+countries_w_state_level_data = ['Australia', 'Canada', 'United States', 'China']
+country_state_list = []
+
+for country in countries_w_state_level_data:
+	country_data = df[df['Country'] == country]
+	country_data = country_data.groupby('State')["Num_Confirmed"].agg("sum")
+	unique_states = country_data.index
+	unique_states = [(country, tuple(zip(unique_states, unique_states)))]
+	country_state_list += unique_states
+
+state_choices = tuple(country_state_list)
+
+
 class UpdateDashboardCountryForm(forms.Form):
 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple)
 
+class UpdateDashboardStateForm(forms.Form):
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple)
 
 

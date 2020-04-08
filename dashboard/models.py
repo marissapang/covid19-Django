@@ -8,6 +8,7 @@ default_country_selections = '["Global", "United States", "China", "Italy"]'
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     dashboard_countries = models.CharField(max_length=9999, blank=True)
+    dashboard_states = models.CharField(max_length=9999, blank=True)
 
     def __str__(self):
     	return str(self.user)+"--profile--"+self.dashboard_countries
