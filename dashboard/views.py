@@ -65,9 +65,10 @@ def index(request):
 
 	else: # if method is not post we just have to generate the form
 		if request.user.is_authenticated:
-			test_state_selections = current_profile.dashboard_states
-			#state_selections = ast.literal_eval(current_profile.dashboard_states)
-			state_selections = ast.literal_eval(current_profile.dashboard_states)
+			if current_profile.dashboard_states == '':
+				state_selections = []
+			else:
+				state_selections = ast.literal_eval(current_profile.dashboard_states)
 		else: 
 			state_selections = request.session.get('states') 
 			state_selections = default_state_selections if state_selections is None else state_selections
@@ -105,7 +106,6 @@ def index(request):
 		output_df = output_df.merge(region_data, on="Date", how="left")
 
 	for i in range(0, 12):
-		print(i)
 		if len(region_dict) > i:
 			key = "region_"+str(i) 
 			output_dict[key] = list(output_df[region_selections[i]])

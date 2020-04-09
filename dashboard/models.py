@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 default_country_selections = '["Global", "United States", "China", "Italy"]'
+default_state_selections = '[]'
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -16,7 +17,7 @@ class Profile(models.Model):
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
 	if created:
-		Profile.objects.create(user=instance, dashboard_countries = default_country_selections)
+		Profile.objects.create(user=instance, dashboard_countries = default_country_selections, dashboard_states = default_state_selections)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
