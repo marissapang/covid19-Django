@@ -32,150 +32,143 @@
 	</style>
 
 	<div class="container-fluid", style="padding: 5%">
-		{% if user.is_authenticated %}
 
-			<div class="container-fluid">
-				<h1> My Dashboard </h1>
-				<p></p>
-				<div style="margin-bottom:60px;">
-						Create your own customized data dashboard by selecting specific countries
-						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#country-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
+		<div class="container-fluid">
+			<h1> My Dashboard </h1>
+			<p></p>
+			<div style="margin-bottom:60px;">
+					Create your own customized data dashboard by selecting specific countries
+					<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#country-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update country selection</button>
 
-						<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#state-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update state selection</button>
-				</div>
+					<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#state-selection-modal" style="padding:10px;margin-left:50px; margin-top:-10px; vertical-align: middle">Update state selection</button>
 			</div>
+		</div>
 
-			<!------------------------------------->
-			<!-- COUNTRY SELECTION MODAL STARTS -->
-			<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				<form action = "" method = "POST" class = "modalform"> 
-				  <div class="modal-dialog modal-xl">
-				    <div class="modal-content">
-				    	<div class="modal-header">
-				  			<h5 class="modal-title" id="exampleModalLabel">Country-level data to include on dashboard</h5>
-				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  				<span aria-hidden="true">&times;</span>
-				  			</button>
-				  		</div>
-			  			<div class="modal-body">		  				
-		  					{% csrf_token %}
-		  					{{ dashboard_country_filter_form.countries}}
-
-			  			</div>
-			  			<div class="modal-footer">
-			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  				<button type="submit" class="btn btn-primary"> Save changes </button>
-			  			</div>
+		<!------------------------------------->
+		<!-- COUNTRY SELECTION MODAL STARTS -->
+		<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<form action = "" method = "POST" class = "modalform"> 
+			  <div class="modal-dialog modal-xl">
+			    <div class="modal-content">
+			    	<div class="modal-header">
+			  			<h5 class="modal-title" id="exampleModalLabel">Country-level data to include on dashboard</h5>
+			  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  				<span aria-hidden="true">&times;</span>
+			  			</button>
 			  		</div>
-				  </div>
-				</form>
-			</div>
-			<!--- COUNTRY SELECTION BUTTON ENDS --->
-			<!------------------------------------->
+		  			<div class="modal-body">		  				
+	  					{% csrf_token %}
+	  					{{ dashboard_country_filter_form.countries}}
+
+		  			</div>
+		  			<div class="modal-footer">
+		  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  				<button type="submit" class="btn btn-primary"> Save changes </button>
+		  			</div>
+		  		</div>
+			  </div>
+			</form>
+		</div>
+		<!--- COUNTRY SELECTION BUTTON ENDS --->
+		<!------------------------------------->
 
 
-			<!------------------------------------->
-			<!--- STATE SELECTION MODAL STARTS ---->
-			<div id = "state-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-				<form action = "" method = "POST"> 
-				  <div class="modal-dialog modal-xl">
-				    <div class="modal-content">
-				    	<div class="modal-header">
-				  			<h5 class="modal-title" id="exampleModalLabel">State-level data to include on dashboard</h5>
-				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  				<span aria-hidden="true">&times;</span>
-				  			</button>
-				  		</div>
-			  			<div class="modal-body">	
-			  				{% csrf_token %}
-		  					{{ dashboard_state_filter_form.states}}	  				
-			  			</div>
-			  			<div class="modal-footer">
-			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  				<button type="submit" class="btn btn-primary"> Save changes </button>
-			  			</div>
+		<!------------------------------------->
+		<!--- STATE SELECTION MODAL STARTS ---->
+		<div id = "state-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<form action = "" method = "POST"> 
+			  <div class="modal-dialog modal-xl">
+			    <div class="modal-content">
+			    	<div class="modal-header">
+			  			<h5 class="modal-title" id="exampleModalLabel">State-level data to include on dashboard</h5>
+			  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  				<span aria-hidden="true">&times;</span>
+			  			</button>
 			  		</div>
-				  </div>
-				</form>
-			</div>
-			<!---- STATE SELECTION BUTTON ENDS ---->
-			<!------------------------------------->
+		  			<div class="modal-body">	
+		  				{% csrf_token %}
+	  					{{ dashboard_state_filter_form.states}}	  				
+		  			</div>
+		  			<div class="modal-footer">
+		  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  				<button type="submit" class="btn btn-primary"> Save changes </button>
+		  			</div>
+		  		</div>
+			  </div>
+			</form>
+		</div>
+		<!---- STATE SELECTION BUTTON ENDS ---->
+		<!------------------------------------->
 
 
-			<!------------------------------------->
-			<!--------- LINE CHART STARTS --------->
+		<!------------------------------------->
+		<!--------- LINE CHART STARTS --------->
 
-			<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
-				<script src="https://code.highcharts.com/highcharts.js"> </script>
-				<script src="https://code.highcharts.com/modules/exporting.js"> </script>
-				<script src="https://code.highcharts.com/modules/export-data.js"> </script>
-				<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
+			<script src="https://code.highcharts.com/highcharts.js"> </script>
+			<script src="https://code.highcharts.com/modules/exporting.js"> </script>
+			<script src="https://code.highcharts.com/modules/export-data.js"> </script>
+			<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-				<script>
-					_dates = {{ dates|safe }};
-					_r1 = {{ region_1|safe }};
-					_r2 = {{ region_2|safe }};
-					_r3 = {{ region_3|safe }};
-					_r4 = {{ region_4|safe }};
-					_r5 = {{ region_5|safe }};
-					_r6 = {{ region_6|safe }};
-					_r7 = {{ region_7|safe }};
-					_r8 = {{ region_8|safe }};
-					_r9 = {{ region_9|safe }};
-					_r10 = {{ region_10|safe }};
-					_r11 = {{ region_11|safe }};
-					_r12 = {{ region_12|safe }};
-					_r1name = {{region_1_name|safe}}
-					_r2name = {{region_2_name|safe}}
-					_r3name = {{region_3_name|safe}}
-					_r4name = {{region_4_name|safe}}
-					_r5name = {{region_5_name|safe}}
-					_r6name = {{region_6_name|safe}}
-					_r7name = {{region_7_name|safe}}
-					_r8name = {{region_8_name|safe}}
-					_r9name = {{region_9_name|safe}}
-					_r10name = {{region_10_name|safe}}
-					_r11name = {{region_11_name|safe}}
-					_r12name = {{region_12_name|safe}}		
-					
-					Highcharts.chart('container', {
-						chart: {type: 'line'},
-						rangeSelector: { selected: 4},
-						title: {text: 'Cummulative Confirmed Cases', style: {fontSize:"24px"}},
-						subtitle: {text: 'Data from Johns Hopkins'},
-					  	xAxis: {categories: _dates},
-					  	yAxis: {
-					  		title: {text: '# Confirmed Cases'}
-					  	},
-					  	plotOptions: {
-					  		series: {marker: {radius: 1}}
-					  	},
-						series: [
-							{name: _r1name, data: _r1},
-							{name: _r2name, data: _r2},
-							{name: _r3name, data: _r3},
-							{name: _r4name, data: _r4},
-							{name: _r5name, data: _r5},
-							{name: _r6name, data: _r6},
-							{name: _r7name, data: _r7},
-							{name: _r8name, data: _r8},
-							{name: _r9name, data: _r9},
-							{name: _r10name, data: _r10},
-							{name: _r11name, data: _r11},
-							{name: _r12name, data: _r12},
-						]
-					})
-				</script>
+			<script>
+				_dates = {{ dates|safe }};
+				_r1 = {{ region_1|safe }};
+				_r2 = {{ region_2|safe }};
+				_r3 = {{ region_3|safe }};
+				_r4 = {{ region_4|safe }};
+				_r5 = {{ region_5|safe }};
+				_r6 = {{ region_6|safe }};
+				_r7 = {{ region_7|safe }};
+				_r8 = {{ region_8|safe }};
+				_r9 = {{ region_9|safe }};
+				_r10 = {{ region_10|safe }};
+				_r11 = {{ region_11|safe }};
+				_r12 = {{ region_12|safe }};
+				_r1name = {{region_1_name|safe}}
+				_r2name = {{region_2_name|safe}}
+				_r3name = {{region_3_name|safe}}
+				_r4name = {{region_4_name|safe}}
+				_r5name = {{region_5_name|safe}}
+				_r6name = {{region_6_name|safe}}
+				_r7name = {{region_7_name|safe}}
+				_r8name = {{region_8_name|safe}}
+				_r9name = {{region_9_name|safe}}
+				_r10name = {{region_10_name|safe}}
+				_r11name = {{region_11_name|safe}}
+				_r12name = {{region_12_name|safe}}		
+				
+				Highcharts.chart('container', {
+					chart: {type: 'line'},
+					rangeSelector: { selected: 4},
+					title: {text: 'Cummulative Confirmed Cases', style: {fontSize:"24px"}},
+					subtitle: {text: 'Data from Johns Hopkins'},
+				  	xAxis: {categories: _dates},
+				  	yAxis: {
+				  		title: {text: '# Confirmed Cases'}
+				  	},
+				  	plotOptions: {
+				  		series: {marker: {radius: 1}}
+				  	},
+					series: [
+						{name: _r1name, data: _r1},
+						{name: _r2name, data: _r2},
+						{name: _r3name, data: _r3},
+						{name: _r4name, data: _r4},
+						{name: _r5name, data: _r5},
+						{name: _r6name, data: _r6},
+						{name: _r7name, data: _r7},
+						{name: _r8name, data: _r8},
+						{name: _r9name, data: _r9},
+						{name: _r10name, data: _r10},
+						{name: _r11name, data: _r11},
+						{name: _r12name, data: _r12},
+					]
+				})
+			</script>
 
-			<!---------- LINE CHART ENDS ---------->
-			<!------------------------------------->
+		<!---------- LINE CHART ENDS ---------->
+		<!------------------------------------->
 
-
-
-
-		{% else %}
-			<strong> Please <a href="{% url 'login' %}"> log in </a> or <a href="{% url 'signup' %}"> sign up </a>to create your personalized dashboard for COVID-19 data </strong>
-		{% endif %}
 	</div>
 
 
