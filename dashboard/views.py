@@ -63,15 +63,14 @@ def index(request):
 				state_selections = default_state_selections if state_selections is None else state_selections
 			dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
 	else: # if method is not post we just have to generate the form
-		if request.user.is_authenticated:
-			state_selections = ast.literal_eval(current_profile.dashboard_states)
-		else: 
-			state_selections = request.session.get('states') 
-			state_selections = default_state_selections if state_selections is None else state_selections
-
+		# if request.user.is_authenticated:
+		# 	state_selections = ast.literal_eval(current_profile.dashboard_states)
+		# else: 
+		# 	state_selections = request.session.get('states') 
+		# 	state_selections = default_state_selections if state_selections is None else state_selections
 		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
-	##### POP-UP STATE FORM ENDS #####
-	
+	# ##### POP-UP STATE FORM ENDS #####
+
 	# ##### DATA SERIES STARTS #####
 	# country_selections = [i for i in country_selections if i != "None"]
 	# state_selections = [i for i in state_selections if i != "None"]
