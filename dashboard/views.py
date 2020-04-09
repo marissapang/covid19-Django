@@ -68,6 +68,7 @@ def index(request):
 		# else: 
 		# 	state_selections = request.session.get('states') 
 		# 	state_selections = default_state_selections if state_selections is None else state_selections
+		state_selections = ['Alabama']
 		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
 	# ##### POP-UP STATE FORM ENDS #####
 
