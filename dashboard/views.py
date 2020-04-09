@@ -43,35 +43,35 @@ def index(request):
 		dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
 	##### POP-UP COUNTRY FORM ENDS #####
 
-	# ##### POP-UP STATE FORM STARTS #####
-	# if request.method == "POST":
-	# 	dashboard_state_filter_form = UpdateDashboardStateForm(request.POST)
-	# 	if dashboard_state_filter_form.is_valid():
-	# 		state_selections = dashboard_state_filter_form.cleaned_data.get('states') # this is a list object
-	# 		if request.user.is_authenticated: # add selection to user's profile
-	# 			current_profile.dashboard_states = str(state_selections)
-	# 			current_profile.save() # save changes to profie attribute
-	# 		else: 
-	# 			request.session['states'] = state_selections
-	# 	else: 
-	# 		if request.user.is_authenticated:
-	# 			state_selections = ast.literal_eval(current_profile.dashboard_states)
-	# 			current_profile.dashboard_states = str(state_selections)
-	# 			current_profile.save() # save changes to profie attribute
-	# 		else:
-	# 			state_selections = request.session.get('states')
-	# 			state_selections = default_state_selections if state_selections is None else state_selections
-	# 		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
-	# else: # if method is not post we just have to generate the form
-	# 	if request.user.is_authenticated:
-	# 		state_selections = ast.literal_eval(current_profile.dashboard_states)
-	# 	else: 
-	# 		state_selections = request.session.get('states') 
-	# 		state_selections = default_state_selections if state_selections is None else state_selections
+	##### POP-UP STATE FORM STARTS #####
+	if request.method == "POST":
+		dashboard_state_filter_form = UpdateDashboardStateForm(request.POST)
+		if dashboard_state_filter_form.is_valid():
+			state_selections = dashboard_state_filter_form.cleaned_data.get('states') # this is a list object
+			if request.user.is_authenticated: # add selection to user's profile
+				current_profile.dashboard_states = str(state_selections)
+				current_profile.save() # save changes to profie attribute
+			else: 
+				request.session['states'] = state_selections
+		else: 
+			if request.user.is_authenticated:
+				state_selections = ast.literal_eval(current_profile.dashboard_states)
+				current_profile.dashboard_states = str(state_selections)
+				current_profile.save() # save changes to profie attribute
+			else:
+				state_selections = request.session.get('states')
+				state_selections = default_state_selections if state_selections is None else state_selections
+			dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+	else: # if method is not post we just have to generate the form
+		if request.user.is_authenticated:
+			state_selections = ast.literal_eval(current_profile.dashboard_states)
+		else: 
+			state_selections = request.session.get('states') 
+			state_selections = default_state_selections if state_selections is None else state_selections
 
-	# 	dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
-	# ##### POP-UP STATE FORM ENDS #####
-	# 
+		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+	##### POP-UP STATE FORM ENDS #####
+	
 	# ##### DATA SERIES STARTS #####
 	# country_selections = [i for i in country_selections if i != "None"]
 	# state_selections = [i for i in state_selections if i != "None"]
