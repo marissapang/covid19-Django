@@ -43,7 +43,6 @@ def index(request):
 		dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
 	##### POP-UP COUNTRY FORM ENDS #####
 
-
 	##### POP-UP STATE FORM STARTS #####
 	if request.method == "POST":
 		dashboard_state_filter_form = UpdateDashboardStateForm(request.POST)
@@ -70,10 +69,8 @@ def index(request):
 			state_selections = request.session.get('states') 
 			print(state_selections)
 			state_selections = default_state_selections if state_selections is None else state_selections
-
 		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
 	##### POP-UP STATE FORM ENDS #####
-
 
 	##### DATA SERIES STARTS #####
 	country_selections = [i for i in country_selections if i != "None"]
@@ -91,7 +88,6 @@ def index(request):
 	output_dict = {}
 	output_region_list = []
 	
-
 	for region_name, region_type in region_dict.items(): 
 		if region_name == "Global":
 			region_data = df
@@ -101,14 +97,13 @@ def index(request):
 			region_data = df[df['State']==region_name]
 		else:
 			region_data="ERROR"
-
 		region_data = region_data.groupby(['Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
 		region_data = region_data.fillna(0)
 		region_data = region_data.rename(columns={"Num_Confirmed" : region_name})
 		output_df = output_df.merge(region_data, on="Date", how="left")
 
-
 	for i in range(0, 12):
+		print(i)
 		if len(region_dict) > i:
 			key = "region_"+str(i) 
 			output_dict[key] = list(output_df[region_selections[i]])
@@ -147,10 +142,10 @@ def index(request):
 		"region_9_name": output_region_list[8],
 		"region_10_name": output_region_list[9],
 		"region_11_name": output_region_list[10],
-		"region_12_name": output_region_list[11],
+		"region_12_name": output_region_list[11]
 	}
 
-return render(request, 'dashboard-index.html', context)
+	return render(request, 'dashboard-index.html', context)
 	
 
 
