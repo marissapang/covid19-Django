@@ -113,30 +113,30 @@
 
 				<script>
 					_dates = {{ dates|safe }};
-					_c1 = {{ country_1|safe }};
-					_c2 = {{country_2|safe}};
-					_c3 = {{country_3|safe}};
-					_c4 = {{country_4|safe}};
-					_c5 = {{country_5|safe}};
-					_c6 = {{country_6|safe}};
-					_c1name = {{country_1_name|safe}}
-					_c2name = {{country_2_name|safe}}
-					_c3name = {{country_3_name|safe}}
-					_c4name = {{country_4_name|safe}}
-					_c5name = {{country_5_name|safe}}
-					_c6name = {{country_6_name|safe}}
-					_s1 = {{ state_1|safe }};
-					_s2 = {{ state_2|safe }};
-					_s3 = {{ state_3|safe }};
-					_s4 = {{ state_4|safe }};
-					_s5 = {{ state_5|safe }};
-					_s6 = {{ state_6|safe }};
-					_s1name = {{state_1_name|safe}};
-					_s2name = {{state_2_name|safe}};
-					_s3name = {{state_3_name|safe}};
-					_s4name = {{state_4_name|safe}};
-					_s5name = {{state_5_name|safe}};
-					_s6name = {{state_6_name|safe}};
+					_r1 = {{ region_1|safe }};
+					_r2 = {{ region_2|safe }};
+					_r3 = {{ region_3|safe }};
+					_r4 = {{ region_4|safe }};
+					_r5 = {{ region_5|safe }};
+					_r6 = {{ region_6|safe }};
+					_r7 = {{ region_7|safe }};
+					_r8 = {{ region_8|safe }};
+					_r9 = {{ region_9|safe }};
+					_r10 = {{ region_10|safe }};
+					_r11 = {{ region_11|safe }};
+					_r12 = {{ region_12|safe }};
+					_r1name = {{region_1_name|safe}}
+					_r2name = {{region_2_name|safe}}
+					_r3name = {{region_3_name|safe}}
+					_r4name = {{region_4_name|safe}}
+					_r5name = {{region_5_name|safe}}
+					_r6name = {{region_6_name|safe}}
+					_r7name = {{region_7_name|safe}}
+					_r8name = {{region_8_name|safe}}
+					_r9name = {{region_9_name|safe}}
+					_r10name = {{region_10_name|safe}}
+					_r11name = {{region_11_name|safe}}
+					_r12name = {{region_12_name|safe}}		
 					
 					Highcharts.chart('container', {
 						chart: {type: 'line'},
@@ -151,18 +151,18 @@
 					  		series: {marker: {radius: 1}}
 					  	},
 						series: [
-							{name: _c1name, data: _c1},
-							{name: _c2name, data: _c2},
-							{name: _c3name, data: _c3},
-							{name: _c4name, data: _c4},
-							{name: _c5name, data: _c5},
-							{name: _c6name, data: _c6},
-							{name: _s1name, data: _s1},
-							{name: _s2name, data: _s2},
-							{name: _s3name, data: _s3},
-							{name: _s4name, data: _s4},
-							{name: _s5name, data: _s5},
-							{name: _s6name, data: _s6},
+							{name: _r1name, data: _r1},
+							{name: _r2name, data: _r2},
+							{name: _r3name, data: _r3},
+							{name: _r4name, data: _r4},
+							{name: _r5name, data: _r5},
+							{name: _r6name, data: _r6},
+							{name: _r7name, data: _r7},
+							{name: _r8name, data: _r8},
+							{name: _r9name, data: _r9},
+							{name: _r10name, data: _r10},
+							{name: _r11name, data: _r11},
+							{name: _r12name, data: _r12},
 						]
 					})
 				</script>
