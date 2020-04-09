@@ -11,7 +11,7 @@ class Profile(models.Model):
     dashboard_states = models.CharField(max_length=9999, blank=True)
 
     def __str__(self):
-    	return str(self.user)+"--profile--"+self.dashboard_countries
+    	return str(self.user)+"--"+self.dashboard_countries+"--"+self.dashboard_states
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
