@@ -150,7 +150,7 @@ def index(request):
 		"region_12_name": output_region_list[11],
 	}
 
-	return render(request, 'dashboard-index.html', context)
+return render(request, 'dashboard-index.html', context)
 	
 
 
