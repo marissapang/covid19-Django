@@ -65,6 +65,8 @@ def index(request):
 	else: # if method is not post we just have to generate the form
 		if request.user.is_authenticated:
 			state_selections = ['Alabama']
+			print(current_profile.dashboard_states)
+			#state_selections = ast.literal_eval(current_profile.dashboard_states)
 			#state_selections = ast.literal_eval(current_profile.dashboard_states)
 		else: 
 			state_selections = request.session.get('states') 
