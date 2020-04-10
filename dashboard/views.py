@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django import forms
 import pandas as pd
-from .forms import UpdateDashboardCountryForm, UpdateDashboardStateForm, UpdateDashboardCountryFormMobile, UpdateDashboardStateFormMobile
+from .forms import UpdateDashboardCountryForm, UpdateDashboardStateForm, UpdateDashboardCountryFormMobile, UpdateDashboardStateFormMobile, UpdateDashboardDateRangeForm
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
+from datetime import datetime, timedelta
 
 def index(request):
 	user = request.user.pk
@@ -88,7 +89,56 @@ def index(request):
 
 	##### POP-UP STATE FORM ENDS #####
 
+	
+
+	if request.method == "POST":
+		dashboard_date_range_form = UpdateDashboardDateRangeForm(request.POST)
+		if dashboard_date_range_form.is_valid():
+			date_range = dashboard_date_range_form.cleaned_data.get('date_range')
+			request.session['date_range'] = date_range
+		else: 
+			date_range = request.session.get('date_range')
+			date_range = "All time" if date_range is None else date_range
+			dashboard_date_range_form = UpdateDashboardDateRangeForm(initial={'date_range': date_range})
+	else: 
+		date_range = request.session.get('date_range')
+		date_range = "All time" if date_range is None else date_range
+		dashboard_date_range_form = UpdateDashboardDateRangeForm(initial={'date_range': date_range})
+
+	date_range = request.session.get('date_range')
+
 	##### DATA SERIES STARTS #####
+	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
+	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
+
+	latest_date = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d')
+
+	days = timedelta(1000) # set high number of days to subtract if it's all time
+	if date_range == "Past 2 months":
+		days = timedelta(61)
+	elif date_range == "Past month":
+		days = timedelta(31)
+	elif date_range == "Past 2 weeks":
+		days = timedelta(15)
+
+	start_date = latest_date - days
+
+	latest_date = latest_date.strftime("%Y-%m-%d")
+	start_date = start_date.strftime("%Y-%m-%d")
+
+	print("Before filtering")
+	#print("Num rows:", df_confirmed.count())
+	print("Max date:", max(df_confirmed['Date']))
+	print("Min date:", min(df_confirmed['Date']))
+
+	df_confirmed = df_confirmed[df_confirmed['Date']>start_date]
+
+	print("After filtering")
+	#print("Num rows:", df_confirmed.count())
+	print("Max date:", max(df_confirmed['Date']))
+	print("Min date:", min(df_confirmed['Date']))
+
+
 	country_selections = [i for i in country_selections if i != "None"]
 	state_selections = [i for i in state_selections if i != "None"]
 
@@ -96,9 +146,6 @@ def index(request):
 	state_dict = {i : "state" for i in state_selections}
 	region_dict.update(state_dict) #created dicitionary of region names and whether they're countries or states
 	region_selections = country_selections + state_selections
-	
-	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
-	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 	
 	dates = list(df_confirmed['Date'].unique())
 	output_confirmed_df = pd.DataFrame(dates, columns=["Date"])
@@ -144,6 +191,7 @@ def index(request):
 		'tab' : 'dashboard',
 		'dashboard_country_filter_form' : dashboard_country_filter_form,
 		'dashboard_state_filter_form' : dashboard_state_filter_form,
+		'dashboard_date_range_form' :  dashboard_date_range_form,
 		"dates": dates,
 		"output_data_list_confirmed": output_data_list_confirmed,
 		"output_data_list_deaths" : output_data_list_deaths,

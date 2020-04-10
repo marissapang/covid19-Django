@@ -70,6 +70,13 @@
 			</div>
 		</div>
 
+		<form action='' method="POST" onChange="this.submit()";>
+			{% csrf_token %}
+			Date window:
+			{{ dashboard_date_range_form.date_range }}
+		</form>
+
+
 		<!------------------------------------->
 		<!-- COUNTRY SELECTION MODAL STARTS -->
 		<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">

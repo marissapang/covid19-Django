@@ -51,4 +51,11 @@ class UpdateDashboardCountryFormMobile(forms.Form):
 class UpdateDashboardStateFormMobile(forms.Form):
 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States")
 
+date_range_options = ["All time", "Past 2 months", "Past month", "Past 2 weeks"]
+date_range_options = list(zip(date_range_options, date_range_options))
+class UpdateDashboardDateRangeForm(forms.Form):
+	date_range = forms.ChoiceField(choices = date_range_options)
+	# date_start = forms.DateField(widget=forms.SelectDateWidget(empty_label="Nothing"))
+	# date_end = forms.DateField(input_formats=['%m/%Y'],widget=forms.SelectDateWidget(empty_label="Nothing"))
+ 
 
