@@ -23,7 +23,7 @@ country_choices = [('None', 'None')]+[('Global','Global')]+country_choices
 df = pd.read_csv("trends/data/confirmed_cases.csv")
 df = df[df['Country'].isin(['Australia', 'Canada', 'United States', 'China'])]
 
-countries_w_state_level_data = ['Australia', 'Canada', 'United States', 'China']
+countries_w_state_level_data = ['Australia', 'Canada', 'China', 'United States']
 country_state_list = []
 
 for country in countries_w_state_level_data:
