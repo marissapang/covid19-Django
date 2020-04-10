@@ -40,9 +40,15 @@ state_choices = tuple(none_list + country_state_list)
 
 
 class UpdateDashboardCountryForm(forms.Form):
-	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries")
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple)
 
 class UpdateDashboardStateForm(forms.Form):
 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple)
+
+class UpdateDashboardCountryFormMobile(forms.Form):
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries")
+
+class UpdateDashboardStateFormMobile(forms.Form):
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States")
 
 

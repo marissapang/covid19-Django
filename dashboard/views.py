@@ -1,11 +1,16 @@
 from django.shortcuts import render
+from django import forms
 import pandas as pd
-from .forms import UpdateDashboardCountryForm, UpdateDashboardStateForm
+from .forms import UpdateDashboardCountryForm, UpdateDashboardStateForm, UpdateDashboardCountryFormMobile, UpdateDashboardStateFormMobile
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
 
 def index(request):
+
+	mobile_ind = request.user_agent.is_mobile
+	desktop_ind = request.user_agent.is_pc
+
 	user = request.user.pk
 
 	current_profile = Profile.objects.get(user=user) if request.user.is_authenticated else None
@@ -31,14 +36,23 @@ def index(request):
 			else: 
 				country_selections = request.session.get('countries') 
 				country_selections = default_country_selections if country_selections is None else country_selections
-			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries':country_selections})
+			if request.user_agent.is_mobile:
+				dashboard_country_filter_form = UpdateDashboardCountryFormMobile(initial={'countries': country_selections})
+			else: 
+				dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
+	
 	else: # if method is not post we just have to generate the form
 		if request.user.is_authenticated:
 			country_selections = ast.literal_eval(current_profile.dashboard_countries)
 		else: 
 			country_selections = request.session.get('countries') 
 			country_selections = default_country_selections if country_selections is None else country_selections
-		dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
+		if request.user_agent.is_mobile:
+			dashboard_country_filter_form = UpdateDashboardCountryFormMobile(initial={'countries': country_selections})
+		else: 
+			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
+	
+
 	##### POP-UP COUNTRY FORM ENDS #####
 
 	##### POP-UP STATE FORM STARTS #####
@@ -59,14 +73,24 @@ def index(request):
 			else:
 				state_selections = request.session.get('states')
 				state_selections = default_state_selections if state_selections is None else state_selections
-			dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+
+			if request.user_agent.is_mobile:
+				dashboard_state_filter_form = UpdateDashboardStateFormMobile(initial={'states':state_selections})
+			else:
+				dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+
 	else: # if method is not post we just have to generate the form
 		if request.user.is_authenticated:
 			state_selections = ast.literal_eval(current_profile.dashboard_states)
 		else: 
 			state_selections = request.session.get('states') 
 			state_selections = default_state_selections if state_selections is None else state_selections
-		dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+
+		if request.user_agent.is_mobile:
+			dashboard_state_filter_form = UpdateDashboardStateFormMobile(initial={'states':state_selections})
+		else:
+			dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
+
 	##### POP-UP STATE FORM ENDS #####
 
 	##### DATA SERIES STARTS #####
