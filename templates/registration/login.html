@@ -1,4 +1,6 @@
 {% extends "base_generic.html" %}
+{% load socialaccount %}
+{% provider_media_js %}
 
 {% block content %}
 
@@ -14,7 +16,7 @@
 		{% endif %}
 	{% endif %}
 
-	<form method="post" action="{% url 'login' %}">
+	<form method="post" action="{% url 'account_login' %}">
 		{% csrf_token %}
 		<table>
 			<tr>
@@ -30,6 +32,6 @@
 		<input type="hidden" name="next" value="{{ next }}" />
 	</form>
 
-	<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+	<p><a href="{% url 'account_reset_password' %}">Lost password?</a></p>
 
 {% endblock %}
