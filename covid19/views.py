@@ -18,3 +18,7 @@ def signup(request):
 	else: 
 		form = SignUpForm()
 	return render(request, 'signup.html', {'form': form})
+
+
+def privacy(request):
+	return render(request, 'privacy_policy.html', {})
