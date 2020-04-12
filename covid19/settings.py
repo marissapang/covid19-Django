@@ -28,24 +28,25 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '1a3*shej(rj^p%m!2q)+d2h$y^w$y=
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 #export DJANGO_DEBUG==False
 
+DEBUG = True
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
-    'django.contrib.contenttypes',
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
     'django_user_agents',
     'trends',
     'dashboard',]
@@ -152,6 +153,7 @@ DATABASES['default'].update(db_from_env)
 
 ALLOWED_HOSTS = ['*']
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
