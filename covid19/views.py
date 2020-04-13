@@ -17,7 +17,7 @@ def signup(request):
 			return redirect('/dashboard/')
 	else: 
 		form = SignUpForm()
-	return render(request, 'signup.html', {'form': form})
+	return render(request, 'override_signup.html', {'form': form})
 
 
 def privacy(request):

@@ -28,6 +28,6 @@ urlpatterns = [
     path('dashboard/', include("dashboard.urls")),
     #path('accounts/', include("django.contrib.auth.urls")),
     path('accounts/', include("allauth.urls")),
-    #path('signup/', root_views.signup, name='signup'),
+    path('signup/', root_views.signup, name='override_signup'),
     path('privacypolicy', root_views.privacy, name='privacy')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

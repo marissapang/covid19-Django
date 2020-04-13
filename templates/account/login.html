@@ -1,46 +1,44 @@
-{% extends "account/base.html" %}
+{% extends 'base_generic.html' %}
+{% load socialaccount %}
+{% providers_media_js %}
 
-{% load i18n %}
-{% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+	{% if forms.errors %}
+		<p> Your username and password doesn't match. Please try again. </p>
+	{% endif %}
 
-<h1>{% trans "Sign In" %}</h1>
+	{% if next %}
+		{% if user.is_authenticated %}
+			<p> our account doesn't have access to this page. To proceed, please login with an acocunt that has access.</p>
+		{% else %}
+			<p>Please log in to see this page.</p>
+		{% endif %}
+	{% endif %}
 
-{% get_providers as socialaccount_providers %}
+<!-- 	<div class="container">
+		<a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook Connect </a>
+		<a href="{% provider_login_url "google" method="oauth2" %}">Google Connect </a>
+	</div>
+ -->
+ 	<h2> Log In </h2>
 
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+	<form method="post" action="{% url 'account_login' %}" style="padding-top: 30px">
+		{% csrf_token %}
+		{{ form.as_p }} 
+		<input type="submit" value="Login" />
+		<input type="hidden" name="next" value="{{ next }}" />
+	</form>
 
-<div class="socialaccount_ballot">
+	<div class="container-fluid" style="padding-top:20px; padding-bottom:20px">
 
-  <ul class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </ul>
+		<button style="background-color:#4267B3;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "facebook" method="oauth2" %}" '> Sign in through Facebook </button>
 
-  <div class="login-or">{% trans 'or' %}</div>
+		<button style="background-color:#EA4335;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "google" method="oauth2" %}" '> Sign in through Google </button>
+	</div>
 
-</div>
 
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
+	<p><a href="{% url 'account_reset_password' %}">Lost password?</a></p>
 
 {% endblock %}
+
