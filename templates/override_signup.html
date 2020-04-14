@@ -1,12 +1,22 @@
 {% extends 'base_generic.html' %}
 {% load i18n %}
+{% load socialaccount %}
+{% providers_media_js %}
 
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<h2>{% trans "Sign Up" %}</h2>
 
 <p>Already have an account? Then please <a href="{% url 'account_login'%}">sign in</a>.</p>
 
+<div style="padding-top:20px; padding-bottom:20px">
+
+		<button style="background-color:#4267B3;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "facebook" method="oauth2" %}" '> Sign up through Facebook </button>
+
+		<button style="background-color:#EA4335;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "google" method="oauth2" %}" '> Sign up through Google </button>
+</div>
+
+<div style="padding-top:10px; padding-bottom:20px; font-size:22px; font-weight: 525"> Or, sign up directly: </div>
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
@@ -15,5 +25,7 @@
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
+
+
 
 {% endblock %}
