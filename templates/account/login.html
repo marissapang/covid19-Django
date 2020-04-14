@@ -23,6 +23,8 @@
  -->
  	<h2> Log In </h2>
 
+ 	<p> Don't have an account? <a href="{% url 'override_signup' %}"> Sign up here </a> </p> 
+
 	<form method="post" action="{% url 'account_login' %}" style="padding-top: 30px">
 		{% csrf_token %}
 		{{ form.as_p }} 
@@ -30,15 +32,15 @@
 		<input type="hidden" name="next" value="{{ next }}" />
 	</form>
 
-	<div class="container-fluid" style="padding-top:20px; padding-bottom:20px">
+	<p><a href="{% url 'account_reset_password' %}">Forgot password?</a></p>
+
+
+	<div style="padding-top:20px; padding-bottom:20px">
 
 		<button style="background-color:#4267B3;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "facebook" method="oauth2" %}" '> Sign in through Facebook </button>
 
 		<button style="background-color:#EA4335;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "google" method="oauth2" %}" '> Sign in through Google </button>
 	</div>
-
-
-	<p><a href="{% url 'account_reset_password' %}">Lost password?</a></p>
 
 {% endblock %}
 
