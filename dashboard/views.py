@@ -7,6 +7,7 @@ from .models import Profile
 import ast
 from datetime import datetime, timedelta
 
+
 def index(request):
 	user = request.user.pk
 	current_profile = Profile.objects.get(user=user) if request.user.is_authenticated else None
@@ -111,6 +112,28 @@ def index(request):
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
+	confirmed_summ_stat = df_confirmed[df_confirmed['Date'] == max(df_confirmed['Date'])].Num_Confirmed.sum()
+	deaths_summ_stat = df_deaths[df_deaths['Date'] == max(df_deaths['Date'])].Num_Deaths.sum()
+
+	yesterday_confirmed = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d') - timedelta(1)
+	yesterday_confirmed = yesterday_confirmed.strftime("%Y-%m-%d")
+
+	yesterday_deaths = datetime.strptime(max(df_deaths['Date']), '%Y-%m-%d') - timedelta(1)
+	yesterday_deaths = yesterday_deaths.strftime("%Y-%m-%d")
+	yesterday_confirmed_summ_stat = df_confirmed[df_confirmed['Date'] == yesterday_confirmed].Num_Confirmed.sum()
+	yesterday_deaths_summ_stat = df_deaths[df_deaths['Date'] == yesterday_deaths].Num_Deaths.sum()
+
+	increment_confirmed = confirmed_summ_stat - yesterday_confirmed_summ_stat
+	increment_deaths = deaths_summ_stat - yesterday_deaths_summ_stat
+
+	incr_pct_confirmed = round(increment_confirmed / yesterday_confirmed_summ_stat,2)*100
+	incr_pct_deaths = round(increment_deaths / yesterday_deaths_summ_stat,2)*100
+
+	confirmed_summ_stat = f"{confirmed_summ_stat:,d}"
+	deaths_summ_stat = f"{deaths_summ_stat:,d}"
+	increment_confirmed = f"{increment_confirmed:,d}"
+	increment_deaths = f"{increment_deaths:,d}"
+
 	latest_date = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d')
 
 	days = timedelta(1000) # set high number of days to subtract if it's all time
@@ -195,7 +218,13 @@ def index(request):
 		"dates": dates,
 		"output_data_list_confirmed": output_data_list_confirmed,
 		"output_data_list_deaths" : output_data_list_deaths,
-		"output_region_names": output_region_names
+		"output_region_names": output_region_names,
+		"confirmed_summ_stat" : confirmed_summ_stat,
+		"deaths_summ_stat" : deaths_summ_stat,
+		"increment_confirmed": increment_confirmed,
+		"increment_deaths" : increment_deaths,
+		"incr_pct_confirmed": incr_pct_confirmed,
+		"incr_pct_deaths" : incr_pct_deaths
 	}
 
 	return render(request, 'dashboard-index.html', context)
