@@ -16,11 +16,6 @@
 		{% endif %}
 	{% endif %}
 
-<!-- 	<div class="container">
-		<a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook Connect </a>
-		<a href="{% provider_login_url "google" method="oauth2" %}">Google Connect </a>
-	</div>
- -->
  	<h2> Log In </h2>
 
  	<p> Don't have an account? <a href="{% url 'override_signup' %}"> Sign up here </a> </p> 
@@ -36,7 +31,6 @@
 
 
 	<div style="padding-top:20px; padding-bottom:20px">
-
 		<button style="background-color:#4267B3;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "facebook" method="oauth2" %}" '> Sign in through Facebook </button>
 
 		<button style="background-color:#EA4335;color:white;height:37px;width:230px;font-weight:500" onclick='window.location.href="{% provider_login_url "google" method="oauth2" %}" '> Sign in through Google </button>

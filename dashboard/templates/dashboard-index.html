@@ -73,71 +73,6 @@
 		</form>
 	</div>
 
-
-
-
-
-
-	<!------------------------------------->
-	<!-- COUNTRY SELECTION MODAL STARTS -->
-<!-- 	<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<form action = "" method = "POST" class = "countrymodalform"> 
-		  <div class="modal-dialog modal-xl">
-		    <div class="modal-content">
-		    	<div class="modal-header">
-		  			<h5 class="modal-title" id="exampleModalLabel">Country-level data to include on dashboard</h5>
-		  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  				<span aria-hidden="true">&times;</span>
-		  			</button>
-		  		</div>
-	  			<div class="modal-body">		  				
-  					{% csrf_token %}
-  					{{ dashboard_country_filter_form.countries}}
-
-	  			</div>
-	  			<div class="modal-footer">
-	  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	  				<button type="submit" class="btn btn-primary"> Save changes </button>
-	  			</div>
-	  		</div>
-		  </div>
-		</form>
-	</div> -->
-	<!--- COUNTRY SELECTION BUTTON ENDS --->
-	<!------------------------------------->
-
-
-	<!------------------------------------->
-	<!--- STATE SELECTION MODAL STARTS ---->
-<!-- 	<div id = "state-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		<form action = "" method = "POST" class = "statemodalform"> 
-		  <div class="modal-dialog modal-xl">
-		    <div class="modal-content">
-		    	<div class="modal-header">
-		  			<h5 class="modal-title" id="exampleModalLabel">State-level data to include on dashboard</h5>
-		  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  				<span aria-hidden="true">&times;</span>
-		  			</button>
-		  		</div>
-	  			<div class="modal-body">	
-	  				{% csrf_token %}
-  					{{ dashboard_state_filter_form.states}}	  				
-	  			</div>
-	  			<div class="modal-footer">
-	  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	  				<button type="submit" class="btn btn-primary"> Save changes </button>
-	  			</div>
-	  		</div>
-		  </div>
-		</form>
-	</div> -->
-	<!---- STATE SELECTION BUTTON ENDS ---->
-	<!------------------------------------->
-
-	<!-------------------------------------->
-	<!----- UPDATE REGION DATA  STARTS ----->
-
-
 	<!------------------------------------->
 	<!--------- LINE CHART STARTS --------->
 
@@ -249,6 +184,23 @@
 		</div>
 		<!---------- LINE CHART ENDS ---------->
 		<!------------------------------------->
+
+		{% if alert_popup %}
+			<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px">
+			    <strong>Hey!</strong> You can click legend labels to select and de-select data from view.
+	<!-- 		    <button type="button;" class="close" data-dismiss="alert" aria-label="Close">
+			    	<span aria-hidden="true">&times;</span>
+			    	<form method='get'>
+			    			<input type="submit" value = '', name="close_alert"> <span aria-hidden="true">&times;</span> <input>
+			    	</form>
+			 	</button> -->
+
+			 	<form method='get'>
+			 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
+			 	</form>
+			</div>
+		{% endif %}
+
 		<div style="min-height: 30px; max_height: 100px; min_width: 3000px"> </div>
 
 

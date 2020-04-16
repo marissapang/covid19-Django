@@ -149,17 +149,8 @@ def index(request):
 	latest_date = latest_date.strftime("%Y-%m-%d")
 	start_date = start_date.strftime("%Y-%m-%d")
 
-	print("Before filtering")
-	#print("Num rows:", df_confirmed.count())
-	print("Max date:", max(df_confirmed['Date']))
-	print("Min date:", min(df_confirmed['Date']))
 
 	df_confirmed = df_confirmed[df_confirmed['Date']>start_date]
-
-	print("After filtering")
-	#print("Num rows:", df_confirmed.count())
-	print("Max date:", max(df_confirmed['Date']))
-	print("Min date:", min(df_confirmed['Date']))
 
 
 	country_selections = [i for i in country_selections if i != "None"]
@@ -210,6 +201,20 @@ def index(request):
 			output_data_list_deaths += [[]]
 	##### DATA SERIES ENDS #####	
 
+
+	alert_popup = request.session.get('alert_popup') 
+	alert_popup = True if alert_popup is None else alert_popup
+
+	print(request.GET.get('close_alert'))
+
+	if request.GET.get('close_alert'):
+		alert_popup = False
+		request.session['alert_popup'] = alert_popup
+
+	print("alert popup")
+	print(alert_popup)
+
+
 	context={
 		'tab' : 'dashboard',
 		'dashboard_country_filter_form' : dashboard_country_filter_form,
@@ -224,7 +229,8 @@ def index(request):
 		"increment_confirmed": increment_confirmed,
 		"increment_deaths" : increment_deaths,
 		"incr_pct_confirmed": incr_pct_confirmed,
-		"incr_pct_deaths" : incr_pct_deaths
+		"incr_pct_deaths" : incr_pct_deaths,
+		"alert_popup" : alert_popup
 	}
 
 	return render(request, 'dashboard-index.html', context)
