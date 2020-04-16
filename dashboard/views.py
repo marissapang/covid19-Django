@@ -205,14 +205,9 @@ def index(request):
 	alert_popup = request.session.get('alert_popup') 
 	alert_popup = True if alert_popup is None else alert_popup
 
-	print(request.GET.get('close_alert'))
-
 	if request.GET.get('close_alert'):
 		alert_popup = False
 		request.session['alert_popup'] = alert_popup
-
-	print("alert popup")
-	print(alert_popup)
 
 
 	context={
