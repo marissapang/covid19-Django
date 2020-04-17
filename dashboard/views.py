@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 import pandas as pd
-from .forms import UpdateDashboardCountryForm, UpdateDashboardStateForm, UpdateDashboardCountryFormMobile, UpdateDashboardStateFormMobile, UpdateDashboardDateRangeForm
+from .forms import UpdateDashboardForm, UpdateDashboardFormMobile
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
@@ -16,98 +16,48 @@ def index(request):
 	default_state_selections = ['New York']
 	default_date_range = 'All time'
 
-	##### POP-UP COUNTRY FORM STARTS #####
 	if request.method == "POST":
-		dashboard_country_filter_form = UpdateDashboardCountryForm(request.POST)
-		if dashboard_country_filter_form.is_valid():
-			country_selections = dashboard_country_filter_form.cleaned_data.get('countries') # this is a list object
-			if request.user.is_authenticated: # add selection to user's profile
-				current_profile.dashboard_countries = str(country_selections)
-				current_profile.save() # save changes to profie attribute
-			else: # if not logged in just save to session
-				request.session['countries'] = country_selections
-		else: 
-			if request.user.is_authenticated:
+		dashboard_form = UpdateDashboardForm(request.POST)
+		if dashboard_form.is_valid():
+			country_selections = dashboard_form.cleaned_data.get('countries') # this is a list object
+			state_selections = dashboard_form.cleaned_data.get('states') # this is a list object
+			date_range = dashboard_form.cleaned_data.get('date_range') # this is a string object
+			if request.user.is_authenticated: # if user is signed in then we save changes to profile
+				if country_selections != []: # only save if not empty
+					current_profile.dashboard_countries = str(country_selections)
+				if state_selections != []:
+					current_profile.dashboard_states = str(state_selections)
+				if date_range != "":
+					current_profile.dashboard_date_range = date_range
+				current_profile.save()
 				country_selections = ast.literal_eval(current_profile.dashboard_countries)
-				current_profile.dashboard_countries = str(country_selections)
-				current_profile.save() # save changes to profie attribute
-			else: 
-				country_selections = request.session.get('countries') 
-				country_selections = default_country_selections if country_selections is None else country_selections
-			if request.user_agent.is_mobile:
-				dashboard_country_filter_form = UpdateDashboardCountryFormMobile(initial={'countries': country_selections})
-			else: 
-				dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
-	
-	else: # if method is not post we just have to generate the form
-		if request.user.is_authenticated:
-			country_selections = ast.literal_eval(current_profile.dashboard_countries)
-		else: 
-			country_selections = request.session.get('countries') 
-			country_selections = default_country_selections if country_selections is None else country_selections
-		if request.user_agent.is_mobile:
-			dashboard_country_filter_form = UpdateDashboardCountryFormMobile(initial={'countries': country_selections})
-		else: 
-			dashboard_country_filter_form = UpdateDashboardCountryForm(initial={'countries': country_selections})		
-	
-
-	##### POP-UP COUNTRY FORM ENDS #####
-
-	##### POP-UP STATE FORM STARTS #####
-	if request.method == "POST":
-		dashboard_state_filter_form = UpdateDashboardStateForm(request.POST)
-		if dashboard_state_filter_form.is_valid():
-			state_selections = dashboard_state_filter_form.cleaned_data.get('states') # this is a list object
-			if request.user.is_authenticated: # add selection to user's profile
-				current_profile.dashboard_states = str(state_selections)
-				current_profile.save() # save changes to profie attribute
-			else: 
-				request.session['states'] = state_selections
-		else: 
-			if request.user.is_authenticated:
 				state_selections = ast.literal_eval(current_profile.dashboard_states)
-				current_profile.dashboard_states = str(state_selections)
-				current_profile.save() # save changes to profie attribute
-			else:
-				state_selections = request.session.get('states')
-				state_selections = default_state_selections if state_selections is None else state_selections
-
-			if request.user_agent.is_mobile:
-				dashboard_state_filter_form = UpdateDashboardStateFormMobile(initial={'states':state_selections})
-			else:
-				dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
-
-	else: # if method is not post we just have to generate the form
-		if request.user.is_authenticated:
+				date_range = current_profile.dashboard_date_range
+			else: # if user is not logged in save changes to session
+				if country_selections != []:
+					request.session['countries'] = country_selections
+				if state_selections != []:
+					request.session['states'] = state_selections
+				if date_range != "":
+					request.session['date_range'] = date_range
+				country_selections = default_country_selections if country_selections==[] else country_selections
+				state_selections = default_state_selections if state_selections==[] else state_selections
+				date_range = default_date_range if date_range=="" else date_range
+	else: # if request method is not post, just generate the form
+		if request.user.is_authenticated: # use saved DB settings in profile
+			country_selections = ast.literal_eval(current_profile.dashboard_countries)
 			state_selections = ast.literal_eval(current_profile.dashboard_states)
-		else: 
-			state_selections = request.session.get('states') 
+			date_range = current_profile.dashboard_date_range
+		else: # if no profile use session data
+			country_selections = request.session.get('countries')
+			country_selections = default_country_selections if country_selections is None else country_selections
+			state_selections = request.session.get('states')
 			state_selections = default_state_selections if state_selections is None else state_selections
-
-		if request.user_agent.is_mobile:
-			dashboard_state_filter_form = UpdateDashboardStateFormMobile(initial={'states':state_selections})
-		else:
-			dashboard_state_filter_form = UpdateDashboardStateForm(initial={'states':state_selections})
-
-	##### POP-UP STATE FORM ENDS #####
-
-	
-
-	if request.method == "POST":
-		dashboard_date_range_form = UpdateDashboardDateRangeForm(request.POST)
-		if dashboard_date_range_form.is_valid():
-			date_range = dashboard_date_range_form.cleaned_data.get('date_range')
-			request.session['date_range'] = date_range
-		else: 
 			date_range = request.session.get('date_range')
-			date_range = "All time" if date_range is None else date_range
-			dashboard_date_range_form = UpdateDashboardDateRangeForm(initial={'date_range': date_range})
-	else: 
-		date_range = request.session.get('date_range')
-		date_range = "All time" if date_range is None else date_range
-		dashboard_date_range_form = UpdateDashboardDateRangeForm(initial={'date_range': date_range})
+			date_range = default_date_range if date_range is None else date_range
+	initial_form_values = {'countries':country_selections, 'states':state_selections, 'date_range':date_range}
+	dashboard_form = UpdateDashboardFormMobile(initial = initial_form_values) if request.user_agent.is_mobile else UpdateDashboardForm(initial = initial_form_values)
 
-	date_range = request.session.get('date_range')
 
 	##### DATA SERIES STARTS #####
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
@@ -213,9 +163,10 @@ def index(request):
 
 	context={
 		'tab' : 'dashboard',
-		'dashboard_country_filter_form' : dashboard_country_filter_form,
-		'dashboard_state_filter_form' : dashboard_state_filter_form,
-		'dashboard_date_range_form' :  dashboard_date_range_form,
+		"dashboard_form" : dashboard_form,
+		#'dashboard_country_filter_form' : dashboard_country_filter_form,
+		#'dashboard_state_filter_form' : dashboard_state_filter_form,
+		#'dashboard_date_range_form' :  dashboard_date_range_form,
 		"dates": dates,
 		"output_data_list_confirmed": output_data_list_confirmed,
 		"output_data_list_deaths" : output_data_list_deaths,

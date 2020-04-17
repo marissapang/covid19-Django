@@ -40,28 +40,14 @@ date_range_options = ["All time", "Past 2 months", "Past month", "Past 2 weeks"]
 date_range_options = list(zip(date_range_options, date_range_options))
 
 class UpdateDashboardForm(forms.Form):
-	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple, blank=True)
-	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple, blank=True)
-	date_range = forms.ChoiceField(choices = date_range_options, blank=True)
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple, required=False)
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple, required=False)
+	date_range = forms.ChoiceField(choices = date_range_options, required=False)
 
 class UpdateDashboardFormMobile(forms.Form):
-	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", blank=True)
-	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", blank=True)
-	date_range = forms.ChoiceField(choices = date_range_options, blank=True)
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", required=False)
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", required=False)
+	date_range = forms.ChoiceField(choices = date_range_options, required=False)
 
-# class UpdateDashboardCountryForm(forms.Form):
-# 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple)
-
-# class UpdateDashboardStateForm(forms.Form):
-# 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple)
-
-# class UpdateDashboardCountryFormMobile(forms.Form):
-# 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries")
-
-# class UpdateDashboardStateFormMobile(forms.Form):
-# 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States")
-
-# class UpdateDashboardDateRangeForm(forms.Form):
-# 	date_range = forms.ChoiceField(choices = date_range_options)
 
 
