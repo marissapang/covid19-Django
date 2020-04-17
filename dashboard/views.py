@@ -66,10 +66,7 @@ def index(request):
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
-	# filter data for relevant country
-	#country = request.GET.get('country')
 	summ_filter_form = SummStatFilterForm(request.POST)
-
 	if summ_filter_form.is_valid():
 		country = summ_filter_form.cleaned_data.get('country')
 		country = "Global" if country=="" else country
@@ -189,8 +186,6 @@ def index(request):
 	if request.GET.get('close_alert'):
 		alert_popup = False
 		request.session['alert_popup'] = alert_popup
-
-
 
 
 	context={

@@ -62,8 +62,12 @@
 	<div class="container-fluid">
 		<h2> My Dashboard </h2>
 		<p></p>
+		{% if user.is_authenticated %}
+			<p> Test test test</p>
+		{% endif %}
 
 	</div>
+
 
 	<div class="container-fluid" style="padding-bottom:25px">
 		<form action='' method="POST" onChange="this.submit()";>
