@@ -49,5 +49,7 @@ class UpdateDashboardFormMobile(forms.Form):
 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", required=False)
 	date_range = forms.ChoiceField(choices = date_range_options, required=False)
 
+class SummStatFilterForm(forms.Form):
+	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'height:30px;width:85px;margin-bottom:10px;'}),required=False, initial="Global")
 
 

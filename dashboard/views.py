@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 import pandas as pd
-from .forms import UpdateDashboardForm, UpdateDashboardFormMobile
+from .forms import UpdateDashboardForm, UpdateDashboardFormMobile, SummStatFilterForm
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
@@ -65,6 +65,20 @@ def index(request):
 	##### SUMM STATS STARTS #####
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
+
+	# filter data for relevant country
+	#country = request.GET.get('country')
+	summ_filter_form = SummStatFilterForm(request.POST)
+
+	if summ_filter_form.is_valid():
+		country = summ_filter_form.cleaned_data.get('country')
+		country = "Global" if country=="" else country
+		if country != "Global":
+			df_confirmed = df_confirmed[df_confirmed['Country']==country]
+			df_deaths = df_deaths[df_deaths['Country']==country]
+
+	summ_stat_filter_form = SummStatFilterForm(initial = {'country': country})
+	summ_filter_country = country
 
 	# find yesterday's date
 	yesterday_confirmed = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d') - timedelta(1)
@@ -177,6 +191,8 @@ def index(request):
 		request.session['alert_popup'] = alert_popup
 
 
+
+
 	context={
 		'tab' : 'dashboard',
 		"dashboard_form" : dashboard_form,
@@ -185,7 +201,9 @@ def index(request):
 		"output_data_list_deaths" : output_data_list_deaths,
 		"output_region_names" : output_region_names,
 		"summ_stats" : summ_stats,
-		"alert_popup" : alert_popup
+		"alert_popup" : alert_popup,
+		"summ_stat_filter_form" : summ_stat_filter_form,
+		"summ_filter_country" : summ_filter_country
 	}
 
 	return render(request, 'dashboard-index.html', context)
