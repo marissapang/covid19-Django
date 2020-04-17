@@ -56,11 +56,9 @@
 				<ul class="nav navbar-nav">
 					{% if tab == "dashboard" %}
 						<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
-						<!-- <li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link">Visualizations</a></li> -->
                 		
             		{% else %}
             			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
-            			<!-- <li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link active">Visualizations</a></li> -->
             		{% endif %}
 				</ul>
 			</div>
