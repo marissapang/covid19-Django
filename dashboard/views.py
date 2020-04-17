@@ -14,6 +14,7 @@ def index(request):
 
 	default_country_selections = ['Global', 'United States']
 	default_state_selections = ['New York']
+	default_date_range = 'All time'
 
 	##### POP-UP COUNTRY FORM STARTS #####
 	if request.method == "POST":
