@@ -24,9 +24,8 @@ from covid19 import views as root_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('trends/', include("trends.urls")),
-    path('', RedirectView.as_view(url='/trends/', permanent=True), name='home'),
+    path('', RedirectView.as_view(url='/dashboard/', permanent=True), name='home'),
     path('dashboard/', include("dashboard.urls")),
-    #path('accounts/', include("django.contrib.auth.urls")),
     path('accounts/', include("allauth.urls")),
     path('signup/', root_views.signup, name='override_signup'),
     path('privacypolicy', root_views.privacy, name='privacy')

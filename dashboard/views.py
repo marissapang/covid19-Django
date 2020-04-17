@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 import pandas as pd
-from .forms import UpdateDashboardForm, UpdateDashboardFormMobile, SummStatFilterForm
+from .forms import UpdateDashboardForm, UpdateDashboardFormMobile, SummStatFilterForm, DataTypeForm
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
@@ -67,15 +67,24 @@ def index(request):
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
 	summ_filter_form = SummStatFilterForm(request.POST)
+
 	if summ_filter_form.is_valid():
 		country = summ_filter_form.cleaned_data.get('country')
-		country = "Global" if country=="" else country
-		if country != "Global":
-			df_confirmed = df_confirmed[df_confirmed['Country']==country]
-			df_deaths = df_deaths[df_deaths['Country']==country]
+		country = "Global" if country=="" or country=="None" else country
+		request.session['country'] = country	
+	else: 
+		country = request.session.get('country')
+		country = "Global" if country is None else country
 
 	summ_stat_filter_form = SummStatFilterForm(initial = {'country': country})
 	summ_filter_country = country
+
+	if country != "Global":
+		df_confirmed = df_confirmed[df_confirmed['Country']==country]
+		df_deaths = df_deaths[df_deaths['Country']==country]
+
+
+
 
 	# find yesterday's date
 	yesterday_confirmed = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d') - timedelta(1)
@@ -127,9 +136,7 @@ def index(request):
 	latest_date = latest_date.strftime("%Y-%m-%d")
 	start_date = start_date.strftime("%Y-%m-%d")
 
-
 	df_confirmed = df_confirmed[df_confirmed['Date']>start_date]
-
 
 	country_selections = [i for i in country_selections if i != "None"]
 	state_selections = [i for i in state_selections if i != "None"]
@@ -142,6 +149,8 @@ def index(request):
 	dates = list(df_confirmed['Date'].unique())
 	output_confirmed_df = pd.DataFrame(dates, columns=["Date"])
 	output_deaths_df = pd.DataFrame(dates, columns=["Date"])
+
+	first_data_type = request.session.get('data_type')
 	
 	for region_name, region_type in region_dict.items(): 
 		if region_name == "Global":
@@ -156,12 +165,46 @@ def index(request):
 
 		region_confirmed_data = region_confirmed_data.groupby(['Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
 		region_confirmed_data = region_confirmed_data.fillna(0)
-		region_confirmed_data = region_confirmed_data.rename(columns={"Num_Confirmed" : region_name})
-		output_confirmed_df = output_confirmed_df.merge(region_confirmed_data, on="Date", how="left")
 
 		region_deaths_data = region_deaths_data.groupby(['Date'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths")
 		region_deaths_data = region_deaths_data.fillna(0)
+
+		# create incremental data and decide whether or not to use cumulative or incremental data
+		
+		if request.method=="POST":
+			data_type_form = DataTypeForm(request.POST)
+			if data_type_form.is_valid():
+				data_type = data_type_form.cleaned_data.get('data_type')
+				print(data_type)
+				request.session['data_type'] = data_type
+				data_type_form = DataTypeForm(initial={"data_type":data_type})
+			else:
+				data_type = first_data_type
+				data_type_form = DataTypeForm(initial={"data_type":data_type})
+		else:
+			data_type = first_data_type
+			data_type = "Cumulative" if data_type is None else data_type
+			data_type_form = DataTypeForm(initial={"data_type":data_type})
+
+		if data_type == "Incremental":
+				region_confirmed_data['Lag_Num'] = region_confirmed_data['Num_Confirmed'].shift(1)
+				region_confirmed_data['Incr_Num'] = region_confirmed_data['Num_Confirmed'] - region_confirmed_data['Lag_Num']
+				region_confirmed_data = region_confirmed_data.drop(['Num_Confirmed', 'Lag_Num'], axis=1)
+				region_confirmed_data = region_confirmed_data.rename(columns={"Incr_Num" : "Num_Confirmed"})
+				
+				region_deaths_data['Lag_Num'] = region_deaths_data['Num_Deaths'].shift(1)
+				region_deaths_data['Incr_Num'] = region_deaths_data['Num_Deaths'] - region_deaths_data['Lag_Num']
+				region_deaths_data = region_deaths_data.drop(['Num_Deaths', 'Lag_Num'], axis=1)
+				region_deaths_data = region_deaths_data.rename(columns={"Incr_Num" : "Num_Deaths"})
+
+		region_confirmed_data = region_confirmed_data.fillna(0)
+		region_deaths_data = region_deaths_data.fillna(0)
+
+		region_confirmed_data = region_confirmed_data.rename(columns={"Num_Confirmed" : region_name})
 		region_deaths_data = region_deaths_data.rename(columns={"Num_Deaths" : region_name})
+
+
+		output_confirmed_df = output_confirmed_df.merge(region_confirmed_data, on="Date", how="left")
 		output_deaths_df = output_deaths_df.merge(region_deaths_data, on="Date", how="left")
 
 	output_region_names = []
@@ -187,7 +230,6 @@ def index(request):
 		alert_popup = False
 		request.session['alert_popup'] = alert_popup
 
-
 	context={
 		'tab' : 'dashboard',
 		"dashboard_form" : dashboard_form,
@@ -198,7 +240,9 @@ def index(request):
 		"summ_stats" : summ_stats,
 		"alert_popup" : alert_popup,
 		"summ_stat_filter_form" : summ_stat_filter_form,
-		"summ_filter_country" : summ_filter_country
+		"summ_filter_country" : summ_filter_country,
+		"data_type_form" : data_type_form,
+		"data_type" : [data_type],
 	}
 
 	return render(request, 'dashboard-index.html', context)

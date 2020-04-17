@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django_toggle_switch_widget.widgets import DjangoToggleSwitchWidget
 
 class SignUpForm(UserCreationForm):
 	first_name = forms.CharField(max_length=50, required=False, help_text='Optional.')
@@ -39,6 +40,9 @@ state_choices = tuple(none_list + country_state_list)
 date_range_options = ["All time", "Past 2 months", "Past month", "Past 2 weeks"]
 date_range_options = list(zip(date_range_options, date_range_options))
 
+data_choices = ["Cumulative", "Incremental"]
+data_choices = list(zip(data_choices, data_choices))
+
 class UpdateDashboardForm(forms.Form):
 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", widget=forms.CheckboxSelectMultiple, required=False)
 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.CheckboxSelectMultiple, required=False)
@@ -48,8 +52,12 @@ class UpdateDashboardFormMobile(forms.Form):
 	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", required=False)
 	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", required=False)
 	date_range = forms.ChoiceField(choices = date_range_options, required=False)
+	cum_vs_incr = forms.ChoiceField(choices=data_choices, required=False)
 
 class SummStatFilterForm(forms.Form):
-	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'height:30px;width:85px;margin-bottom:10px;'}),required=False, initial="Global")
+	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'height:30px;width:85px;margin-bottom:10px;'}), initial="Global")
+
+class DataTypeForm(forms.Form):
+	data_type = forms.ChoiceField(choices=data_choices, initial="Cumulative")
 
 
