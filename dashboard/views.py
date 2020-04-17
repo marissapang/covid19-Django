@@ -40,9 +40,12 @@ def index(request):
 					request.session['states'] = state_selections
 				if date_range != "":
 					request.session['date_range'] = date_range
-				country_selections = default_country_selections if country_selections==[] else country_selections
-				state_selections = default_state_selections if state_selections==[] else state_selections
-				date_range = default_date_range if date_range=="" else date_range
+				country_selections = request.session.get('countries')
+				state_selections = request.session.get('states')
+				date_range = request.session.get('date_range')
+				country_selections = default_country_selections if country_selections is None else country_selections
+				state_selections = default_state_selections if state_selections is None else state_selections
+				date_range = default_date_range if date_range is None else date_range
 	else: # if request method is not post, just generate the form
 		if request.user.is_authenticated: # use saved DB settings in profile
 			country_selections = ast.literal_eval(current_profile.dashboard_countries)
@@ -59,31 +62,44 @@ def index(request):
 	dashboard_form = UpdateDashboardFormMobile(initial = initial_form_values) if request.user_agent.is_mobile else UpdateDashboardForm(initial = initial_form_values)
 
 
-	##### DATA SERIES STARTS #####
+	##### SUMM STATS STARTS #####
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
-	confirmed_summ_stat = df_confirmed[df_confirmed['Date'] == max(df_confirmed['Date'])].Num_Confirmed.sum()
-	deaths_summ_stat = df_deaths[df_deaths['Date'] == max(df_deaths['Date'])].Num_Deaths.sum()
-
+	# find yesterday's date
 	yesterday_confirmed = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d') - timedelta(1)
 	yesterday_confirmed = yesterday_confirmed.strftime("%Y-%m-%d")
-
 	yesterday_deaths = datetime.strptime(max(df_deaths['Date']), '%Y-%m-%d') - timedelta(1)
 	yesterday_deaths = yesterday_deaths.strftime("%Y-%m-%d")
+
+	# find latest + T-1 day numbers
+	confirmed_summ_stat = df_confirmed[df_confirmed['Date'] == max(df_confirmed['Date'])].Num_Confirmed.sum()
+	deaths_summ_stat = df_deaths[df_deaths['Date'] == max(df_deaths['Date'])].Num_Deaths.sum()
 	yesterday_confirmed_summ_stat = df_confirmed[df_confirmed['Date'] == yesterday_confirmed].Num_Confirmed.sum()
 	yesterday_deaths_summ_stat = df_deaths[df_deaths['Date'] == yesterday_deaths].Num_Deaths.sum()
 
-	increment_confirmed = confirmed_summ_stat - yesterday_confirmed_summ_stat
-	increment_deaths = deaths_summ_stat - yesterday_deaths_summ_stat
-
-	incr_pct_confirmed = round(increment_confirmed / yesterday_confirmed_summ_stat,2)*100
-	incr_pct_deaths = round(increment_deaths / yesterday_deaths_summ_stat,2)*100
+	# calculate increment numbers
+	incr_confirmed = confirmed_summ_stat - yesterday_confirmed_summ_stat
+	incr_deaths = deaths_summ_stat - yesterday_deaths_summ_stat
+	incr_pct_confirmed = round(incr_confirmed/yesterday_confirmed_summ_stat*100,1)
+	incr_pct_deaths = round(incr_deaths/yesterday_deaths_summ_stat*100,1)
 
 	confirmed_summ_stat = f"{confirmed_summ_stat:,d}"
 	deaths_summ_stat = f"{deaths_summ_stat:,d}"
-	increment_confirmed = f"{increment_confirmed:,d}"
-	increment_deaths = f"{increment_deaths:,d}"
+	incr_confirmed = f"{incr_confirmed:,d}"
+	incr_deaths = f"{incr_deaths:,d}"
+
+	summ_stats = {
+		"confirmed_summ_stat":confirmed_summ_stat, "deaths_summ_stat":deaths_summ_stat,
+		"incr_confirmed":incr_confirmed, "incr_deaths":incr_deaths, 
+		"incr_pct_confirmed":incr_pct_confirmed, "incr_pct_deaths":incr_pct_deaths
+		}
+	###### SUMM STATS ENDS ######
+
+
+	##### DATA SERIES STARTS #####
+	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
+	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
 	latest_date = datetime.strptime(max(df_confirmed['Date']), '%Y-%m-%d')
 
@@ -164,19 +180,11 @@ def index(request):
 	context={
 		'tab' : 'dashboard',
 		"dashboard_form" : dashboard_form,
-		#'dashboard_country_filter_form' : dashboard_country_filter_form,
-		#'dashboard_state_filter_form' : dashboard_state_filter_form,
-		#'dashboard_date_range_form' :  dashboard_date_range_form,
 		"dates": dates,
-		"output_data_list_confirmed": output_data_list_confirmed,
+		"output_data_list_confirmed" : output_data_list_confirmed,
 		"output_data_list_deaths" : output_data_list_deaths,
-		"output_region_names": output_region_names,
-		"confirmed_summ_stat" : confirmed_summ_stat,
-		"deaths_summ_stat" : deaths_summ_stat,
-		"increment_confirmed": increment_confirmed,
-		"increment_deaths" : increment_deaths,
-		"incr_pct_confirmed": incr_pct_confirmed,
-		"incr_pct_deaths" : incr_pct_deaths,
+		"output_region_names" : output_region_names,
+		"summ_stats" : summ_stats,
 		"alert_popup" : alert_popup
 	}
 
