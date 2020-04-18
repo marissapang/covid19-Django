@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django import forms
 import pandas as pd
-from .forms import UpdateDashboardForm, UpdateDashboardFormMobile, SummStatFilterForm, DataTypeForm
+from .forms import UpdateDashboardForm, UpdateDashboardFormMobile, SummStatFilterForm, SummStatFilterFormMobile, DataTypeForm
 from django.contrib.auth.models import User
 from .models import Profile
 import ast
@@ -66,7 +66,11 @@ def index(request):
 	df_confirmed = pd.read_csv("trends/data/confirmed_cases.csv")
 	df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
-	summ_filter_form = SummStatFilterForm(request.POST)
+	if request.user_agent.is_mobile: 
+		summ_filter_form = SummStatFilterFormMobile(request.POST)
+	else: 
+		summ_filter_form = SummStatFilterForm(request.POST)
+
 
 	if summ_filter_form.is_valid():
 		country = summ_filter_form.cleaned_data.get('country')
@@ -76,7 +80,11 @@ def index(request):
 		country = request.session.get('country')
 		country = "Global" if country is None else country
 
-	summ_stat_filter_form = SummStatFilterForm(initial = {'country': country})
+	if request.user_agent.is_mobile: 
+		summ_stat_filter_form = SummStatFilterFormMobile(initial = {'country': country})
+	else: 
+		summ_stat_filter_form = SummStatFilterForm(initial = {'country': country})
+
 	summ_filter_country = country
 
 	if country != "Global":
@@ -250,7 +258,10 @@ def index(request):
 		"data_type" : [data_type],
 	}
 
-	return render(request, 'dashboard-index.html', context)
+	if request.user_agent.is_mobile:
+		return render(request, 'dashboard-index-mobile.html', context)
+	else: 
+		return render(request, 'dashboard-index.html', context)
 	
 
 
