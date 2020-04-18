@@ -180,19 +180,15 @@ def index(request):
 		# create incremental data and decide whether or not to use cumulative or incremental data
 		
 		if request.method=="POST":
-			print("data type request post")
 			data_type_form = DataTypeForm(request.POST)
 			if data_type_form.is_valid():
 				data_type = data_type_form.cleaned_data.get('data_type')
-				print(data_type)
 				request.session['data_type'] = data_type
 				data_type_form = DataTypeForm(initial={"data_type":data_type})
 			else:
-				print("in little else")
 				data_type = first_data_type if first_data_type is not None else "Cumulative"
 				data_type_form = DataTypeForm(initial={"data_type":data_type})
 		else:
-			print("data type request NOT post")
 			data_type = first_data_type if first_data_type is not None else "Cumulative"
 			data_type_form = DataTypeForm(initial={"data_type":data_type})
 
@@ -239,9 +235,6 @@ def index(request):
 	if request.GET.get('close_alert'):
 		alert_popup = False
 		request.session['alert_popup'] = alert_popup
-
-
-	print("output data type:", data_type)
 
 	context={
 		'tab' : 'dashboard',

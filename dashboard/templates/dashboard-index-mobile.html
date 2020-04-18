@@ -26,6 +26,14 @@
 			margin-top:-10%;
 			width:116%;
 		}
+
+		.modal {
+		  position: absolute;
+		  float: left;
+		  left: 50%;
+		  top: 50%;
+		  transform: translate(-50%, -50%);
+		}
 	</style>
 
 
@@ -104,14 +112,26 @@
 							Date period: {{ dashboard_form.date_range }}
 						</div>
 						<div style="padding-top:2px">
-							Data type:   {{ data_type_form.data_type}}
+							Data type:&nbsp &nbsp {{ data_type_form.data_type}}
 						</div>
 					</div>
 
 					<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="width:35%;height:auto;font-size:12px;padding:1px">Click to modify chart data</button>
 
-					<!-- Countries: {{ dashboard_form.countries}}
-					States: {{ dashboard_form.states}} -->
+
+					<div id = "region-filter-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="clear:both">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-body" style="align-self: center">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  				<span aria-hidden="true">&times;</span>
+							  		</button>
+									Update country selection: {{ dashboard_form.countries}}
+									Update state selection:{{ dashboard_form.states}}
+								</div>
+							</div>
+						</div>
+					</div>
 				</form>
 			</div>
 			
@@ -159,7 +179,7 @@
 				<!------------------------------------->
 
 				{% if alert_popup %}
-					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:10px">
+					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:12px; padding:0">
 					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
 					 	<form method='get'>
 					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
