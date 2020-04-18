@@ -6,174 +6,197 @@
 {% endblock %}
 
 {% block content %}
+	<style>
+		html, body{
+			margin:0;
+			padding:0;
+		}
+/*		div {
+		    margin:0;
+		    border: 1px solid black;
+		    width: 100%;
+		    height: 100%;
+		    padding:0;
+		    box-sizing:border-box;
+		    -moz-box-sizing:border-box;
+		    -webkit-box-sizing:border-box;
+		}*/
+		#test_id {
+			margin-left:-10%;
+			margin-top:-10%;
+			width:120%;
+		}
+	</style>
+
+
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<div>
-		<h4> Latest C19 Data </h4>
-		{% if user.is_authenticated %}
-		{% else %}
-			<p style="font-size: 12px"> To save your dashboard data selections, <a href="{% url 'account_login'%}">log in</a> or <a href="{% url 'override_signup' %}"> create an account </a></p>
-		{% endif %}
-
-	</div>
-
-	<div>
-		
-		<form action = "", method = "POST", onChange="this.submit();">
-			{% csrf_token %}
-			<span font-size:14px> Summary statistics: </span>{{ summ_stat_filter_form.country }}<i class="fa fa-filter" style="font-size: 16px; color:#6C757D"></i> 
-		</form>
-		
-	</div>
-
-	<div style="clear:both;">
-		<div style="float:left;width:49%;height:80px;background-color:#FDF3DF;color:#23272B">
-
-			<div style="height:20px;background-color:#FEE1A8 ">
-				<p style="text-align: center; font-size:15px; line-height: 20px; font-weight:550;"> Confirmed: </p>
-
-			</div>
-
-			<div style="height: 5px;"></div>
-
-			<div style="height:30px;">
-				<h4 style="text-align: center; line-height:30px;"> {{ summ_stats.confirmed_summ_stat }} </h4>
-			</div>
-
-			<div style="width:100%;height:auto;padding-top:1px;background-color:#FDF3DF;">
-				<p style="font-size:12px;text-align: center;" > New today: +{{ summ_stats.incr_confirmed }}   <span style="font-style:italic;color:grey;padding-left:5px">+{{ summ_stats.incr_pct_confirmed }}% </span></p> 
-			</div>
-		</div>
-
-		<div style="float:right;width:49%;height:80px;background-color:#FFD6D6;color:#23272B">
-
-			<div style="width:100%;height:20px;background-color:#FF0000">
-				<p style="text-align:center;font-size:15px;line-height:20px;font-weight:550"> Deaths: </p>
-			</div>
-
-			<div style="width:100%;height: 5px;"></div>
-
-			<div style="width:100%;height:30px;">
-				<h4 style="text-align: center; line-height:30px;"> {{ summ_stats.deaths_summ_stat }} </h4>
-			</div>
-
-			<div style="width:100%;height:auto;padding-top:1px;background-color:#FFD6D6">
-				<p style="font-size:12px;text-align: center;" > New today: +{{ summ_stats.incr_deaths }}  <span style="font-style:italic;color:grey;padding-left:5px">+{{ summ_stats.incr_pct_deaths }}% </span></p> 
-			</div>
-		</div>
-
-	</div>
-		
-	<div style="clear:both;padding-top:10px;margin:0px">
-		<hr>
-	</div>
-
-	<!------------------------------------->
-	<!--------- LINE CHART STARTS --------->
-
-	<div style="background-color:#E2E2E2; padding:3px">
-		<div style="clear:both; font-size:12px;">
-			<form action='' method="POST" onChange="this.submit()">
-				{% csrf_token %}
-				<div style="float:left;">
-					<div>
-						Date period: {{ dashboard_form.date_range }}
-					</div>
-					<div>
-						Data type: {{ data_type_form.data_type}}
-					</div>
-				</div>
-
-				<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="width:35%;height:auto;font-size:12px;padding:1px">Click to modify chart data</button>
-
-				<!-- Countries: {{ dashboard_form.countries}}
-				States: {{ dashboard_form.states}} -->
-			</form>
-		</div>
-		
-			<div style="clear:both; height:5px;"></div>
-
-			<div id="container1" style="max-height: 80%; margin: 0 auto" class="border">
-				<script src="https://code.highcharts.com/highcharts.js"> </script>
-				<script src="https://code.highcharts.com/modules/exporting.js"> </script>
-				<script src="https://code.highcharts.com/modules/export-data.js"> </script>
-				<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-				<script>
-					_dates = {{ dates|safe }};
-					_outputconfirmed = {{ output_data_list_confirmed|safe }}
-					_outputdeaths = {{ output_data_list_deaths|safe }}
-					_outputnames = {{ output_region_names|safe }}
-					_datatype = {{ data_type|safe }}	
-					
-					Highcharts.chart('container1', {
-						chart: {type: 'line'},
-						rangeSelector: { selected: 4},
-						title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"16px"}},
-					  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
-					  	yAxis: {title: {text: null}},
-					  	plotOptions: {series: {marker: {radius: 1}}},
-					  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
-						series: [
-							{name: _outputnames[0], data: _outputconfirmed[0]},
-							{name: _outputnames[1], data: _outputconfirmed[1]},
-							{name: _outputnames[2], data: _outputconfirmed[2]},
-							{name: _outputnames[3], data: _outputconfirmed[3]},
-							{name: _outputnames[4], data: _outputconfirmed[4]},
-							{name: _outputnames[5], data: _outputconfirmed[5]},
-							{name: _outputnames[6], data: _outputconfirmed[6]},
-							{name: _outputnames[7], data: _outputconfirmed[7]},
-							{name: _outputnames[8], data: _outputconfirmed[8]},
-							{name: _outputnames[9], data: _outputconfirmed[9]},
-							{name: _outputnames[10], data: _outputconfirmed[10]},
-							{name: _outputnames[11], data: _outputconfirmed[11]},
-						]
-					})
-				</script>
-			</div>
-			<!---------- LINE CHART ENDS ---------->
-			<!------------------------------------->
-
-			{% if alert_popup %}
-				<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:50px;font-style:12px">
-				    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
-
-				 	<form method='get'>
-				 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
-				 	</form>
-				</div>
+	<div id="test_id">
+		<div>
+			<h4> Latest C19 Data </h4>
+			{% if user.is_authenticated %}
+			{% else %}
+				<p style="font-size: 12px"> To save your dashboard data selections, <a href="{% url 'account_login'%}">log in</a> or <a href="{% url 'override_signup' %}"> create an account </a></p>
 			{% endif %}
 
-			<div style="height: 10px"> </div>
+		</div>
+
+		<div>
+			
+			<form action = "", method = "POST", onChange="this.submit();">
+				{% csrf_token %}
+				<span font-size:14px> Summary statistics: </span>{{ summ_stat_filter_form.country }}<i class="fa fa-filter" style="font-size: 16px; color:#6C757D"></i> 
+			</form>
+			
+		</div>
+
+		<div style="clear:both;">
+			<div style="float:left;width:49%;height:80px;background-color:#FDF3DF;color:#23272B">
+
+				<div style="height:20px;background-color:#FEE1A8 ">
+					<p style="text-align: center; font-size:15px; line-height: 20px; font-weight:550;"> Confirmed: </p>
+
+				</div>
+
+				<div style="height: 5px;"></div>
+
+				<div style="height:30px;">
+					<h4 style="text-align: center; line-height:30px;"> {{ summ_stats.confirmed_summ_stat }} </h4>
+				</div>
+
+				<div style="width:100%;height:auto;padding-top:1px;background-color:#FDF3DF;">
+					<p style="font-size:12px;text-align: center;" > New today: +{{ summ_stats.incr_confirmed }}   <span style="font-style:italic;color:grey;padding-left:5px">+{{ summ_stats.incr_pct_confirmed }}% </span></p> 
+				</div>
+			</div>
+
+			<div style="float:right;width:49%;height:80px;background-color:#FFD6D6;color:#23272B">
+
+				<div style="width:100%;height:20px;background-color:#FF0000">
+					<p style="text-align:center;font-size:15px;line-height:20px;font-weight:550"> Deaths: </p>
+				</div>
+
+				<div style="width:100%;height: 5px;"></div>
+
+				<div style="width:100%;height:30px;">
+					<h4 style="text-align: center; line-height:30px;"> {{ summ_stats.deaths_summ_stat }} </h4>
+				</div>
+
+				<div style="width:100%;height:auto;padding-top:1px;background-color:#FFD6D6">
+					<p style="font-size:12px;text-align: center;" > New today: +{{ summ_stats.incr_deaths }}  <span style="font-style:italic;color:grey;padding-left:5px">+{{ summ_stats.incr_pct_deaths }}% </span></p> 
+				</div>
+			</div>
+
+		</div>
+			
+		<div style="clear:both;padding-top:10px;margin:0px">
+			<hr>
+		</div>
+
+		<!------------------------------------->
+		<!--------- LINE CHART STARTS --------->
+
+		<div>
+			<div style="clear:both; font-size:12px;">
+				<form action='' method="POST" onChange="this.submit()">
+					{% csrf_token %}
+					<div style="float:left;">
+						<div>
+							Date period: {{ dashboard_form.date_range }}
+						</div>
+						<div>
+							Data type: {{ data_type_form.data_type}}
+						</div>
+					</div>
+
+					<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="width:35%;height:auto;font-size:12px;padding:1px">Click to modify chart data</button>
+
+					<!-- Countries: {{ dashboard_form.countries}}
+					States: {{ dashboard_form.states}} -->
+				</form>
+			</div>
+			
+				<div style="clear:both; height:5px;"></div>
+
+				<div id="container1" style="max-height: 80%; margin: 0 auto" class="border">
+					<script src="https://code.highcharts.com/highcharts.js"> </script>
+					<script src="https://code.highcharts.com/modules/exporting.js"> </script>
+					<script src="https://code.highcharts.com/modules/export-data.js"> </script>
+					<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+					<script>
+						_dates = {{ dates|safe }};
+						_outputconfirmed = {{ output_data_list_confirmed|safe }}
+						_outputdeaths = {{ output_data_list_deaths|safe }}
+						_outputnames = {{ output_region_names|safe }}
+						_datatype = {{ data_type|safe }}	
+						
+						Highcharts.chart('container1', {
+							chart: {type: 'line'},
+							rangeSelector: { selected: 4},
+							title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"16px"}},
+						  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
+						  	yAxis: {title: {text: null}},
+						  	plotOptions: {series: {marker: {radius: 1}}},
+						  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
+							series: [
+								{name: _outputnames[0], data: _outputconfirmed[0]},
+								{name: _outputnames[1], data: _outputconfirmed[1]},
+								{name: _outputnames[2], data: _outputconfirmed[2]},
+								{name: _outputnames[3], data: _outputconfirmed[3]},
+								{name: _outputnames[4], data: _outputconfirmed[4]},
+								{name: _outputnames[5], data: _outputconfirmed[5]},
+								{name: _outputnames[6], data: _outputconfirmed[6]},
+								{name: _outputnames[7], data: _outputconfirmed[7]},
+								{name: _outputnames[8], data: _outputconfirmed[8]},
+								{name: _outputnames[9], data: _outputconfirmed[9]},
+								{name: _outputnames[10], data: _outputconfirmed[10]},
+								{name: _outputnames[11], data: _outputconfirmed[11]},
+							]
+						})
+					</script>
+				</div>
+				<!---------- LINE CHART ENDS ---------->
+				<!------------------------------------->
+
+				{% if alert_popup %}
+					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:50px;font-style:10px">
+					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
+					 	<form method='get'>
+					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
+					 	</form>
+					</div>
+				{% endif %}
+
+				<div style="height: 2px"> </div>
 
 
-			<div id="container2" style="max-height: 80%; margin: 0 auto" class="border">
-				<script>
-					Highcharts.chart('container2', {
-						chart: {type: 'line'},
-						rangeSelector: { selected: 4},
-						title: {text: _datatype+' Deaths', style: {fontSize:"16px"}},
-					  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
-					  	yAxis: {title: {text: null}},
-					  	plotOptions: {series: {marker: {radius: 1}}},
-					  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
-						series: [
-							{name: _outputnames[0], data: _outputdeaths[0]},
-							{name: _outputnames[1], data: _outputdeaths[1]},
-							{name: _outputnames[2], data: _outputdeaths[2]},
-							{name: _outputnames[3], data: _outputdeaths[3]},
-							{name: _outputnames[4], data: _outputdeaths[4]},
-							{name: _outputnames[5], data: _outputdeaths[5]},
-							{name: _outputnames[6], data: _outputdeaths[6]},
-							{name: _outputnames[7], data: _outputdeaths[7]},
-							{name: _outputnames[8], data: _outputdeaths[8]},
-							{name: _outputnames[9], data: _outputdeaths[9]},
-							{name: _outputnames[10], data: _outputdeaths[10]},
-							{name: _outputnames[11], data: _outputdeaths[11]},
-						]
-					})
-				</script>
+				<div id="container2" style="max-height: 80%; margin: 0 auto" class="border">
+					<script>
+						Highcharts.chart('container2', {
+							chart: {type: 'line'},
+							rangeSelector: { selected: 4},
+							title: {text: _datatype+' Deaths', style: {fontSize:"16px"}},
+						  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
+						  	yAxis: {title: {text: null}},
+						  	plotOptions: {series: {marker: {radius: 1}}},
+						  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
+							series: [
+								{name: _outputnames[0], data: _outputdeaths[0]},
+								{name: _outputnames[1], data: _outputdeaths[1]},
+								{name: _outputnames[2], data: _outputdeaths[2]},
+								{name: _outputnames[3], data: _outputdeaths[3]},
+								{name: _outputnames[4], data: _outputdeaths[4]},
+								{name: _outputnames[5], data: _outputdeaths[5]},
+								{name: _outputnames[6], data: _outputdeaths[6]},
+								{name: _outputnames[7], data: _outputdeaths[7]},
+								{name: _outputnames[8], data: _outputdeaths[8]},
+								{name: _outputnames[9], data: _outputdeaths[9]},
+								{name: _outputnames[10], data: _outputdeaths[10]},
+								{name: _outputnames[11], data: _outputdeaths[11]},
+							]
+						})
+					</script>
+				</div>
 			</div>
 		</div>
 	</div>
