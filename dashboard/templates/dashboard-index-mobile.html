@@ -126,8 +126,8 @@
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							  				<span aria-hidden="true">&times;</span>
 							  		</button>
-									Update country selection: {{ dashboard_form.countries}}
-									Update state selection:{{ dashboard_form.states}}
+									<p>Update country selection: {{ dashboard_form.countries}}</p>
+									<p>Update state selection:&nbsp &nbsp {{ dashboard_form.states}}</p>
 								</div>
 							</div>
 						</div>
@@ -179,10 +179,10 @@
 				<!------------------------------------->
 
 				{% if alert_popup %}
-					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:12px; padding:0">
-					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
+					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:12px; padding:3px">
+					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series.
 					 	<form method='get'>
-					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
+					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;padding:2px" value="&times" name="close_alert"/>
 					 	</form>
 					</div>
 				{% endif %}

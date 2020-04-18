@@ -49,10 +49,10 @@ class UpdateDashboardForm(forms.Form):
 	date_range = forms.ChoiceField(choices = date_range_options, required=False)
 
 class UpdateDashboardFormMobile(forms.Form):
-	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries", required=False)
-	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", required=False)
-	date_range = forms.ChoiceField(choices = date_range_options, required=False)
-	cum_vs_incr = forms.ChoiceField(choices=data_choices, required=False)
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries",  widget=forms.SelectMultiple(attrs={'style':'width:90px;'}), required=False)
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.SelectMultiple(attrs={'style':'width:90px;'}), required=False)
+	date_range = forms.ChoiceField(choices = date_range_options, widget=forms.Select(attrs={'style':'width:90px;'}), required=False)
+	cum_vs_incr = forms.ChoiceField(choices=data_choices, widget=forms.Select(attrs={'style':'width:90px;'}), required=False)
 
 class SummStatFilterForm(forms.Form):
 	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'height:30px;width:85px;margin-bottom:10px;'}), initial="Global")
