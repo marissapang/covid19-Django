@@ -19,10 +19,12 @@
 	</div>
 
 	<div>
+		
 		<form action = "", method = "POST", onChange="this.submit();">
 			{% csrf_token %}
-			 <i class="fa fa-filter" style="font-size: 16px; color:#6C757D"></i> {{ summ_stat_filter_form.country }}	
+			<span font-size:14px> Summary statistics: </span>{{ summ_stat_filter_form.country }}<i class="fa fa-filter" style="font-size: 16px; color:#6C757D"></i> 
 		</form>
+		
 	</div>
 
 	<div style="clear:both;">
@@ -62,104 +64,117 @@
 		</div>
 
 	</div>
+		
+	<div style="clear:both;padding-top:10px;margin:0px">
+		<hr>
+	</div>
 
 	<!------------------------------------->
 	<!--------- LINE CHART STARTS --------->
 
-	<div style="clear:both; width:70%; padding-left:12px; margin: 0 auto">
+	<div style="background-color:#E2E2E2; padding:3px">
+		<div style="clear:both; font-size:12px;">
+			<form action='' method="POST" onChange="this.submit()">
+				{% csrf_token %}
+				<div style="float:left;">
+					<div>
+						Date period: {{ dashboard_form.date_range }}
+					</div>
+					<div>
+						Data type: {{ data_type_form.data_type}}
+					</div>
+				</div>
 
-		<form action='' method="POST" onChange="this.submit()" style="padding-top:20px">
-			{% csrf_token %}
-			Date period: {{ dashboard_form.date_range }}
-			&emsp;
-			Data type: {{ data_type_form.data_type}}
-			<!-- Countries: {{ dashboard_form.countries}}
-			States: {{ dashboard_form.states}} -->
-		</form>
-	</div>
+				<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="width:35%;height:auto;font-size:12px;padding:1px">Click to modify chart data</button>
 
-		
-
-		<div style="clear:both; height:10px"></div>
-
-		<div id="container1" style="min-width: 300px; max-height: 80%; margin: 0 auto" class="border">
-			<script src="https://code.highcharts.com/highcharts.js"> </script>
-			<script src="https://code.highcharts.com/modules/exporting.js"> </script>
-			<script src="https://code.highcharts.com/modules/export-data.js"> </script>
-			<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-			<script>
-				_dates = {{ dates|safe }};
-				_outputconfirmed = {{ output_data_list_confirmed|safe }}
-				_outputdeaths = {{ output_data_list_deaths|safe }}
-				_outputnames = {{ output_region_names|safe }}
-				_datatype = {{ data_type|safe }}	
-				
-				Highcharts.chart('container1', {
-					chart: {type: 'line'},
-					rangeSelector: { selected: 4},
-					title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"24px"}},
-				  	xAxis: {categories: _dates},
-				  	yAxis: {title: {text: '# Confirmed Cases'}},
-				  	plotOptions: {series: {marker: {radius: 1}}},
-					series: [
-						{name: _outputnames[0], data: _outputconfirmed[0]},
-						{name: _outputnames[1], data: _outputconfirmed[1]},
-						{name: _outputnames[2], data: _outputconfirmed[2]},
-						{name: _outputnames[3], data: _outputconfirmed[3]},
-						{name: _outputnames[4], data: _outputconfirmed[4]},
-						{name: _outputnames[5], data: _outputconfirmed[5]},
-						{name: _outputnames[6], data: _outputconfirmed[6]},
-						{name: _outputnames[7], data: _outputconfirmed[7]},
-						{name: _outputnames[8], data: _outputconfirmed[8]},
-						{name: _outputnames[9], data: _outputconfirmed[9]},
-						{name: _outputnames[10], data: _outputconfirmed[10]},
-						{name: _outputnames[11], data: _outputconfirmed[11]},
-					]
-				})
-			</script>
+				<!-- Countries: {{ dashboard_form.countries}}
+				States: {{ dashboard_form.states}} -->
+			</form>
 		</div>
-		<!---------- LINE CHART ENDS ---------->
-		<!------------------------------------->
+		
+			<div style="clear:both; height:5px;"></div>
 
-		{% if alert_popup %}
-			<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px">
-			    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
+			<div id="container1" style="max-height: 80%; margin: 0 auto" class="border">
+				<script src="https://code.highcharts.com/highcharts.js"> </script>
+				<script src="https://code.highcharts.com/modules/exporting.js"> </script>
+				<script src="https://code.highcharts.com/modules/export-data.js"> </script>
+				<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-			 	<form method='get'>
-			 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
-			 	</form>
+				<script>
+					_dates = {{ dates|safe }};
+					_outputconfirmed = {{ output_data_list_confirmed|safe }}
+					_outputdeaths = {{ output_data_list_deaths|safe }}
+					_outputnames = {{ output_region_names|safe }}
+					_datatype = {{ data_type|safe }}	
+					
+					Highcharts.chart('container1', {
+						chart: {type: 'line'},
+						rangeSelector: { selected: 4},
+						title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"16px"}},
+					  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
+					  	yAxis: {title: {text: null}},
+					  	plotOptions: {series: {marker: {radius: 1}}},
+					  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
+						series: [
+							{name: _outputnames[0], data: _outputconfirmed[0]},
+							{name: _outputnames[1], data: _outputconfirmed[1]},
+							{name: _outputnames[2], data: _outputconfirmed[2]},
+							{name: _outputnames[3], data: _outputconfirmed[3]},
+							{name: _outputnames[4], data: _outputconfirmed[4]},
+							{name: _outputnames[5], data: _outputconfirmed[5]},
+							{name: _outputnames[6], data: _outputconfirmed[6]},
+							{name: _outputnames[7], data: _outputconfirmed[7]},
+							{name: _outputnames[8], data: _outputconfirmed[8]},
+							{name: _outputnames[9], data: _outputconfirmed[9]},
+							{name: _outputnames[10], data: _outputconfirmed[10]},
+							{name: _outputnames[11], data: _outputconfirmed[11]},
+						]
+					})
+				</script>
 			</div>
-		{% endif %}
+			<!---------- LINE CHART ENDS ---------->
+			<!------------------------------------->
 
-		<div style="min-height: 30px; max_height: 100px; min_width: 3000px"> </div>
+			{% if alert_popup %}
+				<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:50px;font-style:12px">
+				    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
+
+				 	<form method='get'>
+				 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
+				 	</form>
+				</div>
+			{% endif %}
+
+			<div style="height: 10px"> </div>
 
 
-		<div id="container2" style="min-width: 300px; max-height: 80%; margin: 0 auto" class="border">
-			<script>
-				Highcharts.chart('container2', {
-					chart: {type: 'line'},
-					rangeSelector: { selected: 4},
-					title: {text: _datatype+' Deaths', style: {fontSize:"24px"}},
-				  	xAxis: {categories: _dates},
-				  	yAxis: {title: {text: '# Deaths'}},
-				  	plotOptions: {series: {marker: {radius: 1}}},
-					series: [
-						{name: _outputnames[0], data: _outputdeaths[0]},
-						{name: _outputnames[1], data: _outputdeaths[1]},
-						{name: _outputnames[2], data: _outputdeaths[2]},
-						{name: _outputnames[3], data: _outputdeaths[3]},
-						{name: _outputnames[4], data: _outputdeaths[4]},
-						{name: _outputnames[5], data: _outputdeaths[5]},
-						{name: _outputnames[6], data: _outputdeaths[6]},
-						{name: _outputnames[7], data: _outputdeaths[7]},
-						{name: _outputnames[8], data: _outputdeaths[8]},
-						{name: _outputnames[9], data: _outputdeaths[9]},
-						{name: _outputnames[10], data: _outputdeaths[10]},
-						{name: _outputnames[11], data: _outputdeaths[11]},
-					]
-				})
-			</script>
+			<div id="container2" style="max-height: 80%; margin: 0 auto" class="border">
+				<script>
+					Highcharts.chart('container2', {
+						chart: {type: 'line'},
+						rangeSelector: { selected: 4},
+						title: {text: _datatype+' Deaths', style: {fontSize:"16px"}},
+					  	xAxis: {categories: _dates, labels:{style:{fontSize:'10px'}}},
+					  	yAxis: {title: {text: null}},
+					  	plotOptions: {series: {marker: {radius: 1}}},
+					  	legend: {symbolWidth:10,itemStyle:{"fontSize":'10px'}},
+						series: [
+							{name: _outputnames[0], data: _outputdeaths[0]},
+							{name: _outputnames[1], data: _outputdeaths[1]},
+							{name: _outputnames[2], data: _outputdeaths[2]},
+							{name: _outputnames[3], data: _outputdeaths[3]},
+							{name: _outputnames[4], data: _outputdeaths[4]},
+							{name: _outputnames[5], data: _outputdeaths[5]},
+							{name: _outputnames[6], data: _outputdeaths[6]},
+							{name: _outputnames[7], data: _outputdeaths[7]},
+							{name: _outputnames[8], data: _outputdeaths[8]},
+							{name: _outputnames[9], data: _outputdeaths[9]},
+							{name: _outputnames[10], data: _outputdeaths[10]},
+							{name: _outputnames[11], data: _outputdeaths[11]},
+						]
+					})
+				</script>
+			</div>
 		</div>
 	</div>
 
