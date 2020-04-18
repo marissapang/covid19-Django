@@ -122,10 +122,11 @@
 					<div id = "region-filter-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="clear:both">
 						<div class="modal-dialog">
 							<div class="modal-content">
-								<div class="modal-body" style="align-self: center">
+								<div class="modal-body" style="align-self: center; padding:5px">
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							  				<span aria-hidden="true">&times;</span>
 							  		</button>
+							  		<p> </p>
 									<p>Update country selection: {{ dashboard_form.countries}}</p>
 									<p>Update state selection:&nbsp &nbsp {{ dashboard_form.states}}</p>
 								</div>
@@ -179,7 +180,7 @@
 				<!------------------------------------->
 
 				{% if alert_popup %}
-					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:12px; padding:3px">
+					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:12px; padding-top:3px; padding-bottom:3px; padding-right:5px;padding-left:5px;">
 					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series.
 					 	<form method='get'>
 					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;padding:2px" value="&times" name="close_alert"/>
