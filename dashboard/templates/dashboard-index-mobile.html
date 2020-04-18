@@ -22,9 +22,9 @@
 		    -webkit-box-sizing:border-box;
 		}*/
 		#test_id {
-			margin-left:-10%;
+			margin-left:-8%;
 			margin-top:-10%;
-			width:120%;
+			width:116%;
 		}
 	</style>
 
@@ -103,8 +103,8 @@
 						<div>
 							Date period: {{ dashboard_form.date_range }}
 						</div>
-						<div>
-							Data type: {{ data_type_form.data_type}}
+						<div style="padding-top:2px">
+							Data type:   {{ data_type_form.data_type}}
 						</div>
 					</div>
 
@@ -159,7 +159,7 @@
 				<!------------------------------------->
 
 				{% if alert_popup %}
-					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:50px;font-style:10px">
+					<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px;font-size:10px">
 					    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
 					 	<form method='get'>
 					 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
