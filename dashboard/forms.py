@@ -55,7 +55,7 @@ class UpdateDashboardFormMobile(forms.Form):
 	cum_vs_incr = forms.ChoiceField(choices=data_choices, widget=forms.Select(attrs={'style':'width:90px;'}), required=False)
 
 class SummStatFilterForm(forms.Form):
-	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'height:30px;width:85px;margin-bottom:10px;'}), initial="Global")
+	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'font-size:14px;width:85px;height:30px;margin-bottom:10px;'}), initial="Global")
 
 class SummStatFilterFormMobile(forms.Form):
 	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'style':'font-size:16px;font-weight:550;height:25px;width:85px;'}), initial="Global")

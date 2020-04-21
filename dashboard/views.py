@@ -133,11 +133,11 @@ def index(request):
 
 	days = timedelta(1000) # set high number of days to subtract if it's all time
 	if date_range == "Past 2 months":
-		days = timedelta(61)
+		days = timedelta(62)
 	elif date_range == "Past month":
-		days = timedelta(31)
+		days = timedelta(32)
 	elif date_range == "Past 2 weeks":
-		days = timedelta(15)
+		days = timedelta(16)
 
 	start_date = latest_date - days
 
@@ -155,6 +155,8 @@ def index(request):
 	region_selections = country_selections + state_selections
 	
 	dates = list(df_confirmed['Date'].unique())
+	dates.pop(0)
+	print(dates)
 	output_confirmed_df = pd.DataFrame(dates, columns=["Date"])
 	output_deaths_df = pd.DataFrame(dates, columns=["Date"])
 
@@ -203,12 +205,15 @@ def index(request):
 				region_deaths_data = region_deaths_data.drop(['Num_Deaths', 'Lag_Num'], axis=1)
 				region_deaths_data = region_deaths_data.rename(columns={"Incr_Num" : "Num_Deaths"})
 
+
+		region_confirmed_data = region_confirmed_data.drop(region_confirmed_data.index[0])
+		region_deaths_data = region_deaths_data.drop(region_deaths_data.index[0])
+
 		region_confirmed_data = region_confirmed_data.fillna(0)
 		region_deaths_data = region_deaths_data.fillna(0)
 
 		region_confirmed_data = region_confirmed_data.rename(columns={"Num_Confirmed" : region_name})
 		region_deaths_data = region_deaths_data.rename(columns={"Num_Deaths" : region_name})
-
 
 		output_confirmed_df = output_confirmed_df.merge(region_confirmed_data, on="Date", how="left")
 		output_deaths_df = output_deaths_df.merge(region_deaths_data, on="Date", how="left")

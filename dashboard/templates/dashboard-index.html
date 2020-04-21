@@ -74,18 +74,23 @@
 	<!--------- LINE CHART STARTS --------->
 
 	<div style="float:left; width:70%; padding-left:12px; margin: 0 auto">
-		<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="padding:10px;">Click to modify chart data</button>
+		
 
-		<form action='' method="POST" onChange="this.submit()" style="padding-top:20px">
-			{% csrf_token %}
-			Date period:
-			{{ dashboard_form.date_range }}
-			&emsp;
-			Data type:
-			{{ data_type_form.data_type}}
-		</form>
+		<div>
+			<div style="float:left;width:70%">
+				<form action='' method="POST" onChange="this.submit()" style="padding-top:20px">
+					{% csrf_token %}
+					<p style="margin:2px">Date period: &nbsp{{ dashboard_form.date_range }} </p>
+					<p style="margin:2px">Data type: &nbsp &nbsp {{ data_type_form.data_type}} </p>
+				</form>
+			</div>
+			<div style="float:right; width:30%">
+				<button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#region-filter-modal" style="padding:10px;">Click to modify chart data</button>
+			</div>
+		</div>
 
-		<div id = "region-filter-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="margin-top:20%">
+
+		<div id = "region-filter-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="margin-top:20%; clear:both">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body" style="align-self: center">
@@ -147,10 +152,9 @@
 
 		</div>
 		
-
 		<div style="clear:both; height:10px"></div>
 
-		<div id="container1" style="min-width: 300px; max-height: 80%; margin: 0 auto" class="border">
+		<div id="container1" style="min-width: 400px; max-height: 80%; margin: 0 auto" class="border">
 			<script src="https://code.highcharts.com/highcharts.js"> </script>
 			<script src="https://code.highcharts.com/modules/exporting.js"> </script>
 			<script src="https://code.highcharts.com/modules/export-data.js"> </script>
@@ -167,8 +171,8 @@
 					chart: {type: 'line'},
 					rangeSelector: { selected: 4},
 					title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"24px"}},
-				  	xAxis: {categories: _dates},
-				  	yAxis: {title: {text: '# Confirmed Cases'}},
+				  	xAxis: {categories: _dates, tickInterval:3},
+				  	yAxis: {title: {text: null}},
 				  	plotOptions: {series: {marker: {radius: 1}}},
 					series: [
 						{name: _outputnames[0], data: _outputconfirmed[0]},
@@ -203,14 +207,14 @@
 		<div style="min-height: 30px; max_height: 100px; min_width: 3000px"> </div>
 
 
-		<div id="container2" style="min-width: 300px; max-height: 80%; margin: 0 auto" class="border">
+		<div id="container2" style="min-width: 400px; max-height: 80%; margin: 0 auto" class="border">
 			<script>
 				Highcharts.chart('container2', {
 					chart: {type: 'line'},
 					rangeSelector: { selected: 4},
 					title: {text: _datatype+' Deaths', style: {fontSize:"24px"}},
-				  	xAxis: {categories: _dates},
-				  	yAxis: {title: {text: '# Deaths'}},
+				  	xAxis: {categories: _dates, tickInterval:3},
+				  	yAxis: {title: {text: null}},
 				  	plotOptions: {series: {marker: {radius: 1}}},
 					series: [
 						{name: _outputnames[0], data: _outputdeaths[0]},
@@ -242,17 +246,17 @@
 			</form>
 		</div>
 
-		<div style="clear:both;width:85%;height:200px;background-color:#FDF3DF;color:#23272B">
+		<div style="clear:both;min-width:230px;width:85%;height:200px;background-color:#FDF3DF;color:#23272B">
 
 			<div style="height:40px;background-color:#FEE1A8 ">
-				<p style="text-align: center; font-size:18px; line-height: 40px; font-weight:550;"> {{summ_filter_country}} confirmed cases: </p>
+				<p style="text-align: center; font-size:16px; line-height: 40px; font-weight:550;"> {{summ_filter_country}} confirmed cases: </p>
 
 			</div>
 
 			<div style="height: 25px;"></div>
 
 			<div style="height:60px;">
-				<h1 style="text-align: center; line-height:60px;"> {{ summ_stats.confirmed_summ_stat }} </h1>
+				<h2 style="text-align: center; line-height:60px;"> {{ summ_stats.confirmed_summ_stat }} </h2>
 			</div>
 
 			<div style="height:50px;">
@@ -263,16 +267,16 @@
 
 		<div style="height:25px"></div>
 
-		<div style="width:85%;height:200px;background-color:#FFD6D6;color:#23272B">
+		<div style="min-width:230px;width:85%;height:200px;background-color:#FFD6D6;color:#23272B">
 
 			<div style="width:100%;height:40px;background-color:#FF0000">
-				<p style="text-align:center;font-size:18px;line-height:40px;font-weight:550"> {{summ_filter_country}} Deaths: </p>
+				<p style="text-align:center;font-size:16px;line-height:40px;font-weight:550"> {{summ_filter_country}} Deaths: </p>
 			</div>
 
 			<div style="width:100%;height: 25px;"></div>
 
 			<div style="width:100%;height:60px;">
-				<h1 style="text-align: center; line-height:60px;"> {{ summ_stats.deaths_summ_stat }} </h1>
+				<h2 style="text-align: center; line-height:60px;"> {{ summ_stats.deaths_summ_stat }} </h2>
 			</div>
 
 			<div style="width:100%;height:50px;">
