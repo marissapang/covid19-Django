@@ -200,6 +200,7 @@
 					series_confirmed_data = {}
 					series_confirmed_data['name'] = _outputnames[series]
 					series_confirmed_data['data'] = _outputconfirmed[series]
+					series_confirmed_data['selected'] = true
 					confirmed_data.push(series_confirmed_data)
 
 					series_deaths_data = {}
@@ -214,7 +215,22 @@
 					title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"24px"}},
 				  	xAxis: {categories: _dates, tickInterval:3},
 				  	yAxis: {title: {text: null}},
-				  	plotOptions: {series: {marker: {radius: 1}}},
+				  	legend: {layout: "horizontal"},
+				  	plotOptions: {
+				  		series: {
+				  			marker: {radius: 1}, 
+				  			showCheckbox:true, 
+				  			events: {
+				  				checkboxClick: function(event) {
+			  						if (event.checked == true) {
+			  							event.item.show()
+			  						} else{
+			  							event.item.hide()
+			  						}
+			  					},
+			  				}
+				  		}
+				  	},
 				  	series: confirmed_data
 				})
 			</script>
@@ -240,12 +256,13 @@
 				Highcharts.chart('container2', {
 					chart: {type: 'line'},
 					rangeSelector: { selected: 4},
-					title: {text: _datatype+' Deaths', style: {fontSize:"24px"}},
+					title: {text: _datatype +' Deaths', style: {fontSize:"24px"}},
 				  	xAxis: {categories: _dates, tickInterval:3},
 				  	yAxis: {title: {text: null}},
 				  	plotOptions: {series: {marker: {radius: 1}}},
-				  	series: deaths_data,
-				})
+				  	series: deaths_data
+				});
+
 			</script>
 		</div>
 	</div>
