@@ -12,12 +12,18 @@
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
-			height: 500px;
+			height: 400px;
 			align-items: start;
+			font-size:14px;
+			font-weight:400;
+			padding-left:20px;
+			padding-bottom:0px;
+			padding-right:5px;
+			padding-top:0;
 		}
 
 		form.countrymodalform li{
-			width: 220px;
+			width: 180px;
 		}
 
 		form.statemodalform ul{
@@ -26,6 +32,9 @@
 			flex-direction: row;
 			flex-wrap: nowrap;
 			width: 300px;
+			font-size:16px;
+			font-weight: 550;
+			margin-left:-30px;
 		}
 
 		form.statemodalform ul ul{
@@ -33,10 +42,12 @@
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
+			font-weight:400;
+			font-size:14px;
 		}
 
 		form.statemodalform ul ul li{
-			width: 270px;
+			width: 250px;
 		}
 	</style>
 
@@ -103,6 +114,7 @@
 					</div>
 				</div>
 			</div>
+			
 
 			<div id = "country-selection-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 				<form action = "" method = "POST" class = "countrymodalform"> 
@@ -110,17 +122,20 @@
 				    <div class="modal-content">
 				    	<div class="modal-header">
 				  			<h5 class="modal-title" id="exampleModalLabel">Country-level data to include on dashboard</h5>
-				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  				<span aria-hidden="true">&times;</span>
-				  			</button>
+				  			<div style="float:right">
+					  			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				  				<button type="submit" name = "country_select_save" class="btn btn-primary"> Save changes </button>
+					  		</div>
 				  		</div>
-			  			<div class="modal-body">		  				
+			  			<div class="modal-body">	
+
+							<input type="button" onclick='UnSelectAllCountries()' value="Unselect All"/>
 		  					{% csrf_token %}
 		  					{{ dashboard_form.countries}}
 			  			</div>
 			  			<div class="modal-footer">
 			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-			  				<button type="submit" class="btn btn-primary"> Save changes </button>
+			  				<button type="submit" name = "country_select_save" class="btn btn-primary"> Save changes </button>
 			  			</div>
 			  		</div>
 				  </div>
@@ -133,22 +148,41 @@
 				    <div class="modal-content">
 				    	<div class="modal-header">
 				  			<h5 class="modal-title" id="exampleModalLabel">State-level data to include on dashboard</h5>
-				  			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  				<span aria-hidden="true">&times;</span>
-				  			</button>
+				  			<div style="float:right">
+					  			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				  				<button type="submit" name = "state_select_save" class="btn btn-primary"> Save changes </button>
+					  		</div>
 				  		</div>
 			  			<div class="modal-body">	
+			  				<input type="button" onclick='UnSelectAllStates()' value="Unselect All"/>
 			  				{% csrf_token %}
-		  					{{ dashboard_form.states}}	  				
+			  				{{ dashboard_form.states}}	
 			  			</div>
 			  			<div class="modal-footer">
-			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  				<button type="submit" class="btn btn-primary"> Save changes </button>
+			  				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			  				<button type="submit" name = "state_select_save" class="btn btn-primary"> Save changes </button>
 			  			</div>
 			  		</div>
 				  </div>
 				</form>
 			</div> 
+
+			<script>
+				function UnSelectAllCountries(){
+					var items=document.getElementsByName('countries');
+					for(var i=0; i<items.length; i++){
+						if(items[i].type=='checkbox')
+							items[i].checked=false;
+					}
+				}
+				function UnSelectAllStates(){
+					var items=document.getElementsByName('states');
+					for(var i=0; i<items.length; i++){
+						if(items[i].type=='checkbox')
+							items[i].checked=false;
+					}
+				}
+			</script>	
 
 		</div>
 		

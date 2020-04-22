@@ -22,30 +22,66 @@ def index(request):
 			country_selections = dashboard_form.cleaned_data.get('countries') # this is a list object
 			state_selections = dashboard_form.cleaned_data.get('states') # this is a list object
 			date_range = dashboard_form.cleaned_data.get('date_range') # this is a string object
-			if request.user.is_authenticated: # if user is signed in then we save changes to profile
-				if country_selections != []: # only save if not empty
+
+			if 'country_select_save' in request.POST:
+				country_selections = dashboard_form.cleaned_data.get('countries')
+				if request.user.is_authenticated: # if user is signed in then we save changes to profile
 					current_profile.dashboard_countries = str(country_selections)
-				if state_selections != []:
+					current_profile.save()
+				else: 
+					request.session['countries'] = country_selections
+			elif 'state_select_save' in request.POST:
+				state_selections = dashboard_form.cleaned_data.get('states')
+				if request.user.is_authenticated: # if user is signed in then we save changes to profile
 					current_profile.dashboard_states = str(state_selections)
-				if date_range != "":
-					current_profile.dashboard_date_range = date_range
-				current_profile.save()
+					current_profile.save()
+				else: 
+					request.session['states'] = state_selections
+			
+			date_range = dashboard_form.cleaned_data.get('date_range')
+			if date_range != "":
+				if request.user.is_authenticated: # if user is signed in then we save changes to profile
+					current_profile.dashboard_date_range = str(date_range)
+					current_profile.save()
+				else: 
+					request.session['date_range'] = date_range
+
+			if request.user.is_authenticated:
 				country_selections = ast.literal_eval(current_profile.dashboard_countries)
 				state_selections = ast.literal_eval(current_profile.dashboard_states)
 				date_range = current_profile.dashboard_date_range
-			else: # if user is not logged in save changes to session
-				if country_selections != []:
-					request.session['countries'] = country_selections
-				if state_selections != []:
-					request.session['states'] = state_selections
-				if date_range != "":
-					request.session['date_range'] = date_range
+			else: 
 				country_selections = request.session.get('countries')
 				state_selections = request.session.get('states')
 				date_range = request.session.get('date_range')
-				country_selections = default_country_selections if country_selections is None else country_selections
-				state_selections = default_state_selections if state_selections is None else state_selections
-				date_range = default_date_range if date_range is None else date_range
+			country_selections = default_country_selections if country_selections is None else country_selections
+			state_selections = default_state_selections if state_selections is None else state_selections
+			date_range = default_date_range if date_range is None else date_range
+			
+			# if request.user.is_authenticated: # if user is signed in then we save changes to profile
+			# 	if country_selections != []: # only save if not empty
+			# 		current_profile.dashboard_countries = str(country_selections)
+			# 	if state_selections != []:
+			# 		current_profile.dashboard_states = str(state_selections)
+			# 	if date_range != "":
+			# 		current_profile.dashboard_date_range = date_range
+			# 	current_profile.save()
+			# 	country_selections = ast.literal_eval(current_profile.dashboard_countries)
+			# 	state_selections = ast.literal_eval(current_profile.dashboard_states)
+			# 	date_range = current_profile.dashboard_date_range
+			# else: # if user is not logged in save changes to session
+			# 	if country_selections != []:
+			# 		request.session['countries'] = country_selections
+			# 	if state_selections != []:
+			# 		request.session['states'] = state_selections
+			# 	if date_range != "":
+			# 		request.session['date_range'] = date_range
+			# 	country_selections = request.session.get('countries')
+			# 	state_selections = request.session.get('states')
+			# 	date_range = request.session.get('date_range')
+			# 	country_selections = default_country_selections if country_selections is None else country_selections
+			# 	state_selections = default_state_selections if state_selections is None else state_selections
+			# 	date_range = default_date_range if date_range is None else date_range
 	else: # if request method is not post, just generate the form
 		if request.user.is_authenticated: # use saved DB settings in profile
 			country_selections = ast.literal_eval(current_profile.dashboard_countries)
@@ -156,11 +192,28 @@ def index(request):
 	
 	dates = list(df_confirmed['Date'].unique())
 	dates.pop(0)
-	print(dates)
 	output_confirmed_df = pd.DataFrame(dates, columns=["Date"])
 	output_deaths_df = pd.DataFrame(dates, columns=["Date"])
 
 	first_data_type = request.session.get('data_type')
+
+	if request.method=="POST":
+		print("testing testing")
+		data_type_form = DataTypeForm(request.POST)
+		if data_type_form.is_valid():
+			data_type = data_type_form.cleaned_data.get('data_type')
+			request.session['data_type'] = data_type
+			# data_type_form = DataTypeForm(initial={"data_type":data_type})
+		else:
+			data_type = first_data_type if first_data_type is not None else "Cumulative"
+			# data_type_form = DataTypeForm(initial={"data_type":data_type})
+	else:
+		print("in else")
+		data_type = first_data_type if first_data_type is not None else "Cumulative"
+		# data_type_form = DataTypeForm(initial={"data_type":data_type})
+
+	data_type_form = DataTypeForm(initial={"data_type":data_type})
+
 	
 	for region_name, region_type in region_dict.items(): 
 		if region_name == "Global":
@@ -180,19 +233,6 @@ def index(request):
 		region_deaths_data = region_deaths_data.fillna(0)
 
 		# create incremental data and decide whether or not to use cumulative or incremental data
-		
-		if request.method=="POST":
-			data_type_form = DataTypeForm(request.POST)
-			if data_type_form.is_valid():
-				data_type = data_type_form.cleaned_data.get('data_type')
-				request.session['data_type'] = data_type
-				data_type_form = DataTypeForm(initial={"data_type":data_type})
-			else:
-				data_type = first_data_type if first_data_type is not None else "Cumulative"
-				data_type_form = DataTypeForm(initial={"data_type":data_type})
-		else:
-			data_type = first_data_type if first_data_type is not None else "Cumulative"
-			data_type_form = DataTypeForm(initial={"data_type":data_type})
 
 		if data_type == "Incremental":
 				region_confirmed_data['Lag_Num'] = region_confirmed_data['Num_Confirmed'].shift(1)
