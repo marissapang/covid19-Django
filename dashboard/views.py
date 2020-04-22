@@ -205,7 +205,6 @@ def index(request):
 		else:
 			data_type = first_data_type if first_data_type is not None else "Cumulative"
 	else:
-		print("in else")
 		data_type = first_data_type if first_data_type is not None else "Cumulative"
 
 	data_type_form = DataTypeForm(initial={"data_type":data_type})
