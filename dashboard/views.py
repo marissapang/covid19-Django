@@ -198,19 +198,15 @@ def index(request):
 	first_data_type = request.session.get('data_type')
 
 	if request.method=="POST":
-		print("testing testing")
 		data_type_form = DataTypeForm(request.POST)
 		if data_type_form.is_valid():
 			data_type = data_type_form.cleaned_data.get('data_type')
 			request.session['data_type'] = data_type
-			# data_type_form = DataTypeForm(initial={"data_type":data_type})
 		else:
 			data_type = first_data_type if first_data_type is not None else "Cumulative"
-			# data_type_form = DataTypeForm(initial={"data_type":data_type})
 	else:
 		print("in else")
 		data_type = first_data_type if first_data_type is not None else "Cumulative"
-		# data_type_form = DataTypeForm(initial={"data_type":data_type})
 
 	data_type_form = DataTypeForm(initial={"data_type":data_type})
 
@@ -262,15 +258,11 @@ def index(request):
 	output_data_list_confirmed = []
 	output_data_list_deaths = []
 
-	for i in range(0, 12):
-		if len(region_dict) > i:
-			output_region_names += [list(region_dict.keys())[i]]
-			output_data_list_confirmed += [list(output_confirmed_df[list(region_dict.keys())[i]])]
-			output_data_list_deaths += [list(output_deaths_df[list(region_dict.keys())[i]])]
-		else:
-			output_region_names += [['']]
-			output_data_list_confirmed += [[]]
-			output_data_list_deaths += [[]]
+	for i in range(0, len(region_dict)):
+		output_region_names += [list(region_dict.keys())[i]]
+		output_data_list_confirmed += [list(output_confirmed_df[list(region_dict.keys())[i]])]
+		output_data_list_deaths += [list(output_deaths_df[list(region_dict.keys())[i]])]
+
 	##### DATA SERIES ENDS #####	
 
 
