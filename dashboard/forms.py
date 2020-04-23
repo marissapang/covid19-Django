@@ -48,8 +48,8 @@ class UpdateDashboardForm(forms.Form):
 	date_range = forms.ChoiceField(choices = date_range_options, required=False)
 
 class UpdateDashboardFormMobile(forms.Form):
-	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries",  widget=forms.SelectMultiple(attrs={'style':'width:150px;'}), required=False)
-	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.SelectMultiple(attrs={'style':'width:150px;'}), required=False)
+	countries = forms.MultipleChoiceField(choices = country_choices, label = "Select Countries",  widget=forms.SelectMultiple(attrs={'style':'width:200px;'}), required=False)
+	states = forms.MultipleChoiceField(choices = state_choices, label = "Select States", widget=forms.SelectMultiple(attrs={'style':'width:200px;'}), required=False)
 	date_range = forms.ChoiceField(choices = date_range_options, widget=forms.Select(attrs={'style':'width:90px;'}), required=False)
 	cum_vs_incr = forms.ChoiceField(choices=data_choices, widget=forms.Select(attrs={'style':'width:90px;'}), required=False)
 
