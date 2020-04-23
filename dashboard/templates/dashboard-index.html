@@ -215,20 +215,9 @@
 					title: {text: _datatype + ' Confirmed Cases', style: {fontSize:"24px"}},
 				  	xAxis: {categories: _dates, tickInterval:3},
 				  	yAxis: {title: {text: null}},
-				  	legend: {layout: "horizontal"},
 				  	plotOptions: {
 				  		series: {
 				  			marker: {radius: 1}, 
-				  			showCheckbox:true, 
-				  			events: {
-				  				checkboxClick: function(event) {
-			  						if (event.checked == true) {
-			  							event.item.show()
-			  						} else{
-			  							event.item.hide()
-			  						}
-			  					},
-			  				}
 				  		}
 				  	},
 				  	series: confirmed_data
@@ -240,7 +229,7 @@
 
 		{% if alert_popup %}
 			<div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-top:10px">
-			    <strong>Hey!</strong> You can click legend labels to hide and unhide data series .
+			    <strong>Hey!</strong> You can click legend labels to hide and unhide data series.
 
 			 	<form method='get'>
 			 		<input type="submit" class="close" style="background-color:#D1ECF1;border:0px;" value="&times" name="close_alert"/>
