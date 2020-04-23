@@ -3,6 +3,16 @@ import pandas as pd
 from .forms import CountryFilterForm
 
 def index(request):
+    
+    
+
+
+
+
+
+
+
+
     df = pd.read_csv("trends/data/confirmed_cases.csv")
 
     country = request.GET.get('country_filter')
