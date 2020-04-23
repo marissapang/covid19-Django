@@ -57,7 +57,7 @@ class SummStatFilterForm(forms.Form):
 	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'class':'btn btn-outline-secondary','style':'font-size:14px;width:85px;height:30px;margin-bottom:10px;'}), initial="Global")
 
 class SummStatFilterFormMobile(forms.Form):
-	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'style':'font-size:16px;font-weight:550;height:25px;width:85px;'}), initial="Global")
+	country = forms.ChoiceField(choices = country_choices, widget=forms.Select(attrs={'style':'font-size:16px;font-weight:550;height:25px;width:100px;'}), initial="Global")
 
 class DataTypeForm(forms.Form):
 	data_type = forms.ChoiceField(choices=data_choices, initial="Cumulative")
