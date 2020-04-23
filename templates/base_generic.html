@@ -54,29 +54,47 @@
 
         	<div class="collapse navbar-collapse" id="exCollapsingNavbar">
 				<ul class="nav navbar-nav">
+
+					{% if request.user_agent.is_mobile and user.is_authenticated and user.first_name %}
+						<li> <span style="color:#FFFFFF;font-style:italic;font-weight:300"> Welcome, {{ user.first_name }}! </span></li>
+					{% elif request.user_agent.is_mobile and user.is_authenticated and user.get_username %}
+						<li> Welcome, {{ user.get_username }}! </li>
+					{% endif %}
+
 					{% if tab == "dashboard" %}
 						<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
                 		
             		{% else %}
             			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
             		{% endif %}
+
+            		{% if request.user_agent.is_mobile %}
+            			{% if user.is_authenticated %}
+            				<li class="nav-item"><a href="{% url 'account_logout'%}" class="nav-link">Log Out</a></li>
+        				{% else %}
+            				<li class="nav-item"><a href="{% url 'account_login'%}" class="nav-link">Log In</a></li>
+            				<li class="nav-item"><a href="{% url 'override_signup' %}" class="nav-link">Sign Up</a></li>
+        				{% endif %}
+        			{% endif %}
 				</ul>
 			</div>
 
 
 			{% if user.is_authenticated %}
-				{% if user_agent.is_mobile %}
+				{% if not request.user_agent.is_mobile %}
 				    {% if user.first_name %}
 						<button class="btn btn-dark navbar-btn" style="margin: 2px"> Welcome, {{ user.first_name }}!</button>
 					{% else %}
 						<button class="btn btn-dark navbar-btn" style="margin: 2px"> Welcome, {{ user.get_username }}!</button>
 					{% endif %}
-				{% endif %}
 				<a class="btn btn-secondary navbar-btn" href="{% url 'account_logout' %}">Log Out</a>
+				{% endif %}	
 			{% else %}
-				<a class="btn btn-secondary navbar-btn" style="margin: 2px" href="{% url 'account_login'%}">Log In</a>
-<!-- 			<a class="btn btn-secondary navbar-btn" style="margin: 2px" href="{% url 'override_signup' %}">Sign Up</a>
- -->		{% endif %}
+				{% if not request.user_agent.is_mobile %}
+					<a class="btn btn-dark navbar-btn" style="margin: 2px" href="{% url 'account_login'%}">Log In</a>
+					<a class="btn btn-secondary navbar-btn" style="margin: 2px" href="{% url 'override_signup' %}">Sign Up</a>
+				{% endif %}
+		{% endif %}
 
 		</div>
 	</nav>
