@@ -7,18 +7,177 @@
 {% endblock %}
 
 {% block content %}
+
+<style>
+	.smallCharts {
+		border:solid black;
+		width:48%;
+		height:300px;
+		margin:1%;
+	}
+</style>
 <div> 
 	<h2> Data Representations </h2>
 </div>
 
-<div style="float:left, width:70%"> 
-	This section is used for the charts
-	<div style="">
-		chart 1
+<div style="float:left; width:85%; display:flex; flex-direction:row;flex-wrap:wrap"> 
+	<div class="smallCharts">
+		<div style="height:10%; padding-top: 1%; padding-bottom:1%; font-size:12px">
+			<div style="float:left">
+				Cumulative confirmed cases
+			</div>
+			<div style="float:right">
+				<form action = "", method = "GET", onChange="this.submit();">{{ country_filter_form.confirmed_country_filter}}</form>
+			</div>
+		</div>
+		<div id="container1" style="width:100%; height: 90%; margin: 0 auto;" class="border">
+			<script src="https://code.highcharts.com/highcharts.js"> </script>
+			<script src="https://code.highcharts.com/modules/exporting.js"> </script>
+			<script src="https://code.highcharts.com/modules/export-data.js"> </script>
+			<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+			<script>
+				_dates = {{dates|safe}};
+				_breakdowndata = {{breakdown_data|safe}};
+				_breakdownnames = {{breakdown_names|safe}}
+
+				var confirmed_data = []
+				for (var series=0; series<_breakdownnames.length; series++){
+					series_confirmed_data = {}
+					series_confirmed_data['name'] = _breakdownnames[series]
+					series_confirmed_data['data'] = _breakdowndata[series]
+					series_confirmed_data['selected'] = true
+					confirmed_data.push(series_confirmed_data)
+				}
+
+				Highcharts.chart('container1', {
+				  	chart: {type: 'area'},
+				  	rangeSelector: { selected: 4},
+				  	title: {text: '_', style: {fontSize:"1px"}},
+				  	xAxis: {categories: _dates, tickInterval: 30, labels: {style: {fontSize:"10px"}}},
+				  	yAxis: {title: {text: null}},
+				  	plotOptions: {
+				  		area: {stacking: 'normal'},
+				  		series: {marker: {radius: 1}}
+				  	},
+				  	legend: {itemStyle: {fontSize:"10px"}},
+				  	series: confirmed_data
+		      	});
+			</script>
+		</div>
+	</div>
+	<div class="smallCharts">
+		<div style="height:10%; padding-top: 1%; padding-bottom:1%; font-size:12px">
+			<div style="float:left">
+				Cumulative deaths
+			</div>
+			<div style="float:right">
+				<form action = "", method = "GET", onChange="this.submit();">{{ country_filter_form.deaths_country_filter}}</form>
+			</div>
+		</div>
+		<div id="container2" style="width:100%; height: 90%; margin: 0 auto;" class="border">
+			<script>
+				_dates = {{dates|safe}};
+				_breakdowndeathsdata = {{breakdown_deaths_data|safe}};
+				_breakdowndeathsnames = {{breakdown_deaths_names|safe}}
+
+				var deaths_data = []
+				for (var series=0; series<_breakdowndeathsnames.length; series++){
+					series_deaths_data = {}
+					series_deaths_data['name'] = _breakdowndeathsnames[series]
+					series_deaths_data['data'] = _breakdowndeathsdata[series]
+					series_deaths_data['selected'] = true
+					deaths_data.push(series_deaths_data)
+				}
+				Highcharts.chart('container2', {
+				  	chart: {type: 'area'},
+				  	rangeSelector: { selected: 4},
+				  	title: {text: '_', style: {fontSize:"1px"}},
+				  	xAxis: {categories: _dates, tickInterval: 30, labels: {style: {fontSize:"10px"}}},
+				  	yAxis: {title: {text: null}},
+				  	plotOptions: {
+				  		area: {stacking: 'normal'},
+				  		series: {marker: {radius: 1}}
+				  	},
+				  	legend: {itemStyle: {fontSize:"10px"}},
+				  	// series: [{name:'test', data: [1,2,3,4,5]}]
+				  	series: deaths_data
+		      	});
+			</script>
+		</div>
+	</div>
+	<div class="smallCharts">
+		<div style="height:10%; padding-top: 1%; padding-bottom:1%; font-size:12px">
+			Death rate by GDP Per Capita
+		</div>
+		<div id="container3" style="width:100%; height: 90%; margin: 0 auto;" class="border">
+			<script src="http://code.highcharts.com/highcharts-more.js"></script>
+		
+			<script>
+				_death_rate_data = {{ death_rate_data|safe }}
+
+				Highcharts.chart('container3', {
+				    chart: {
+				        type: 'bubble',
+				        plotBorderWidth: 0,
+				        zoomType: 'xy'
+				    },
+				    legend: {enabled: false},
+				    title: {text: ''},
+				    subtitle: {text: ''},
+				    xAxis: {
+				        gridLineWidth: 1,
+				        title: {
+				            text: 'GDP Per Capita'
+				        },
+				        labels: {
+				            format: '{value} USD'
+				        },
+				    },
+
+				    yAxis: {
+				        startOnTick: false,
+				        endOnTick: false,
+				        title: {
+				            text: 'Death Rate'
+				        },
+				        labels: {
+				            format: '{value}%'
+				        },
+				        maxPadding: 0.2,
+				    },
+
+				    tooltip: {
+				        useHTML: true,
+				        headerFormat: '<table>',
+				        pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
+				            '<tr><th>GDP Per Capita:</th><td>{point.x}g</td></tr>' +
+				            '<tr><th>Death Rate:</th><td>{point.y}g</td></tr>' +
+				            '<tr><th>Total Confirmed Cases:</th><td>{point.z}%</td></tr>',
+				        footerFormat: '</table>',
+				        followPointer: true
+				    },
+
+				    plotOptions: {
+				        series: {
+				            dataLabels: {
+				                enabled: true,
+				                format: '{point.name}'
+				            }
+				        }
+				    },
+				    series: [{data: _death_rate_data}]
+				});
+			</script>
+		</div>
+	</div>
+	<div class="smallCharts">
+		chart 4
 	</div>
 
+
 </div>
-<div style="float:right, width:20%, max-width:300px">
+
+<div style="float:right; width:15%; max-width:300px">
 	<h4> Useful data sources </h4>
 	This is for links to data sources
 
@@ -27,75 +186,4 @@
 </div>
 
 
-
-
-
-    <div class="container-fluid" style = "padding-top: 2%; padding-bottom:2%">
-		<h1> {{ country }} # Cases Confirmed </h1>
-	</div>
-
-	<div class="container" style="padding-top: 1%; padding-bottom: 1%">
-		<!-- Content here -->
-		<form action = "", method = "GET", onChange="this.submit();">
-				Country filter: {{ country_filter_form.country_filter}}
-
-		</form>
-	</div>
-
-	<div id="container" style="min-width: 310px; max-width:80%; height: 500px; margin: 0 auto" class="border">
-		<script src="https://code.highcharts.com/highcharts.js"> </script>
-		<script src="https://code.highcharts.com/modules/exporting.js"> </script>
-		<script src="https://code.highcharts.com/modules/export-data.js"> </script>
-		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-		<script>
-			_dates = {{dates|safe}};
-			_b1 = {{breakdown_1|safe}};
-			_b2 = {{breakdown_2|safe}};
-			_b3 = {{breakdown_3|safe}};
-			_b4 = {{breakdown_4|safe}};
-			_b5 = {{breakdown_5|safe}};
-			_b6 = {{breakdown_6|safe}};
-			_b1name = {{breakdown_1_name|safe}}
-			_b2name = {{breakdown_2_name|safe}}
-			_b3name = {{breakdown_3_name|safe}}
-			_b4name = {{breakdown_4_name|safe}}
-			_b5name = {{breakdown_5_name|safe}}
-			_b6name = {{breakdown_6_name|safe}}
-
-			Highcharts.chart('container', {
-			  	chart: {type: 'area'},
-			  	rangeSelector: { selected: 4},
-			  	title: {text: 'Cumulative Confirmed Cases', style: {fontSize:"24px"}},
-			  	subtitle: {text: 'Global data from Johns Hopkins, US state-level data from the New York Times'},
-			  	xAxis: {categories: _dates},
-			  	yAxis: {
-			  		title: {text: '# Confirmed Cases'}
-			  	},
-			  	plotOptions: {
-			  		area: {stacking: 'normal'},
-			  		series: {marker: {radius: 1}}
-			  	},
-			  	series: [{ 
-			  		name: _b1name,
-			  		data: _b1
-		  		},{
-		  			name: _b2name, 
-		  			data: _b2
-		  		},{ 
-			  		name: _b3name,
-			  		data: _b3
-		  		},{
-		  			name: _b4name, 
-		  			data: _b4
-		  		},{ 
-			  		name: _b5name,
-			  		data: _b5
-		  		},{
-		  			name: _b6name, 
-		  			data: _b6 
-		  		}]
-	      	});
-		</script>
-
-</div>
 {% endblock %}

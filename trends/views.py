@@ -3,29 +3,30 @@ import pandas as pd
 from .forms import CountryFilterForm
 
 def index(request):
-    
-    
-
-
-
-
-
-
-
-
     df = pd.read_csv("trends/data/confirmed_cases.csv")
+    df_deaths = pd.read_csv("trends/data/num_deaths.csv")
 
-    country = request.GET.get('country_filter')
-    if country is None: 
-        country = "Global"
+
+    ###################################
+    ###### COUNTRY CHARTS BEGINS ######
+    country_confirmed = request.GET.get('confirmed_country_filter')
+    country_deaths= request.GET.get('deaths_country_filter')
+
+    if country_confirmed is not None:
+        request.session['country_confirmed'] = country_confirmed
+
+    if country_deaths is not None:
+        request.session['country_deaths'] = country_deaths
+
+    country_confirmed = request.session.get('country_confirmed', 'Global')
+    country_deaths = request.session.get('country_deaths', 'Global')
      
-    if country == "Global":
-        df2 = df.groupby(['Country','Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed") 
-        top_regions = df2.groupby('Country')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed") 
+    if country_confirmed == "Global":
+        df = df.groupby(['Country','Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed") 
+        top_regions = df.groupby('Country')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed") 
         top_regions = top_regions.sort_values(by=['Num_Confirmed'], ascending=False)
         top_regions = list(top_regions.head(5)['Country'])
 
-        df = df.groupby(['Date', 'Country'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
         df['Agg_Country'] =  df.apply(lambda row: row['Country'] if row['Country'] in top_regions else 'Other Countries', axis=1)
         df = df.groupby(['Date', 'Agg_Country'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
         
@@ -33,30 +34,21 @@ def index(request):
         df = df.fillna(0)
         df = df[top_regions + ['Other Countries']] 
         dates = list(df.index)
+
         breakdown_names = top_regions + ['Other Countries']
-
-        breakdown_1 = list(df[top_regions[0]])
-        breakdown_2 = list(df[top_regions[1]])
-        breakdown_3 = list(df[top_regions[2]])
-        breakdown_4 = list(df[top_regions[3]])
-        breakdown_5 = list(df[top_regions[4]])
-        breakdown_6 = list(df[breakdown_names[5]])
-        breakdown_1_name = [breakdown_names[0]]
-        breakdown_2_name = [breakdown_names[1]]
-        breakdown_3_name = [breakdown_names[2]]
-        breakdown_4_name = [breakdown_names[3]]
-        breakdown_5_name = [breakdown_names[4]]
-        breakdown_6_name = [breakdown_names[5]]
-
+        breakdown_data = []
+        for region in breakdown_names:
+            breakdown_data += [list(df[region])]
     else:
-        df = df[df['Country']==country]
+        df = df[df['Country']==country_confirmed]
+        unique_states = list(df['State'].unique())
 
-        if len(df['State'].unique()) >= 6:
+        if len(unique_states) > 1:
+            df = df.groupby(['Date', 'State'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
             top_regions = df.groupby('State')["Num_Confirmed"].agg("max").reset_index(name="Num_Confirmed") 
             top_regions = top_regions.sort_values(by=['Num_Confirmed'], ascending=False)
             top_regions = list(top_regions.head(5)['State'])
 
-            df = df.groupby(['Date', 'State'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
             df['Agg_State'] =  df.apply(lambda row: row['State'] if row['State'] in top_regions else 'Other States', axis=1)
             df = df.groupby(['Date', 'Agg_State'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
             
@@ -64,65 +56,103 @@ def index(request):
             df = df.fillna(0)
             df = df[top_regions + ['Other States']] 
             dates = list(df.index)
+
             breakdown_names = top_regions + ['Other States']
+            breakdown_data = []
 
-            breakdown_1 = list(df[top_regions[0]])
-            breakdown_2 = list(df[top_regions[1]])
-            breakdown_3 = list(df[top_regions[2]])
-            breakdown_4 = list(df[top_regions[3]])
-            breakdown_5 = list(df[top_regions[4]])
-            breakdown_6 = list(df[breakdown_names[5]])
-            breakdown_1_name = [breakdown_names[0]]
-            breakdown_2_name = [breakdown_names[1]]
-            breakdown_3_name = [breakdown_names[2]]
-            breakdown_4_name = [breakdown_names[3]]
-            breakdown_5_name = [breakdown_names[4]]
-            breakdown_6_name = [breakdown_names[5]]
+            for region in breakdown_names:
+                breakdown_data += [list(df[region])]
+
         else: 
+            dates = list(df['Date'].unique())
             df = df.groupby(['Date'])["Num_Confirmed"].agg("sum").reset_index(name="Num_Confirmed")
-            df = df.fillna(0)
-            dates = list(df.Date)
-            print(dates)
+            breakdown_names = [[country_confirmed]]
+            breakdown_data = [list(df['Num_Confirmed'])]
 
-            breakdown_1 = list(df['Num_Confirmed'])
-            breakdown_1_name = [country]
+    if country_deaths == "Global":
 
-            print(breakdown_1)
-            print(breakdown_1_name)
+        df_deaths = df_deaths.groupby(['Country','Date'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths") 
+        top_regions_deaths = df_deaths.groupby('Country')["Num_Deaths"].agg("max").reset_index(name="Num_Deaths") 
+        top_regions_deaths = top_regions_deaths.sort_values(by=['Num_Deaths'], ascending=False)
+        top_regions_deaths = list(top_regions_deaths.head(5)['Country'])
 
-            breakdown_2 = []
-            breakdown_3 = []
-            breakdown_4 = []
-            breakdown_5 = []
-            breakdown_6 = []
-            breakdown_2_name = []
-            breakdown_3_name = []
-            breakdown_4_name = []
-            breakdown_5_name = []
-            breakdown_6_name = []
+        df_deaths['Agg_Country'] =  df_deaths.apply(lambda row: row['Country'] if row['Country'] in top_regions_deaths else 'Other Countries', axis=1)
+        df_deaths = df_deaths.groupby(['Date', 'Agg_Country'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths")
+        
+        df_deaths = df_deaths.pivot(index='Date', columns='Agg_Country', values='Num_Deaths')
+        df_deaths = df_deaths.fillna(0)
+        df_deaths = df_deaths[top_regions_deaths + ['Other Countries']] 
+
+        breakdown_deaths_names = top_regions_Deaths + ['Other Countries']
+        breakdown_deaths_data = []
+        for region in breakdown_deaths_names:
+            breakdown_deaths_data += [list(df_deaths[region])]
+    else: 
+        df_deaths = df_deaths[df_deaths['Country']==country_deaths]
+        unique_states_deaths = list(df_deaths['State'].unique())
+
+        if len(unique_states_deaths) > 1:
+            df_deaths = df_deaths.groupby(['Date', 'State'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths")
+            top_regions_deaths = df_deaths.groupby('State')["Num_Deaths"].agg("max").reset_index(name="Num_Deaths") 
+            top_regions_deaths = top_regions_deaths.sort_values(by=['Num_Deaths'], ascending=False)
+            top_regions_deaths = list(top_regions_deaths.head(5)['State'])
+
+            df_deaths['Agg_State'] =  df_deaths.apply(lambda row: row['State'] if row['State'] in top_regions_deaths else 'Other States', axis=1)
+            df_deaths = df_deaths.groupby(['Date', 'Agg_State'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths")
+            
+            df_deaths = df_deaths.pivot(index='Date', columns='Agg_State', values='Num_Deaths')
+            df_deaths = df_deaths.fillna(0)
+            df_deaths = df_deaths[top_regions_deaths + ['Other States']] 
+
+            breakdown_deaths_names = top_regions_deaths + ['Other States']
+            breakdown_deaths_data = []
+
+            for region in breakdown_deaths_names:
+                breakdown_deaths_data += [list(df_deaths[region])]
+        else: 
+            df_deaths = df_deaths.groupby(['Date'])["Num_Deaths"].agg("sum").reset_index(name="Num_Deaths")
+            breakdown_deaths_names = [[country_deaths]]
+            breakdown_deaths_data = [list(df_deaths['Num_Deaths'])]
+
 
     country_filter_form = CountryFilterForm()
-    if country != "Global":
-        country_filter_form.fields['country_filter'].initial = country
+    country_filter_form.fields['confirmed_country_filter'].initial = country_confirmed
+    country_filter_form.fields['deaths_country_filter'].initial = country_deaths
 
-    
+    ####### COUNTRY CHARTS ENDS #######
+    ###################################
+
+    ###################################
+    ##### DEATH RATE CHART BEGINS #####
+    death_rates = pd.read_csv("trends/data/death_rate.csv")
+    death_rate_data = []
+    for row in range(len(death_rates.index)):
+        row_dict = {}
+        row_dict['x'] = death_rates['GDP_Per_Capita'][row]
+        row_dict['y'] = death_rates['Death_Rate'][row]
+        row_dict['z'] = death_rates['Num_Confirmed'][row]
+        row_dict['num_deaths'] = death_rates['Num_Deaths'][row]
+        row_dict['name'] = death_rates['Country_Abbr'][row]
+        row_dict['country'] = death_rates['Country'][row]
+        death_rate_data += [row_dict]
+
+    print(death_rate_data)
+
+
+    ###### DEATH RATE CHART ENDS ######
+    ###################################
+
     context = {
-        'tab': 'trends',
-        'breakdown_1': breakdown_1,
-        'breakdown_2': breakdown_2,
-        'breakdown_3': breakdown_3,
-        'breakdown_4': breakdown_4,
-        'breakdown_5': breakdown_5,
-        'breakdown_6': breakdown_6,
-        'breakdown_1_name': breakdown_1_name,
-        'breakdown_2_name': breakdown_2_name,
-        'breakdown_3_name': breakdown_3_name,
-        'breakdown_4_name': breakdown_4_name,
-        'breakdown_5_name': breakdown_5_name,
-        'breakdown_6_name': breakdown_6_name,
+        'tab': 'insights',
+        'breakdown_data': breakdown_data,
+        'breakdown_names':breakdown_names,
+        'breakdown_deaths_data':breakdown_deaths_data,
+        'breakdown_deaths_names':breakdown_deaths_names,
         'dates' : dates,
-        'country' : country,
-        'country_filter_form' : country_filter_form
+        'country_confirmed' : country_confirmed,
+        'country_deaths': country_deaths,
+        'country_filter_form' : country_filter_form,
+        'death_rate_data': death_rate_data,
      } 
     return render(request, 'trends-index.html', context)
 
