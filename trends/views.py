@@ -83,7 +83,7 @@ def index(request):
         df_deaths = df_deaths.fillna(0)
         df_deaths = df_deaths[top_regions_deaths + ['Other Countries']] 
 
-        breakdown_deaths_names = top_regions_Deaths + ['Other Countries']
+        breakdown_deaths_names = top_regions_deaths + ['Other Countries']
         breakdown_deaths_data = []
         for region in breakdown_deaths_names:
             breakdown_deaths_data += [list(df_deaths[region])]
