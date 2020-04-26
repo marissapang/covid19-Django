@@ -36,6 +36,7 @@
 			<script src="https://code.highcharts.com/modules/exporting.js"> </script>
 			<script src="https://code.highcharts.com/modules/export-data.js"> </script>
 			<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+			<script src="http://code.highcharts.com/highcharts-more.js"></script>
 			<script>
 				_dates = {{dates|safe}};
 				_breakdowndata = {{breakdown_data|safe}};
@@ -111,17 +112,14 @@
 		<div style="height:20%; padding-top: 1%; padding-bottom:1%; font-size:14px;font-weight:550">
 			Death rate by GDP Per Capita
 		</div>
-		<div id="container3" style="width:100%; height: 90%; margin: 0 auto;" class="border">
-			<script src="http://code.highcharts.com/highcharts-more.js"></script>
-		
+		<div id="container3" style="width:100%; height: 90%; margin: 0 auto;" class="border">		
 			<script>
-				_death_rate_dict = {{ death_rate_dict|safe }}			
+				_death_rate_dict = {{ death_rate_dict|safe }}		
 
 				Highcharts.chart('container3', {
 				    chart: {
 				        type: 'bubble',
 				        zoomType: 'xy',
-				        backgroundColor: 'transparent'
 				    },
 				    legend: {enabled: true},
 				    title: {text: ''},
