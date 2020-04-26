@@ -44,8 +44,29 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed_top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">C19 Trends</a>
+				{% if request.user_agent.is_mobile %}
+					<a class="navbar-brand" href="#">C19</a>
+				{% else %}
+					<a class="navbar-brand" href="#">C19 Trends</a>
+				{% endif %}
 			</div>
+
+
+			<ul class="nav navbar-nav">
+				{% if tab == "dashboard" %}
+					<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
+        		{% else %}
+        			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
+        		{% endif %}
+
+        		{% if tab == "trends" %}
+					<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link active">Visualizations</a></li>
+        		{% else %}
+        			<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link">Visualizations</a></li>
+        		{% endif %}
+        	</ul>
+        </div>
+
 
 			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
             &#9776;
@@ -61,7 +82,7 @@
 						<li> Welcome, {{ user.get_username }}! </li>
 					{% endif %}
 
-					{% if tab == "dashboard" %}
+					<!-- {% if tab == "dashboard" %}
 						<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
             		{% else %}
             			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
@@ -72,7 +93,7 @@
             		{% else %}
             			<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link">Visualizations</a></li>
             		{% endif %}
-
+ -->
             		{% if request.user_agent.is_mobile %}
             			{% if user.is_authenticated %}
             				<li class="nav-item"><a href="{% url 'account_logout'%}" class="nav-link">Log Out</a></li>
