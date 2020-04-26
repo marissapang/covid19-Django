@@ -9,8 +9,6 @@ from datetime import datetime, timedelta
 
 
 def index(request):
-	if request.user_agent.is_mobile:
-		print("using mobile view")
 	user = request.user.pk
 	current_profile = Profile.objects.get(user=user) if request.user.is_authenticated else None
 
@@ -25,20 +23,33 @@ def index(request):
 			state_selections = dashboard_form.cleaned_data.get('states') # this is a list object
 			date_range = dashboard_form.cleaned_data.get('date_range') # this is a string object
 
-			if 'country_select_save' in request.POST:
-				country_selections = dashboard_form.cleaned_data.get('countries')
-				if request.user.is_authenticated: # if user is signed in then we save changes to profile
-					current_profile.dashboard_countries = str(country_selections)
-					current_profile.save()
-				else: 
-					request.session['countries'] = country_selections
-			elif 'state_select_save' in request.POST:
-				state_selections = dashboard_form.cleaned_data.get('states')
-				if request.user.is_authenticated: # if user is signed in then we save changes to profile
-					current_profile.dashboard_states = str(state_selections)
-					current_profile.save()
-				else: 
-					request.session['states'] = state_selections
+			if not request.user_agent.is_mobile:
+				if 'country_select_save' in request.POST:
+					country_selections = dashboard_form.cleaned_data.get('countries')
+					if request.user.is_authenticated: # if user is signed in then we save changes to profile
+						current_profile.dashboard_countries = str(country_selections)
+						current_profile.save()
+					else: 
+						request.session['countries'] = country_selections
+				elif 'state_select_save' in request.POST:
+					state_selections = dashboard_form.cleaned_data.get('states')
+					if request.user.is_authenticated: # if user is signed in then we save changes to profile
+						current_profile.dashboard_states = str(state_selections)
+						current_profile.save()
+					else: 
+						request.session['states'] = state_selections
+			else: # if using mobile interface we only have one submit button for country and state
+				if 'region_select_save' in request.POST:
+					country_selections = dashboard_form.cleaned_data.get('countries')
+					state_selections = dashboard_form.cleaned_data.get('states')
+
+					if request.user.is_authenticated:
+						current_profile.dashboard_countries = str(country_selections)
+						current_profile.dashboard_states = str(state_selections)
+						current_profile.save()
+					else: 
+						request.session['countries'] = country_selections
+						request.session['states'] = state_selections
 			
 			date_range = dashboard_form.cleaned_data.get('date_range')
 			if date_range != "":
