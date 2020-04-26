@@ -125,18 +125,24 @@ def index(request):
     ###################################
     ##### DEATH RATE CHART BEGINS #####
     death_rates = pd.read_csv("trends/data/death_rate.csv")
-    death_rate_data = []
-    for row in range(len(death_rates.index)):
-        row_dict = {}
-        row_dict['x'] = death_rates['GDP_Per_Capita'][row]
-        row_dict['y'] = death_rates['Death_Rate'][row]
-        row_dict['z'] = death_rates['Num_Confirmed'][row]
-        row_dict['num_deaths'] = death_rates['Num_Deaths'][row]
-        row_dict['name'] = death_rates['Country_Abbr'][row]
-        row_dict['country'] = death_rates['Country'][row]
-        death_rate_data += [row_dict]
+    death_rate_dict = {}
 
-    print(death_rate_data)
+    continents = ["Europe", "Asia Pacific", "Americas", "Middle East"]
+
+    for c in continents:
+        cont_death_rates = death_rates[death_rates['Continent']==c].reset_index()
+        # cont_death_rates = death_rates
+        cont_data = []
+        for row in range(len(cont_death_rates.index)):
+            row_dict = {}
+            row_dict['x'] = cont_death_rates['GDP_Per_Capita'][row]
+            row_dict['y'] = cont_death_rates['Death_Rate'][row]
+            row_dict['z'] = cont_death_rates['Num_Confirmed'][row]
+            row_dict['num_deaths'] = cont_death_rates['Num_Deaths'][row]
+            row_dict['name'] = cont_death_rates['Country_Abbr'][row]
+            row_dict['country'] = cont_death_rates['Country'][row]
+            cont_data += [row_dict]
+        death_rate_dict[c] = cont_data
 
 
     ###### DEATH RATE CHART ENDS ######
@@ -152,7 +158,11 @@ def index(request):
         'country_confirmed' : country_confirmed,
         'country_deaths': country_deaths,
         'country_filter_form' : country_filter_form,
-        'death_rate_data': death_rate_data,
+        'death_rate_dict' : death_rate_dict
      } 
-    return render(request, 'trends-index.html', context)
+
+    if request.user_agent.is_mobile:
+        return render(request, 'trends-index-mobile.html', context)
+    else:
+        return render(request, 'trends-index.html', context)
 

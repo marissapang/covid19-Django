@@ -11,5 +11,5 @@ country_choices = list(zip(country_choices, country_choices))
 country_choices = [('Global','Global')]+country_choices
 
 class CountryFilterForm(forms.Form):
-   confirmed_country_filter = forms.ChoiceField(choices = country_choices, label = "Country", initial="Global", required=False)
-   deaths_country_filter = forms.ChoiceField(choices = country_choices, label = "Country", initial="Global", required=False)
+   confirmed_country_filter = forms.ChoiceField(choices = country_choices, label = "Country", widget=forms.Select(attrs={'style':'width:150px;'}), initial="Global", required=False)
+   deaths_country_filter = forms.ChoiceField(choices = country_choices, label = "Country", widget=forms.Select(attrs={'style':'width:150px;'}), initial="Global", required=False)

@@ -10,9 +10,9 @@
 
 <style>
 	.smallCharts {
-		width:48%;
-		height:300px;
-		margin:1%;
+		min-height:300px;
+		height:60%;
+		width:100%;
 		min-width:300px;
 	}
 </style>
@@ -20,13 +20,14 @@
 	<h2> Visualizations </h2>
 </div>
 
-<div style="float:left; width:85%; display:flex; flex-direction:row;flex-wrap:wrap"> 
+<!-- <div style="float:left; width:85%; display:flex; flex-direction:row;flex-wrap:wrap">  -->
+<div>
 	<div class="smallCharts">
-		<div style="height:10%; padding-top: 1%; padding-bottom:1%;">
+		<div style="height:20%; padding-top: 1%; padding-bottom:1%;">
 			<div style="float:left; font-size:14px; font-weight:550">
 				Total confirmed cases by region
 			</div>
-			<div style="float:right; font-size:12px;">
+			<div style="float:left; font-size:12px;">
 				<form action = "", method = "GET", onChange="this.submit();">{{ country_filter_form.confirmed_country_filter}}</form>
 			</div>
 		</div>
@@ -67,11 +68,11 @@
 		</div>
 	</div>
 	<div class="smallCharts">
-		<div style="height:10%; padding-top: 1%; padding-bottom:1%; font-size:12px">
+		<div style="height:20%; padding-top: 1%; padding-bottom:1%; font-size:12px">
 			<div style="float:left; font-size:14px;font-weight:550">
 				Total deaths by region
 			</div>
-			<div style="float:right; font-size:12px">
+			<div style="float:left; font-size:12px">
 				<form action = "", method = "GET", onChange="this.submit();">{{ country_filter_form.deaths_country_filter}}</form>
 			</div>
 		</div>
@@ -107,15 +108,14 @@
 		</div>
 	</div>
 	<div class="smallCharts" style="width:98%">
-		<div style="height:10%; padding-top: 1%; padding-bottom:1%; font-size:14px;font-weight:550">
+		<div style="height:20%; padding-top: 1%; padding-bottom:1%; font-size:14px;font-weight:550">
 			Death rate by GDP Per Capita
 		</div>
 		<div id="container3" style="width:100%; height: 90%; margin: 0 auto;" class="border">
 			<script src="http://code.highcharts.com/highcharts-more.js"></script>
 		
 			<script>
-				_death_rate_dict = {{ death_rate_dict|safe }}
-			
+				_death_rate_dict = {{ death_rate_dict|safe }}			
 
 				Highcharts.chart('container3', {
 				    chart: {
@@ -132,7 +132,7 @@
 				        labels: {format: '${value:,.0f}', style:{color:"#565656"}},
 				        startOnTick: false,
 				        endOnTick: false,
-				        tickInterval:20000,
+				        tickInterval:30000,
 				    },
 
 				    yAxis: {
@@ -163,7 +163,7 @@
 				            }
 				        }
 				    },
-				    legend: {layout:'vertical', verticalAlign:'middle', align:'right', itemStyle:{"font-size":"10px"}, itemMarginTop:5},
+				    legend: {layout:'horizontal', itemStyle:{"font-size":"10px"}, itemMarginTop:1},
 				    series: [
 				    	{name: "Europe", data: _death_rate_dict['Europe'], color: '#9DC6FF', },
 				    	{name: "Asia Pacific", data: _death_rate_dict['Asia Pacific'], color: '#DB71FF'},
@@ -181,9 +181,10 @@
 
 </div>
 
-<div style="float:right; width:13%; max-width:300px; font-size:12px; margin:1%">
+<!-- <div style="float:right; width:13%; max-width:300px; font-size:12px; margin:1%"> -->
+<div style="padding-top:20px">
 	<h6> Useful data sources </h6>
-	<ul style="padding-left:20px;margin:0">
+	<ul style="padding-left:20px;margin:0; font-size:12px">
 		<li><a href="https://github.com/CSSEGISandData/COVID-19"> John's Hopkins Github</a> for world data</li>
 		<li><a href="https://rt.live"> Rt tracking </a> measuring the spread of Covid 19 in the US</li>
 		<li><a href="https://covidtracking.com"> Covid-19 Tracking Project </a> tracking testing and diagnostic statistics in the US</li>
@@ -191,7 +192,7 @@
 
 	<p></p>
 	<h6> Useful news sources </h6>
-	<ul style="padding-left:20px;margin:0">
+	<ul style="padding-left:20px;margin:0;font-size:12px">
 		<li><a href="https://www.cdc.gov/coronavirus/2019-nCov/index.html"> CDC guidelines and updates</a></li>
 		<li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"> WHO guidelines and updates</a></li>
 	</ul>
