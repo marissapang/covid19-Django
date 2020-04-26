@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 
 
 def index(request):
+	if request.user_agent.is_mobile:
+		print("using mobile view")
 	user = request.user.pk
 	current_profile = Profile.objects.get(user=user) if request.user.is_authenticated else None
 
@@ -57,31 +59,6 @@ def index(request):
 			country_selections = default_country_selections if country_selections is None else country_selections
 			state_selections = default_state_selections if state_selections is None else state_selections
 			date_range = default_date_range if date_range is None else date_range
-			
-			# if request.user.is_authenticated: # if user is signed in then we save changes to profile
-			# 	if country_selections != []: # only save if not empty
-			# 		current_profile.dashboard_countries = str(country_selections)
-			# 	if state_selections != []:
-			# 		current_profile.dashboard_states = str(state_selections)
-			# 	if date_range != "":
-			# 		current_profile.dashboard_date_range = date_range
-			# 	current_profile.save()
-			# 	country_selections = ast.literal_eval(current_profile.dashboard_countries)
-			# 	state_selections = ast.literal_eval(current_profile.dashboard_states)
-			# 	date_range = current_profile.dashboard_date_range
-			# else: # if user is not logged in save changes to session
-			# 	if country_selections != []:
-			# 		request.session['countries'] = country_selections
-			# 	if state_selections != []:
-			# 		request.session['states'] = state_selections
-			# 	if date_range != "":
-			# 		request.session['date_range'] = date_range
-			# 	country_selections = request.session.get('countries')
-			# 	state_selections = request.session.get('states')
-			# 	date_range = request.session.get('date_range')
-			# 	country_selections = default_country_selections if country_selections is None else country_selections
-			# 	state_selections = default_state_selections if state_selections is None else state_selections
-			# 	date_range = default_date_range if date_range is None else date_range
 	else: # if request method is not post, just generate the form
 		if request.user.is_authenticated: # use saved DB settings in profile
 			country_selections = ast.literal_eval(current_profile.dashboard_countries)
