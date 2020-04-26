@@ -63,9 +63,14 @@
 
 					{% if tab == "dashboard" %}
 						<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
-                		
             		{% else %}
             			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
+            		{% endif %}
+
+            		{% if tab == "trends" %}
+						<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link active">Visualizations</a></li>
+            		{% else %}
+            			<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link">Visualizations</a></li>
             		{% endif %}
 
             		{% if request.user_agent.is_mobile %}
