@@ -166,3 +166,6 @@ def index(request):
     else:
         return render(request, 'trends-index.html', context)
 
+def localGovUpdate(request):
+    context = {}
+    return render(request, 'local-gov-update.html', context)

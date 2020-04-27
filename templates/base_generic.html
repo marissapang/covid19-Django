@@ -51,23 +51,6 @@
 				{% endif %}
 			</div>
 
-			<!-- <ul class="navbar-nav mr-auto">
-				{% if tab == "dashboard" %}
-					<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link active">Dashboard</a></li>
-        		{% else %}
-        			<li class="nav-item"><a href="{% url 'dashboard-index' %}" class="nav-link">Dashboard</a></li>
-        		{% endif %}
-
-        		{% if tab == "trends" %}
-					<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link active">Visualizations</a></li>
-        		{% else %}
-        			<li class="nav-item"><a href="{% url 'trends-index' %}" class="nav-link">Visualizations</a></li>
-        		{% endif %}
-        	</ul>
-        </div>
-        <div class="container-fluid"> -->
-
-
 			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
             &#9776;
         	</button>
@@ -104,7 +87,6 @@
         			{% endif %}
 				</ul>
 			</div>
-
 
 			{% if user.is_authenticated %}
 				{% if not request.user_agent.is_mobile %}
