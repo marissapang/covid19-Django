@@ -42833,7 +42833,7 @@ Martinique,France,2020-07-01,14
 Aruba,Netherlands,2020-07-01,3
 Curacao,Netherlands,2020-07-01,1
 Sint Maarten,Netherlands,2020-07-01,15
-"",Netherlands,2020-07-01,6113
+"",Netherlands,2020-07-01,6115
 "",New Zealand,2020-07-01,22
 "",Nicaragua,2020-07-01,83
 "",Niger,2020-07-01,67
@@ -43098,7 +43098,7 @@ Martinique,France,2020-07-02,14
 Aruba,Netherlands,2020-07-02,3
 Curacao,Netherlands,2020-07-02,1
 Sint Maarten,Netherlands,2020-07-02,15
-"",Netherlands,2020-07-02,6113
+"",Netherlands,2020-07-02,6118
 "",New Zealand,2020-07-02,22
 "",Nicaragua,2020-07-02,83
 "",Niger,2020-07-02,68
@@ -43363,7 +43363,7 @@ Martinique,France,2020-07-03,14
 Aruba,Netherlands,2020-07-03,3
 Curacao,Netherlands,2020-07-03,1
 Sint Maarten,Netherlands,2020-07-03,15
-"",Netherlands,2020-07-03,6113
+"",Netherlands,2020-07-03,6120
 "",New Zealand,2020-07-03,22
 "",Nicaragua,2020-07-03,83
 "",Niger,2020-07-03,68
@@ -43628,7 +43628,7 @@ Martinique,France,2020-07-04,14
 Aruba,Netherlands,2020-07-04,3
 Curacao,Netherlands,2020-07-04,1
 Sint Maarten,Netherlands,2020-07-04,15
-"",Netherlands,2020-07-04,6113
+"",Netherlands,2020-07-04,6126
 "",New Zealand,2020-07-04,22
 "",Nicaragua,2020-07-04,83
 "",Niger,2020-07-04,68
@@ -46109,6 +46109,271 @@ Saint Pierre and Miquelon,France,2020-07-13,0
 "",Comoros,2020-07-13,7
 "",Tajikistan,2020-07-13,55
 "",Lesotho,2020-07-13,3
+"",Afghanistan,2020-07-14,1048
+"",Albania,2020-07-14,97
+"",Algeria,2020-07-14,1028
+"",Andorra,2020-07-14,52
+"",Angola,2020-07-14,26
+"",Antigua and Barbuda,2020-07-14,3
+"",Argentina,2020-07-14,1968
+"",Armenia,2020-07-14,581
+Australian Capital Territory,Australia,2020-07-14,3
+New South Wales,Australia,2020-07-14,49
+Northern Territory,Australia,2020-07-14,0
+Queensland,Australia,2020-07-14,6
+South Australia,Australia,2020-07-14,4
+Tasmania,Australia,2020-07-14,13
+Victoria,Australia,2020-07-14,27
+Western Australia,Australia,2020-07-14,9
+"",Austria,2020-07-14,709
+"",Azerbaijan,2020-07-14,319
+"",Bahamas,2020-07-14,11
+"",Bahrain,2020-07-14,111
+"",Bangladesh,2020-07-14,2424
+"",Barbados,2020-07-14,7
+"",Belarus,2020-07-14,474
+"",Belgium,2020-07-14,9787
+"",Benin,2020-07-14,26
+"",Bhutan,2020-07-14,0
+"",Bolivia,2020-07-14,1898
+"",Bosnia and Herzegovina,2020-07-14,226
+"",Brazil,2020-07-14,74133
+"",Brunei,2020-07-14,3
+"",Bulgaria,2020-07-14,283
+"",Burkina Faso,2020-07-14,53
+"",Cabo Verde,2020-07-14,19
+"",Cambodia,2020-07-14,0
+"",Cameroon,2020-07-14,359
+Alberta,Canada,2020-07-14,163
+British Columbia,Canada,2020-07-14,189
+Grand Princess,Canada,2020-07-14,0
+Manitoba,Canada,2020-07-14,7
+New Brunswick,Canada,2020-07-14,2
+Newfoundland and Labrador,Canada,2020-07-14,3
+Nova Scotia,Canada,2020-07-14,63
+Ontario,Canada,2020-07-14,2769
+Prince Edward Island,Canada,2020-07-14,0
+Quebec,Canada,2020-07-14,5633
+Saskatchewan,Canada,2020-07-14,15
+"",Central African Republic,2020-07-14,53
+"",Chad,2020-07-14,75
+"",Chile,2020-07-14,7069
+Anhui,China,2020-07-14,6
+Beijing,China,2020-07-14,9
+Chongqing,China,2020-07-14,6
+Fujian,China,2020-07-14,1
+Gansu,China,2020-07-14,2
+Guangdong,China,2020-07-14,8
+Guangxi,China,2020-07-14,2
+Guizhou,China,2020-07-14,2
+Hainan,China,2020-07-14,6
+Hebei,China,2020-07-14,6
+Heilongjiang,China,2020-07-14,13
+Henan,China,2020-07-14,22
+Hong Kong,Hong Kong,2020-07-14,8
+Hubei,China,2020-07-14,4512
+Hunan,China,2020-07-14,4
+Inner Mongolia,China,2020-07-14,1
+Jiangsu,China,2020-07-14,0
+Jiangxi,China,2020-07-14,1
+Jilin,China,2020-07-14,2
+Liaoning,China,2020-07-14,2
+Macau,China,2020-07-14,0
+Ningxia,China,2020-07-14,0
+Qinghai,China,2020-07-14,0
+Shaanxi,China,2020-07-14,3
+Shandong,China,2020-07-14,7
+Shanghai,China,2020-07-14,7
+Shanxi,China,2020-07-14,0
+Sichuan,China,2020-07-14,3
+Tianjin,China,2020-07-14,3
+Tibet,China,2020-07-14,0
+Xinjiang,China,2020-07-14,3
+Yunnan,China,2020-07-14,2
+Zhejiang,China,2020-07-14,1
+"",Colombia,2020-07-14,5787
+"",Congo (Brazzaville),2020-07-14,47
+"",Congo (Kinshasa),2020-07-14,190
+"",Costa Rica,2020-07-14,37
+"",Cote d'Ivoire,2020-07-14,87
+"",Croatia,2020-07-14,120
+"",Diamond Princess,2020-07-14,13
+"",Cuba,2020-07-14,87
+"",Cyprus,2020-07-14,19
+"",Czechia,2020-07-14,355
+Faroe Islands,Denmark,2020-07-14,0
+Greenland,Denmark,2020-07-14,0
+"",Denmark,2020-07-14,610
+"",Djibouti,2020-07-14,56
+"",Dominican Republic,2020-07-14,910
+"",Ecuador,2020-07-14,5130
+"",Egypt,2020-07-14,4008
+"",El Salvador,2020-07-14,278
+"",Equatorial Guinea,2020-07-14,51
+"",Eritrea,2020-07-14,0
+"",Estonia,2020-07-14,69
+"",Eswatini,2020-07-14,20
+"",Ethiopia,2020-07-14,139
+"",Fiji,2020-07-14,0
+"",Finland,2020-07-14,329
+French Guiana,France,2020-07-14,31
+French Polynesia,France,2020-07-14,0
+Guadeloupe,France,2020-07-14,14
+Mayotte,France,2020-07-14,37
+New Caledonia,France,2020-07-14,0
+Reunion,France,2020-07-14,3
+Saint Barthelemy,France,2020-07-14,0
+St Martin,France,2020-07-14,3
+Martinique,France,2020-07-14,15
+"",France,2020-07-14,29929
+"",Gabon,2020-07-14,46
+"",Gambia,2020-07-14,3
+"",Georgia,2020-07-14,15
+"",Germany,2020-07-14,9078
+"",Ghana,2020-07-14,139
+"",Greece,2020-07-14,193
+"",Guatemala,2020-07-14,1302
+"",Guinea,2020-07-14,38
+"",Guyana,2020-07-14,17
+"",Haiti,2020-07-14,141
+"",Holy See,2020-07-14,0
+"",Honduras,2020-07-14,789
+"",Hungary,2020-07-14,595
+"",Iceland,2020-07-14,10
+"",India,2020-07-14,24309
+"",Indonesia,2020-07-14,3710
+"",Iran,2020-07-14,13211
+"",Iraq,2020-07-14,3345
+"",Ireland,2020-07-14,1746
+"",Israel,2020-07-14,371
+"",Italy,2020-07-14,34984
+"",Jamaica,2020-07-14,10
+"",Japan,2020-07-14,984
+"",Jordan,2020-07-14,10
+"",Kazakhstan,2020-07-14,375
+"",Kenya,2020-07-14,202
+"",South Korea,2020-07-14,289
+"",Kuwait,2020-07-14,396
+"",Kyrgyzstan,2020-07-14,149
+"",Latvia,2020-07-14,31
+"",Lebanon,2020-07-14,37
+"",Liberia,2020-07-14,51
+"",Liechtenstein,2020-07-14,1
+"",Lithuania,2020-07-14,79
+"",Luxembourg,2020-07-14,111
+"",Madagascar,2020-07-14,39
+"",Malaysia,2020-07-14,122
+"",Maldives,2020-07-14,14
+"",Malta,2020-07-14,9
+"",Mauritania,2020-07-14,147
+"",Mauritius,2020-07-14,10
+"",Mexico,2020-07-14,36327
+"",Moldova,2020-07-14,655
+"",Monaco,2020-07-14,4
+"",Mongolia,2020-07-14,0
+"",Montenegro,2020-07-14,24
+"",Morocco,2020-07-14,257
+"",Namibia,2020-07-14,2
+"",Nepal,2020-07-14,38
+Aruba,Netherlands,2020-07-14,3
+Curacao,Netherlands,2020-07-14,1
+Sint Maarten,Netherlands,2020-07-14,15
+"",Netherlands,2020-07-14,6135
+"",New Zealand,2020-07-14,22
+"",Nicaragua,2020-07-14,99
+"",Niger,2020-07-14,68
+"",Nigeria,2020-07-14,754
+"",North Macedonia,2020-07-14,389
+"",Norway,2020-07-14,253
+"",Oman,2020-07-14,273
+"",Pakistan,2020-07-14,5386
+"",Panama,2020-07-14,960
+"",Papua New Guinea,2020-07-14,0
+"",Paraguay,2020-07-14,25
+"",Peru,2020-07-14,12229
+"",Philippines,2020-07-14,1603
+"",Poland,2020-07-14,1588
+"",Portugal,2020-07-14,1668
+"",Qatar,2020-07-14,150
+"",Romania,2020-07-14,1931
+"",Russia,2020-07-14,11597
+"",Rwanda,2020-07-14,4
+"",Saint Lucia,2020-07-14,0
+"",Saint Vincent and the Grenadines,2020-07-14,0
+"",San Marino,2020-07-14,42
+"",Saudi Arabia,2020-07-14,2283
+"",Senegal,2020-07-14,150
+"",Serbia,2020-07-14,418
+"",Seychelles,2020-07-14,0
+"",Singapore,2020-07-14,27
+"",Slovakia,2020-07-14,28
+"",Slovenia,2020-07-14,111
+"",Somalia,2020-07-14,93
+"",South Africa,2020-07-14,4346
+"",Spain,2020-07-14,28409
+"",Sri Lanka,2020-07-14,11
+"",Sudan,2020-07-14,659
+"",Suriname,2020-07-14,18
+"",Sweden,2020-07-14,5545
+"",Switzerland,2020-07-14,1968
+"",Taiwan,2020-07-14,7
+"",Tanzania,2020-07-14,21
+"",Thailand,2020-07-14,58
+"",Togo,2020-07-14,15
+"",Trinidad and Tobago,2020-07-14,8
+"",Tunisia,2020-07-14,50
+"",Turkey,2020-07-14,5402
+"",Uganda,2020-07-14,0
+"",Ukraine,2020-07-14,1429
+"",United Arab Emirates,2020-07-14,335
+Bermuda,United Kingdom,2020-07-14,9
+Cayman Islands,United Kingdom,2020-07-14,1
+Channel Islands,United Kingdom,2020-07-14,47
+Gibraltar,United Kingdom,2020-07-14,0
+Isle of Man,United Kingdom,2020-07-14,24
+Montserrat,United Kingdom,2020-07-14,1
+"",United Kingdom,2020-07-14,44968
+"",Uruguay,2020-07-14,31
+"",Uzbekistan,2020-07-14,67
+"",Venezuela,2020-07-14,96
+"",Vietnam,2020-07-14,0
+"",Zambia,2020-07-14,42
+"",Zimbabwe,2020-07-14,20
+Diamond Princess,Canada,2020-07-14,1
+"",Dominica,2020-07-14,0
+"",Grenada,2020-07-14,0
+"",Mozambique,2020-07-14,9
+"",Syria,2020-07-14,21
+"",Timor-Leste,2020-07-14,0
+"",Belize,2020-07-14,2
+"",Laos,2020-07-14,0
+"",Libya,2020-07-14,42
+"",West Bank and Gaza,2020-07-14,44
+"",Guinea-Bissau,2020-07-14,26
+"",Mali,2020-07-14,121
+"",Saint Kitts and Nevis,2020-07-14,0
+Northwest Territories,Canada,2020-07-14,0
+Yukon,Canada,2020-07-14,0
+"",Kosovo,2020-07-14,108
+"",Burma,2020-07-14,6
+Anguilla,United Kingdom,2020-07-14,0
+British Virgin Islands,United Kingdom,2020-07-14,1
+Turks and Caicos Islands,United Kingdom,2020-07-14,2
+"",MS Zaandam,2020-07-14,2
+"",Botswana,2020-07-14,1
+"",Burundi,2020-07-14,1
+"",Sierra Leone,2020-07-14,64
+"Bonaire, Sint Eustatius and Saba",Netherlands,2020-07-14,0
+"",Malawi,2020-07-14,40
+Falkland Islands (Malvinas),United Kingdom,2020-07-14,0
+Saint Pierre and Miquelon,France,2020-07-14,0
+"",South Sudan,2020-07-14,41
+"",Western Sahara,2020-07-14,1
+"",Sao Tome and Principe,2020-07-14,14
+"",Yemen,2020-07-14,429
+"",Comoros,2020-07-14,7
+"",Tajikistan,2020-07-14,56
+"",Lesotho,2020-07-14,3
 Alabama,United States,2020-01-22,0
 Alabama,United States,2020-01-23,0
 Alabama,United States,2020-01-24,0
@@ -46283,6 +46548,7 @@ Alabama,United States,2020-07-10,1104
 Alabama,United States,2020-07-11,1114
 Alabama,United States,2020-07-12,1121
 Alabama,United States,2020-07-13,1124
+Alabama,United States,2020-07-14,1164
 Alaska,United States,2020-01-22,0
 Alaska,United States,2020-01-23,0
 Alaska,United States,2020-01-24,0
@@ -46457,6 +46723,7 @@ Alaska,United States,2020-07-10,17
 Alaska,United States,2020-07-11,17
 Alaska,United States,2020-07-12,17
 Alaska,United States,2020-07-13,17
+Alaska,United States,2020-07-14,17
 American Samoa,United States,2020-01-22,0
 American Samoa,United States,2020-01-23,0
 American Samoa,United States,2020-01-24,0
@@ -46631,6 +46898,7 @@ American Samoa,United States,2020-07-10,0
 American Samoa,United States,2020-07-11,0
 American Samoa,United States,2020-07-12,0
 American Samoa,United States,2020-07-13,0
+American Samoa,United States,2020-07-14,0
 Arizona,United States,2020-01-22,0
 Arizona,United States,2020-01-23,0
 Arizona,United States,2020-01-24,0
@@ -46805,6 +47073,7 @@ Arizona,United States,2020-07-10,2082
 Arizona,United States,2020-07-11,2151
 Arizona,United States,2020-07-12,2237
 Arizona,United States,2020-07-13,2246
+Arizona,United States,2020-07-14,2337
 Arkansas,United States,2020-01-22,0
 Arkansas,United States,2020-01-23,0
 Arkansas,United States,2020-01-24,0
@@ -46979,6 +47248,7 @@ Arkansas,United States,2020-07-10,313
 Arkansas,United States,2020-07-11,319
 Arkansas,United States,2020-07-12,321
 Arkansas,United States,2020-07-13,323
+Arkansas,United States,2020-07-14,331
 California,United States,2020-01-22,0
 California,United States,2020-01-23,0
 California,United States,2020-01-24,0
@@ -47153,6 +47423,7 @@ California,United States,2020-07-10,6955
 California,United States,2020-07-11,7027
 California,United States,2020-07-12,7051
 California,United States,2020-07-13,7089
+California,United States,2020-07-14,7250
 Colorado,United States,2020-01-22,0
 Colorado,United States,2020-01-23,0
 Colorado,United States,2020-01-24,0
@@ -47327,6 +47598,7 @@ Colorado,United States,2020-07-10,1724
 Colorado,United States,2020-07-11,1725
 Colorado,United States,2020-07-12,1725
 Colorado,United States,2020-07-13,1727
+Colorado,United States,2020-07-14,1738
 Connecticut,United States,2020-01-22,0
 Connecticut,United States,2020-01-23,0
 Connecticut,United States,2020-01-24,0
@@ -47501,6 +47773,7 @@ Connecticut,United States,2020-07-10,4348
 Connecticut,United States,2020-07-11,4348
 Connecticut,United States,2020-07-12,4348
 Connecticut,United States,2020-07-13,4371
+Connecticut,United States,2020-07-14,4372
 Delaware,United States,2020-01-22,0
 Delaware,United States,2020-01-23,0
 Delaware,United States,2020-01-24,0
@@ -47675,6 +47948,7 @@ Delaware,United States,2020-07-10,517
 Delaware,United States,2020-07-11,517
 Delaware,United States,2020-07-12,517
 Delaware,United States,2020-07-13,517
+Delaware,United States,2020-07-14,518
 Diamond Princess,United States,2020-01-22,0
 Diamond Princess,United States,2020-01-23,0
 Diamond Princess,United States,2020-01-24,0
@@ -47849,6 +48123,7 @@ Diamond Princess,United States,2020-07-10,0
 Diamond Princess,United States,2020-07-11,0
 Diamond Princess,United States,2020-07-12,0
 Diamond Princess,United States,2020-07-13,0
+Diamond Princess,United States,2020-07-14,0
 District of Columbia,United States,2020-01-22,0
 District of Columbia,United States,2020-01-23,0
 District of Columbia,United States,2020-01-24,0
@@ -48023,6 +48298,7 @@ District of Columbia,United States,2020-07-10,568
 District of Columbia,United States,2020-07-11,568
 District of Columbia,United States,2020-07-12,568
 District of Columbia,United States,2020-07-13,568
+District of Columbia,United States,2020-07-14,568
 Florida,United States,2020-01-22,0
 Florida,United States,2020-01-23,0
 Florida,United States,2020-01-24,0
@@ -48197,6 +48473,7 @@ Florida,United States,2020-07-10,4102
 Florida,United States,2020-07-11,4197
 Florida,United States,2020-07-12,4242
 Florida,United States,2020-07-13,4277
+Florida,United States,2020-07-14,4409
 Georgia,United States,2020-01-22,0
 Georgia,United States,2020-01-23,0
 Georgia,United States,2020-01-24,0
@@ -48371,6 +48648,7 @@ Georgia,United States,2020-07-10,2965
 Georgia,United States,2020-07-11,2996
 Georgia,United States,2020-07-12,3003
 Georgia,United States,2020-07-13,3026
+Georgia,United States,2020-07-14,3054
 Grand Princess,United States,2020-01-22,0
 Grand Princess,United States,2020-01-23,0
 Grand Princess,United States,2020-01-24,0
@@ -48545,6 +48823,7 @@ Grand Princess,United States,2020-07-10,3
 Grand Princess,United States,2020-07-11,3
 Grand Princess,United States,2020-07-12,3
 Grand Princess,United States,2020-07-13,3
+Grand Princess,United States,2020-07-14,3
 Guam,United States,2020-01-22,0
 Guam,United States,2020-01-23,0
 Guam,United States,2020-01-24,0
@@ -48719,6 +48998,7 @@ Guam,United States,2020-07-10,5
 Guam,United States,2020-07-11,5
 Guam,United States,2020-07-12,5
 Guam,United States,2020-07-13,5
+Guam,United States,2020-07-14,5
 Hawaii,United States,2020-01-22,0
 Hawaii,United States,2020-01-23,0
 Hawaii,United States,2020-01-24,0
@@ -48893,6 +49173,7 @@ Hawaii,United States,2020-07-10,19
 Hawaii,United States,2020-07-11,19
 Hawaii,United States,2020-07-12,19
 Hawaii,United States,2020-07-13,22
+Hawaii,United States,2020-07-14,22
 Idaho,United States,2020-01-22,0
 Idaho,United States,2020-01-23,0
 Idaho,United States,2020-01-24,0
@@ -49067,6 +49348,7 @@ Idaho,United States,2020-07-10,101
 Idaho,United States,2020-07-11,102
 Idaho,United States,2020-07-12,102
 Idaho,United States,2020-07-13,102
+Idaho,United States,2020-07-14,103
 Illinois,United States,2020-01-22,0
 Illinois,United States,2020-01-23,0
 Illinois,United States,2020-01-24,0
@@ -49241,6 +49523,7 @@ Illinois,United States,2020-07-10,7345
 Illinois,United States,2020-07-11,7369
 Illinois,United States,2020-07-12,7388
 Illinois,United States,2020-07-13,7394
+Illinois,United States,2020-07-14,7419
 Indiana,United States,2020-01-22,0
 Indiana,United States,2020-01-23,0
 Indiana,United States,2020-01-24,0
@@ -49415,6 +49698,7 @@ Indiana,United States,2020-07-10,2748
 Indiana,United States,2020-07-11,2756
 Indiana,United States,2020-07-12,2760
 Indiana,United States,2020-07-13,2762
+Indiana,United States,2020-07-14,2775
 Iowa,United States,2020-01-22,0
 Iowa,United States,2020-01-23,0
 Iowa,United States,2020-01-24,0
@@ -49589,6 +49873,7 @@ Iowa,United States,2020-07-10,743
 Iowa,United States,2020-07-11,748
 Iowa,United States,2020-07-12,752
 Iowa,United States,2020-07-13,755
+Iowa,United States,2020-07-14,757
 Kansas,United States,2020-01-22,0
 Kansas,United States,2020-01-23,0
 Kansas,United States,2020-01-24,0
@@ -49763,6 +50048,7 @@ Kansas,United States,2020-07-10,293
 Kansas,United States,2020-07-11,295
 Kansas,United States,2020-07-12,297
 Kansas,United States,2020-07-13,298
+Kansas,United States,2020-07-14,299
 Kentucky,United States,2020-01-22,0
 Kentucky,United States,2020-01-23,0
 Kentucky,United States,2020-01-24,0
@@ -49937,6 +50223,7 @@ Kentucky,United States,2020-07-10,620
 Kentucky,United States,2020-07-11,622
 Kentucky,United States,2020-07-12,625
 Kentucky,United States,2020-07-13,629
+Kentucky,United States,2020-07-14,635
 Louisiana,United States,2020-01-22,0
 Louisiana,United States,2020-01-23,0
 Louisiana,United States,2020-01-24,0
@@ -50111,6 +50398,7 @@ Louisiana,United States,2020-07-10,3380
 Louisiana,United States,2020-07-11,3403
 Louisiana,United States,2020-07-12,3416
 Louisiana,United States,2020-07-13,3423
+Louisiana,United States,2020-07-14,3445
 Maine,United States,2020-01-22,0
 Maine,United States,2020-01-23,0
 Maine,United States,2020-01-24,0
@@ -50285,6 +50573,7 @@ Maine,United States,2020-07-10,111
 Maine,United States,2020-07-11,112
 Maine,United States,2020-07-12,114
 Maine,United States,2020-07-13,114
+Maine,United States,2020-07-14,114
 Maryland,United States,2020-01-22,0
 Maryland,United States,2020-01-23,0
 Maryland,United States,2020-01-24,0
@@ -50459,6 +50748,7 @@ Maryland,United States,2020-07-10,3303
 Maryland,United States,2020-07-11,3310
 Maryland,United States,2020-07-12,3319
 Maryland,United States,2020-07-13,3325
+Maryland,United States,2020-07-14,3334
 Massachusetts,United States,2020-01-22,0
 Massachusetts,United States,2020-01-23,0
 Massachusetts,United States,2020-01-24,0
@@ -50633,6 +50923,7 @@ Massachusetts,United States,2020-07-10,8296
 Massachusetts,United States,2020-07-11,8310
 Massachusetts,United States,2020-07-12,8325
 Massachusetts,United States,2020-07-13,8330
+Massachusetts,United States,2020-07-14,8340
 Michigan,United States,2020-01-22,0
 Michigan,United States,2020-01-23,0
 Michigan,United States,2020-01-24,0
@@ -50807,6 +51098,7 @@ Michigan,United States,2020-07-10,6285
 Michigan,United States,2020-07-11,6313
 Michigan,United States,2020-07-12,6314
 Michigan,United States,2020-07-13,6321
+Michigan,United States,2020-07-14,6326
 Minnesota,United States,2020-01-22,0
 Minnesota,United States,2020-01-23,0
 Minnesota,United States,2020-01-24,0
@@ -50981,6 +51273,7 @@ Minnesota,United States,2020-07-10,1533
 Minnesota,United States,2020-07-11,1537
 Minnesota,United States,2020-07-12,1540
 Minnesota,United States,2020-07-13,1542
+Minnesota,United States,2020-07-14,1548
 Mississippi,United States,2020-01-22,0
 Mississippi,United States,2020-01-23,0
 Mississippi,United States,2020-01-24,0
@@ -51155,6 +51448,7 @@ Mississippi,United States,2020-07-10,1215
 Mississippi,United States,2020-07-11,1230
 Mississippi,United States,2020-07-12,1249
 Mississippi,United States,2020-07-13,1250
+Mississippi,United States,2020-07-14,1272
 Missouri,United States,2020-01-22,0
 Missouri,United States,2020-01-23,0
 Missouri,United States,2020-01-24,0
@@ -51329,6 +51623,7 @@ Missouri,United States,2020-07-10,1084
 Missouri,United States,2020-07-11,1091
 Missouri,United States,2020-07-12,1092
 Missouri,United States,2020-07-13,1105
+Missouri,United States,2020-07-14,1114
 Montana,United States,2020-01-22,0
 Montana,United States,2020-01-23,0
 Montana,United States,2020-01-24,0
@@ -51503,6 +51798,7 @@ Montana,United States,2020-07-10,28
 Montana,United States,2020-07-11,29
 Montana,United States,2020-07-12,29
 Montana,United States,2020-07-13,32
+Montana,United States,2020-07-14,34
 Nebraska,United States,2020-01-22,0
 Nebraska,United States,2020-01-23,0
 Nebraska,United States,2020-01-24,0
@@ -51677,6 +51973,7 @@ Nebraska,United States,2020-07-10,286
 Nebraska,United States,2020-07-11,285
 Nebraska,United States,2020-07-12,285
 Nebraska,United States,2020-07-13,288
+Nebraska,United States,2020-07-14,286
 Nevada,United States,2020-01-22,0
 Nevada,United States,2020-01-23,0
 Nevada,United States,2020-01-24,0
@@ -51851,6 +52148,7 @@ Nevada,United States,2020-07-10,579
 Nevada,United States,2020-07-11,592
 Nevada,United States,2020-07-12,593
 Nevada,United States,2020-07-13,593
+Nevada,United States,2020-07-14,612
 New Hampshire,United States,2020-01-22,0
 New Hampshire,United States,2020-01-23,0
 New Hampshire,United States,2020-01-24,0
@@ -52025,6 +52323,7 @@ New Hampshire,United States,2020-07-10,390
 New Hampshire,United States,2020-07-11,391
 New Hampshire,United States,2020-07-12,391
 New Hampshire,United States,2020-07-13,391
+New Hampshire,United States,2020-07-14,392
 New Jersey,United States,2020-01-22,0
 New Jersey,United States,2020-01-23,0
 New Jersey,United States,2020-01-24,0
@@ -52199,6 +52498,7 @@ New Jersey,United States,2020-07-10,15479
 New Jersey,United States,2020-07-11,15525
 New Jersey,United States,2020-07-12,15525
 New Jersey,United States,2020-07-13,15560
+New Jersey,United States,2020-07-14,15582
 New Mexico,United States,2020-01-22,0
 New Mexico,United States,2020-01-23,0
 New Mexico,United States,2020-01-24,0
@@ -52373,6 +52673,7 @@ New Mexico,United States,2020-07-10,539
 New Mexico,United States,2020-07-11,543
 New Mexico,United States,2020-07-12,545
 New Mexico,United States,2020-07-13,548
+New Mexico,United States,2020-07-14,551
 New York,United States,2020-01-22,0
 New York,United States,2020-01-23,0
 New York,United States,2020-01-24,0
@@ -52547,6 +52848,7 @@ New York,United States,2020-07-10,32331
 New York,United States,2020-07-11,32343
 New York,United States,2020-07-12,32350
 New York,United States,2020-07-13,32395
+New York,United States,2020-07-14,32408
 North Carolina,United States,2020-01-22,0
 North Carolina,United States,2020-01-23,0
 North Carolina,United States,2020-01-24,0
@@ -52721,6 +53023,7 @@ North Carolina,United States,2020-07-10,1497
 North Carolina,United States,2020-07-11,1513
 North Carolina,United States,2020-07-12,1522
 North Carolina,United States,2020-07-13,1529
+North Carolina,United States,2020-07-14,1571
 North Dakota,United States,2020-01-22,0
 North Dakota,United States,2020-01-23,0
 North Dakota,United States,2020-01-24,0
@@ -52895,6 +53198,7 @@ North Dakota,United States,2020-07-10,85
 North Dakota,United States,2020-07-11,87
 North Dakota,United States,2020-07-12,87
 North Dakota,United States,2020-07-13,87
+North Dakota,United States,2020-07-14,88
 Northern Mariana Islands,United States,2020-01-22,0
 Northern Mariana Islands,United States,2020-01-23,0
 Northern Mariana Islands,United States,2020-01-24,0
@@ -53069,6 +53373,7 @@ Northern Mariana Islands,United States,2020-07-10,2
 Northern Mariana Islands,United States,2020-07-11,2
 Northern Mariana Islands,United States,2020-07-12,2
 Northern Mariana Islands,United States,2020-07-13,2
+Northern Mariana Islands,United States,2020-07-14,2
 Ohio,United States,2020-01-22,0
 Ohio,United States,2020-01-23,0
 Ohio,United States,2020-01-24,0
@@ -53243,6 +53548,7 @@ Ohio,United States,2020-07-10,3032
 Ohio,United States,2020-07-11,3036
 Ohio,United States,2020-07-12,3058
 Ohio,United States,2020-07-13,3064
+Ohio,United States,2020-07-14,3069
 Oklahoma,United States,2020-01-22,0
 Oklahoma,United States,2020-01-23,0
 Oklahoma,United States,2020-01-24,0
@@ -53417,6 +53723,7 @@ Oklahoma,United States,2020-07-10,416
 Oklahoma,United States,2020-07-11,421
 Oklahoma,United States,2020-07-12,422
 Oklahoma,United States,2020-07-13,424
+Oklahoma,United States,2020-07-14,428
 Oregon,United States,2020-01-22,0
 Oregon,United States,2020-01-23,0
 Oregon,United States,2020-01-24,0
@@ -53591,6 +53898,7 @@ Oregon,United States,2020-07-10,232
 Oregon,United States,2020-07-11,232
 Oregon,United States,2020-07-12,234
 Oregon,United States,2020-07-13,237
+Oregon,United States,2020-07-14,244
 Pennsylvania,United States,2020-01-22,0
 Pennsylvania,United States,2020-01-23,0
 Pennsylvania,United States,2020-01-24,0
@@ -53765,6 +54073,7 @@ Pennsylvania,United States,2020-07-10,6880
 Pennsylvania,United States,2020-07-11,6897
 Pennsylvania,United States,2020-07-12,6904
 Pennsylvania,United States,2020-07-13,6911
+Pennsylvania,United States,2020-07-14,6931
 Puerto Rico,United States,2020-01-22,0
 Puerto Rico,United States,2020-01-23,0
 Puerto Rico,United States,2020-01-24,0
@@ -53939,6 +54248,7 @@ Puerto Rico,United States,2020-07-10,159
 Puerto Rico,United States,2020-07-11,167
 Puerto Rico,United States,2020-07-12,167
 Puerto Rico,United States,2020-07-13,167
+Puerto Rico,United States,2020-07-14,169
 Rhode Island,United States,2020-01-22,0
 Rhode Island,United States,2020-01-23,0
 Rhode Island,United States,2020-01-24,0
@@ -54113,6 +54423,7 @@ Rhode Island,United States,2020-07-10,976
 Rhode Island,United States,2020-07-11,976
 Rhode Island,United States,2020-07-12,976
 Rhode Island,United States,2020-07-13,984
+Rhode Island,United States,2020-07-14,985
 South Carolina,United States,2020-01-22,0
 South Carolina,United States,2020-01-23,0
 South Carolina,United States,2020-01-24,0
@@ -54287,6 +54598,7 @@ South Carolina,United States,2020-07-10,929
 South Carolina,United States,2020-07-11,951
 South Carolina,United States,2020-07-12,961
 South Carolina,United States,2020-07-13,972
+South Carolina,United States,2020-07-14,993
 South Dakota,United States,2020-01-22,0
 South Dakota,United States,2020-01-23,0
 South Dakota,United States,2020-01-24,0
@@ -54461,6 +54773,7 @@ South Dakota,United States,2020-07-10,107
 South Dakota,United States,2020-07-11,109
 South Dakota,United States,2020-07-12,109
 South Dakota,United States,2020-07-13,109
+South Dakota,United States,2020-07-14,109
 Tennessee,United States,2020-01-22,0
 Tennessee,United States,2020-01-23,0
 Tennessee,United States,2020-01-24,0
@@ -54635,6 +54948,7 @@ Tennessee,United States,2020-07-10,723
 Tennessee,United States,2020-07-11,738
 Tennessee,United States,2020-07-12,741
 Tennessee,United States,2020-07-13,749
+Tennessee,United States,2020-07-14,767
 Texas,United States,2020-01-22,0
 Texas,United States,2020-01-23,0
 Texas,United States,2020-01-24,0
@@ -54809,6 +55123,7 @@ Texas,United States,2020-07-10,3062
 Texas,United States,2020-07-11,3138
 Texas,United States,2020-07-12,3216
 Texas,United States,2020-07-13,3276
+Texas,United States,2020-07-14,3362
 Utah,United States,2020-01-22,0
 Utah,United States,2020-01-23,0
 Utah,United States,2020-01-24,0
@@ -54983,6 +55298,7 @@ Utah,United States,2020-07-10,207
 Utah,United States,2020-07-11,212
 Utah,United States,2020-07-12,215
 Utah,United States,2020-07-13,216
+Utah,United States,2020-07-14,226
 Vermont,United States,2020-01-22,0
 Vermont,United States,2020-01-23,0
 Vermont,United States,2020-01-24,0
@@ -55157,6 +55473,7 @@ Vermont,United States,2020-07-10,56
 Vermont,United States,2020-07-11,56
 Vermont,United States,2020-07-12,56
 Vermont,United States,2020-07-13,56
+Vermont,United States,2020-07-14,56
 Virgin Islands,United States,2020-01-22,0
 Virgin Islands,United States,2020-01-23,0
 Virgin Islands,United States,2020-01-24,0
@@ -55331,6 +55648,7 @@ Virgin Islands,United States,2020-07-10,6
 Virgin Islands,United States,2020-07-11,6
 Virgin Islands,United States,2020-07-12,6
 Virgin Islands,United States,2020-07-13,6
+Virgin Islands,United States,2020-07-14,6
 Virginia,United States,2020-01-22,0
 Virginia,United States,2020-01-23,0
 Virginia,United States,2020-01-24,0
@@ -55505,6 +55823,7 @@ Virginia,United States,2020-07-10,1958
 Virginia,United States,2020-07-11,1962
 Virginia,United States,2020-07-12,1966
 Virginia,United States,2020-07-13,1968
+Virginia,United States,2020-07-14,1977
 Washington,United States,2020-01-22,0
 Washington,United States,2020-01-23,0
 Washington,United States,2020-01-24,0
@@ -55679,6 +55998,7 @@ Washington,United States,2020-07-10,1424
 Washington,United States,2020-07-11,1424
 Washington,United States,2020-07-12,1438
 Washington,United States,2020-07-13,1399
+Washington,United States,2020-07-14,1404
 West Virginia,United States,2020-01-22,0
 West Virginia,United States,2020-01-23,0
 West Virginia,United States,2020-01-24,0
@@ -55853,6 +56173,7 @@ West Virginia,United States,2020-07-10,95
 West Virginia,United States,2020-07-11,96
 West Virginia,United States,2020-07-12,96
 West Virginia,United States,2020-07-13,97
+West Virginia,United States,2020-07-14,97
 Wisconsin,United States,2020-01-22,0
 Wisconsin,United States,2020-01-23,0
 Wisconsin,United States,2020-01-24,0
@@ -56027,6 +56348,7 @@ Wisconsin,United States,2020-07-10,814
 Wisconsin,United States,2020-07-11,821
 Wisconsin,United States,2020-07-12,820
 Wisconsin,United States,2020-07-13,820
+Wisconsin,United States,2020-07-14,826
 Wyoming,United States,2020-01-22,0
 Wyoming,United States,2020-01-23,0
 Wyoming,United States,2020-01-24,0
@@ -56201,3 +56523,4 @@ Wyoming,United States,2020-07-10,21
 Wyoming,United States,2020-07-11,21
 Wyoming,United States,2020-07-12,21
 Wyoming,United States,2020-07-13,21
+Wyoming,United States,2020-07-14,22
