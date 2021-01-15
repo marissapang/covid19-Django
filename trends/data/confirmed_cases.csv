@@ -241,7 +241,7 @@ Sint Maarten,Netherlands,2020-01-22,0
 "",Taiwan,2020-01-22,1
 "",Tajikistan,2020-01-22,0
 "",Tanzania,2020-01-22,0
-"",Thailand,2020-01-22,2
+"",Thailand,2020-01-22,4
 "",Timor-Leste,2020-01-22,0
 "",Togo,2020-01-22,0
 "",Trinidad and Tobago,2020-01-22,0
@@ -512,7 +512,7 @@ Sint Maarten,Netherlands,2020-01-23,0
 "",Taiwan,2020-01-23,1
 "",Tajikistan,2020-01-23,0
 "",Tanzania,2020-01-23,0
-"",Thailand,2020-01-23,3
+"",Thailand,2020-01-23,4
 "",Timor-Leste,2020-01-23,0
 "",Togo,2020-01-23,0
 "",Trinidad and Tobago,2020-01-23,0
@@ -1054,7 +1054,7 @@ Sint Maarten,Netherlands,2020-01-25,0
 "",Taiwan,2020-01-25,3
 "",Tajikistan,2020-01-25,0
 "",Tanzania,2020-01-25,0
-"",Thailand,2020-01-25,7
+"",Thailand,2020-01-25,6
 "",Timor-Leste,2020-01-25,0
 "",Togo,2020-01-25,0
 "",Trinidad and Tobago,2020-01-25,0
@@ -6745,7 +6745,7 @@ Sint Maarten,Netherlands,2020-02-15,0
 "",Taiwan,2020-02-15,18
 "",Tajikistan,2020-02-15,0
 "",Tanzania,2020-02-15,0
-"",Thailand,2020-02-15,33
+"",Thailand,2020-02-15,34
 "",Timor-Leste,2020-02-15,0
 "",Togo,2020-02-15,0
 "",Trinidad and Tobago,2020-02-15,0
@@ -25444,7 +25444,7 @@ Sint Maarten,Netherlands,2020-04-24,73
 "",Taiwan,2020-04-24,428
 "",Tajikistan,2020-04-24,0
 "",Tanzania,2020-04-24,299
-"",Thailand,2020-04-24,2907
+"",Thailand,2020-04-24,2854
 "",Timor-Leste,2020-04-24,24
 "",Togo,2020-04-24,90
 "",Trinidad and Tobago,2020-04-24,115
@@ -28451,7 +28451,7 @@ Turks and Caicos Islands,United Kingdom,2020-05-05,12
 "",Venezuela,2020-05-05,361
 "",Vietnam,2020-05-05,271
 "",West Bank and Gaza,2020-05-05,371
-"",Yemen,2020-05-05,22
+"",Yemen,2020-05-05,21
 "",Zambia,2020-05-05,138
 "",Zimbabwe,2020-05-05,34
 "",Afghanistan,2020-05-06,3393
@@ -32516,7 +32516,7 @@ Turks and Caicos Islands,United Kingdom,2020-05-20,12
 "",Venezuela,2020-05-20,824
 "",Vietnam,2020-05-20,324
 "",West Bank and Gaza,2020-05-20,398
-"",Yemen,2020-05-20,184
+"",Yemen,2020-05-20,180
 "",Zambia,2020-05-20,832
 "",Zimbabwe,2020-05-20,48
 "",Afghanistan,2020-05-21,8677
@@ -32787,7 +32787,7 @@ Turks and Caicos Islands,United Kingdom,2020-05-21,12
 "",Venezuela,2020-05-21,882
 "",Vietnam,2020-05-21,324
 "",West Bank and Gaza,2020-05-21,423
-"",Yemen,2020-05-21,197
+"",Yemen,2020-05-21,193
 "",Zambia,2020-05-21,866
 "",Zimbabwe,2020-05-21,51
 "",Afghanistan,2020-05-22,9219
@@ -33058,7 +33058,7 @@ Turks and Caicos Islands,United Kingdom,2020-05-22,12
 "",Venezuela,2020-05-22,944
 "",Vietnam,2020-05-22,324
 "",West Bank and Gaza,2020-05-22,423
-"",Yemen,2020-05-22,209
+"",Yemen,2020-05-22,205
 "",Zambia,2020-05-22,920
 "",Zimbabwe,2020-05-22,51
 "",Afghanistan,2020-05-23,10001
@@ -34413,7 +34413,7 @@ Turks and Caicos Islands,United Kingdom,2020-05-27,12
 "",Venezuela,2020-05-27,1245
 "",Vietnam,2020-05-27,327
 "",West Bank and Gaza,2020-05-27,434
-"",Yemen,2020-05-27,256
+"",Yemen,2020-05-27,255
 "",Zambia,2020-05-27,1057
 "",Zimbabwe,2020-05-27,132
 "",Afghanistan,2020-05-28,13039
@@ -41975,7 +41975,7 @@ Sint Maarten,Netherlands,2020-06-24,77
 "",Taiwan,2020-06-24,446
 "",Tajikistan,2020-06-24,5630
 "",Tanzania,2020-06-24,509
-"",Thailand,2020-06-24,3158
+"",Thailand,2020-06-24,3157
 "",Timor-Leste,2020-06-24,24
 "",Togo,2020-06-24,583
 "",Trinidad and Tobago,2020-06-24,123
@@ -45253,7 +45253,7 @@ Turks and Caicos Islands,United Kingdom,2020-07-06,48
 "",Venezuela,2020-07-06,7411
 "",Vietnam,2020-07-06,369
 "",West Bank and Gaza,2020-07-06,4341
-"",Yemen,2020-07-06,1284
+"",Yemen,2020-07-06,1290
 "",Zambia,2020-07-06,1632
 "",Zimbabwe,2020-07-06,734
 "",Afghanistan,2020-07-07,33374
@@ -45498,7 +45498,7 @@ Sint Maarten,Netherlands,2020-07-07,78
 "",Taiwan,2020-07-07,449
 "",Tajikistan,2020-07-07,6315
 "",Tanzania,2020-07-07,509
-"",Thailand,2020-07-07,3197
+"",Thailand,2020-07-07,3195
 "",Timor-Leste,2020-07-07,24
 "",Togo,2020-07-07,689
 "",Trinidad and Tobago,2020-07-07,133
@@ -48750,7 +48750,7 @@ Sint Maarten,Netherlands,2020-07-19,79
 "",Taiwan,2020-07-19,451
 "",Tajikistan,2020-07-19,6878
 "",Tanzania,2020-07-19,509
-"",Thailand,2020-07-19,3250
+"",Thailand,2020-07-19,3249
 "",Timor-Leste,2020-07-19,24
 "",Togo,2020-07-19,778
 "",Trinidad and Tobago,2020-07-19,137
@@ -49563,7 +49563,7 @@ Sint Maarten,Netherlands,2020-07-22,79
 "",Taiwan,2020-07-22,455
 "",Tajikistan,2020-07-22,7015
 "",Tanzania,2020-07-22,509
-"",Thailand,2020-07-22,3261
+"",Thailand,2020-07-22,3253
 "",Timor-Leste,2020-07-22,24
 "",Togo,2020-07-22,806
 "",Trinidad and Tobago,2020-07-22,141
@@ -49834,7 +49834,7 @@ Sint Maarten,Netherlands,2020-07-23,81
 "",Taiwan,2020-07-23,455
 "",Tajikistan,2020-07-23,7060
 "",Tanzania,2020-07-23,509
-"",Thailand,2020-07-23,3279
+"",Thailand,2020-07-23,3269
 "",Timor-Leste,2020-07-23,24
 "",Togo,2020-07-23,828
 "",Trinidad and Tobago,2020-07-23,141
@@ -50918,7 +50918,7 @@ Sint Maarten,Netherlands,2020-07-27,114
 "",Taiwan,2020-07-27,462
 "",Tajikistan,2020-07-27,7235
 "",Tanzania,2020-07-27,509
-"",Thailand,2020-07-27,3297
+"",Thailand,2020-07-27,3295
 "",Timor-Leste,2020-07-27,24
 "",Togo,2020-07-27,874
 "",Trinidad and Tobago,2020-07-27,148
@@ -56338,7 +56338,7 @@ Sint Maarten,Netherlands,2020-08-16,317
 "",Taiwan,2020-08-16,484
 "",Tajikistan,2020-08-16,8065
 "",Tanzania,2020-08-16,509
-"",Thailand,2020-08-16,3378
+"",Thailand,2020-08-16,3377
 "",Timor-Leste,2020-08-16,25
 "",Togo,2020-08-16,1147
 "",Trinidad and Tobago,2020-08-16,552
@@ -56635,7 +56635,7 @@ Turks and Caicos Islands,United Kingdom,2020-08-17,298
 "",Venezuela,2020-08-17,34802
 "",Vietnam,2020-08-17,983
 "",West Bank and Gaza,2020-08-17,16844
-"",Yemen,2020-08-17,1882
+"",Yemen,2020-08-17,1869
 "",Zambia,2020-08-17,9839
 "",Zimbabwe,2020-08-17,5308
 "",Afghanistan,2020-08-18,37710
@@ -56880,7 +56880,7 @@ Sint Maarten,Netherlands,2020-08-18,333
 "",Taiwan,2020-08-18,486
 "",Tajikistan,2020-08-18,8131
 "",Tanzania,2020-08-18,509
-"",Thailand,2020-08-18,3382
+"",Thailand,2020-08-18,3381
 "",Timor-Leste,2020-08-18,25
 "",Togo,2020-08-18,1173
 "",Trinidad and Tobago,2020-08-18,629
@@ -58506,7 +58506,7 @@ Sint Maarten,Netherlands,2020-08-24,408
 "",Taiwan,2020-08-24,487
 "",Tajikistan,2020-08-24,8346
 "",Tanzania,2020-08-24,509
-"",Thailand,2020-08-24,3402
+"",Thailand,2020-08-24,3397
 "",Timor-Leste,2020-08-24,26
 "",Togo,2020-08-24,1295
 "",Trinidad and Tobago,2020-08-24,1099
@@ -59048,7 +59048,7 @@ Sint Maarten,Netherlands,2020-08-26,442
 "",Taiwan,2020-08-26,487
 "",Tajikistan,2020-08-26,8413
 "",Tanzania,2020-08-26,509
-"",Thailand,2020-08-26,3404
+"",Thailand,2020-08-26,3403
 "",Timor-Leste,2020-08-26,26
 "",Togo,2020-08-26,1326
 "",Trinidad and Tobago,2020-08-26,1411
@@ -59319,7 +59319,7 @@ Sint Maarten,Netherlands,2020-08-27,444
 "",Taiwan,2020-08-27,487
 "",Tajikistan,2020-08-27,8449
 "",Tanzania,2020-08-27,509
-"",Thailand,2020-08-27,3410
+"",Thailand,2020-08-27,3404
 "",Timor-Leste,2020-08-27,27
 "",Togo,2020-08-27,1326
 "",Trinidad and Tobago,2020-08-27,1429
@@ -59590,7 +59590,7 @@ Sint Maarten,Netherlands,2020-08-28,444
 "",Taiwan,2020-08-28,487
 "",Tajikistan,2020-08-28,8481
 "",Tanzania,2020-08-28,509
-"",Thailand,2020-08-28,3411
+"",Thailand,2020-08-28,3410
 "",Timor-Leste,2020-08-28,27
 "",Togo,2020-08-28,1365
 "",Trinidad and Tobago,2020-08-28,1554
@@ -60403,7 +60403,7 @@ Sint Maarten,Netherlands,2020-08-31,476
 "",Taiwan,2020-08-31,488
 "",Tajikistan,2020-08-31,8583
 "",Tanzania,2020-08-31,509
-"",Thailand,2020-08-31,3417
+"",Thailand,2020-08-31,3412
 "",Timor-Leste,2020-08-31,27
 "",Togo,2020-08-31,1400
 "",Trinidad and Tobago,2020-08-31,1759
@@ -60674,7 +60674,7 @@ Sint Maarten,Netherlands,2020-09-01,482
 "",Taiwan,2020-09-01,488
 "",Tajikistan,2020-09-01,8619
 "",Tanzania,2020-09-01,509
-"",Thailand,2020-09-01,3425
+"",Thailand,2020-09-01,3417
 "",Timor-Leste,2020-09-01,27
 "",Togo,2020-09-01,1416
 "",Trinidad and Tobago,2020-09-01,1797
@@ -60945,7 +60945,7 @@ Sint Maarten,Netherlands,2020-09-02,495
 "",Taiwan,2020-09-02,489
 "",Tajikistan,2020-09-02,8654
 "",Tanzania,2020-09-02,509
-"",Thailand,2020-09-02,3427
+"",Thailand,2020-09-02,3425
 "",Timor-Leste,2020-09-02,27
 "",Togo,2020-09-02,1434
 "",Trinidad and Tobago,2020-09-02,1920
@@ -61216,7 +61216,7 @@ Sint Maarten,Netherlands,2020-09-03,504
 "",Taiwan,2020-09-03,489
 "",Tajikistan,2020-09-03,8690
 "",Tanzania,2020-09-03,509
-"",Thailand,2020-09-03,3431
+"",Thailand,2020-09-03,3427
 "",Timor-Leste,2020-09-03,27
 "",Togo,2020-09-03,1443
 "",Trinidad and Tobago,2020-09-03,1984
@@ -61758,7 +61758,7 @@ Sint Maarten,Netherlands,2020-09-05,511
 "",Taiwan,2020-09-05,492
 "",Tajikistan,2020-09-05,8757
 "",Tanzania,2020-09-05,509
-"",Thailand,2020-09-05,3444
+"",Thailand,2020-09-05,3438
 "",Timor-Leste,2020-09-05,27
 "",Togo,2020-09-05,1477
 "",Trinidad and Tobago,2020-09-05,2230
@@ -62029,7 +62029,7 @@ Sint Maarten,Netherlands,2020-09-06,511
 "",Taiwan,2020-09-06,493
 "",Tajikistan,2020-09-06,8792
 "",Tanzania,2020-09-06,509
-"",Thailand,2020-09-06,3445
+"",Thailand,2020-09-06,3444
 "",Timor-Leste,2020-09-06,27
 "",Togo,2020-09-06,1488
 "",Trinidad and Tobago,2020-09-06,2250
@@ -62300,7 +62300,7 @@ Sint Maarten,Netherlands,2020-09-07,516
 "",Taiwan,2020-09-07,494
 "",Tajikistan,2020-09-07,8824
 "",Tanzania,2020-09-07,509
-"",Thailand,2020-09-07,3446
+"",Thailand,2020-09-07,3445
 "",Timor-Leste,2020-09-07,27
 "",Togo,2020-09-07,1493
 "",Trinidad and Tobago,2020-09-07,2277
@@ -62571,7 +62571,7 @@ Sint Maarten,Netherlands,2020-09-08,527
 "",Taiwan,2020-09-08,495
 "",Tajikistan,2020-09-08,8860
 "",Tanzania,2020-09-08,509
-"",Thailand,2020-09-08,3447
+"",Thailand,2020-09-08,3446
 "",Timor-Leste,2020-09-08,27
 "",Togo,2020-09-08,1513
 "",Trinidad and Tobago,2020-09-08,2391
@@ -62842,7 +62842,7 @@ Sint Maarten,Netherlands,2020-09-09,530
 "",Taiwan,2020-09-09,495
 "",Tajikistan,2020-09-09,8899
 "",Tanzania,2020-09-09,509
-"",Thailand,2020-09-09,3454
+"",Thailand,2020-09-09,3447
 "",Timor-Leste,2020-09-09,27
 "",Togo,2020-09-09,1528
 "",Trinidad and Tobago,2020-09-09,2588
@@ -63113,7 +63113,7 @@ Sint Maarten,Netherlands,2020-09-10,530
 "",Taiwan,2020-09-10,496
 "",Tajikistan,2020-09-10,8939
 "",Tanzania,2020-09-10,509
-"",Thailand,2020-09-10,3461
+"",Thailand,2020-09-10,3454
 "",Timor-Leste,2020-09-10,27
 "",Togo,2020-09-10,1537
 "",Trinidad and Tobago,2020-09-10,2698
@@ -63655,7 +63655,7 @@ Sint Maarten,Netherlands,2020-09-12,533
 "",Taiwan,2020-09-12,498
 "",Tajikistan,2020-09-12,9014
 "",Tanzania,2020-09-12,509
-"",Thailand,2020-09-12,3473
+"",Thailand,2020-09-12,3466
 "",Timor-Leste,2020-09-12,27
 "",Togo,2020-09-12,1555
 "",Trinidad and Tobago,2020-09-12,2993
@@ -63926,7 +63926,7 @@ Sint Maarten,Netherlands,2020-09-13,549
 "",Taiwan,2020-09-13,498
 "",Tajikistan,2020-09-13,9049
 "",Tanzania,2020-09-13,509
-"",Thailand,2020-09-13,3475
+"",Thailand,2020-09-13,3473
 "",Timor-Leste,2020-09-13,27
 "",Togo,2020-09-13,1572
 "",Trinidad and Tobago,2020-09-13,3042
@@ -64468,7 +64468,7 @@ Sint Maarten,Netherlands,2020-09-15,549
 "",Taiwan,2020-09-15,499
 "",Tajikistan,2020-09-15,9129
 "",Tanzania,2020-09-15,509
-"",Thailand,2020-09-15,3490
+"",Thailand,2020-09-15,3480
 "",Timor-Leste,2020-09-15,27
 "",Togo,2020-09-15,1595
 "",Trinidad and Tobago,2020-09-15,3223
@@ -65010,7 +65010,7 @@ Sint Maarten,Netherlands,2020-09-17,565
 "",Taiwan,2020-09-17,503
 "",Tajikistan,2020-09-17,9214
 "",Tanzania,2020-09-17,509
-"",Thailand,2020-09-17,3497
+"",Thailand,2020-09-17,3490
 "",Timor-Leste,2020-09-17,27
 "",Togo,2020-09-17,1618
 "",Trinidad and Tobago,2020-09-17,3434
@@ -65552,7 +65552,7 @@ Sint Maarten,Netherlands,2020-09-19,584
 "",Taiwan,2020-09-19,506
 "",Tajikistan,2020-09-19,9303
 "",Tanzania,2020-09-19,509
-"",Thailand,2020-09-19,3506
+"",Thailand,2020-09-19,3500
 "",Timor-Leste,2020-09-19,27
 "",Togo,2020-09-19,1659
 "",Trinidad and Tobago,2020-09-19,3853
@@ -67720,7 +67720,7 @@ Sint Maarten,Netherlands,2020-09-27,644
 "",Taiwan,2020-09-27,510
 "",Tajikistan,2020-09-27,9646
 "",Tanzania,2020-09-27,509
-"",Thailand,2020-09-27,3523
+"",Thailand,2020-09-27,3545
 "",Timor-Leste,2020-09-27,27
 "",Togo,2020-09-27,1743
 "",Trinidad and Tobago,2020-09-27,4362
@@ -72327,7 +72327,7 @@ Sint Maarten,Netherlands,2020-10-14,729
 "",Taiwan,2020-10-14,530
 "",Tajikistan,2020-10-14,10336
 "",Tanzania,2020-10-14,509
-"",Thailand,2020-10-14,3652
+"",Thailand,2020-10-14,3665
 "",Timor-Leste,2020-10-14,29
 "",Togo,2020-10-14,1983
 "",Trinidad and Tobago,2020-10-14,5154
@@ -72598,7 +72598,7 @@ Sint Maarten,Netherlands,2020-10-15,737
 "",Taiwan,2020-10-15,531
 "",Tajikistan,2020-10-15,10374
 "",Tanzania,2020-10-15,509
-"",Thailand,2020-10-15,3669
+"",Thailand,2020-10-15,3675
 "",Timor-Leste,2020-10-15,29
 "",Togo,2020-10-15,1996
 "",Trinidad and Tobago,2020-10-15,5194
@@ -72869,7 +72869,7 @@ Sint Maarten,Netherlands,2020-10-16,746
 "",Taiwan,2020-10-16,535
 "",Tajikistan,2020-10-16,10414
 "",Tanzania,2020-10-16,509
-"",Thailand,2020-10-16,3679
+"",Thailand,2020-10-16,3686
 "",Timor-Leste,2020-10-16,29
 "",Togo,2020-10-16,2027
 "",Trinidad and Tobago,2020-10-16,5241
@@ -73140,7 +73140,7 @@ Sint Maarten,Netherlands,2020-10-17,749
 "",Taiwan,2020-10-17,535
 "",Tajikistan,2020-10-17,10455
 "",Tanzania,2020-10-17,509
-"",Thailand,2020-10-17,3686
+"",Thailand,2020-10-17,3679
 "",Timor-Leste,2020-10-17,29
 "",Togo,2020-10-17,2049
 "",Trinidad and Tobago,2020-10-17,5281
@@ -75308,7 +75308,7 @@ Sint Maarten,Netherlands,2020-10-25,784
 "",Taiwan,2020-10-25,550
 "",Tajikistan,2020-10-25,10776
 "",Tanzania,2020-10-25,509
-"",Thailand,2020-10-25,3736
+"",Thailand,2020-10-25,3743
 "",Timor-Leste,2020-10-25,29
 "",Togo,2020-10-25,2200
 "",Trinidad and Tobago,2020-10-25,5511
@@ -78586,7 +78586,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-06,707
 "",Venezuela,2020-11-06,94305
 "",Vietnam,2020-11-06,1212
 "",West Bank and Gaza,2020-11-06,57226
-"",Yemen,2020-11-06,2067
+"",Yemen,2020-11-06,2063
 "",Zambia,2020-11-06,16819
 "",Zimbabwe,2020-11-06,8471
 "",Afghanistan,2020-11-07,42033
@@ -78857,7 +78857,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-07,707
 "",Venezuela,2020-11-07,94698
 "",Vietnam,2020-11-07,1213
 "",West Bank and Gaza,2020-11-07,57657
-"",Yemen,2020-11-07,2070
+"",Yemen,2020-11-07,2063
 "",Zambia,2020-11-07,16908
 "",Zimbabwe,2020-11-07,8498
 "",Afghanistan,2020-11-08,42159
@@ -79128,7 +79128,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-08,707
 "",Venezuela,2020-11-08,94883
 "",Vietnam,2020-11-08,1213
 "",West Bank and Gaza,2020-11-08,58158
-"",Yemen,2020-11-08,2070
+"",Yemen,2020-11-08,2063
 "",Zambia,2020-11-08,16954
 "",Zimbabwe,2020-11-08,8531
 "",Afghanistan,2020-11-09,42297
@@ -79399,7 +79399,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-09,707
 "",Venezuela,2020-11-09,95149
 "",Vietnam,2020-11-09,1215
 "",West Bank and Gaza,2020-11-09,58838
-"",Yemen,2020-11-09,2071
+"",Yemen,2020-11-09,2063
 "",Zambia,2020-11-09,16971
 "",Zimbabwe,2020-11-09,8561
 "",Afghanistan,2020-11-10,42463
@@ -79670,7 +79670,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-10,711
 "",Venezuela,2020-11-10,95445
 "",Vietnam,2020-11-10,1226
 "",West Bank and Gaza,2020-11-10,59422
-"",Yemen,2020-11-10,2071
+"",Yemen,2020-11-10,2063
 "",Zambia,2020-11-10,16997
 "",Zimbabwe,2020-11-10,8610
 "",Afghanistan,2020-11-11,42609
@@ -79941,7 +79941,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-11,716
 "",Venezuela,2020-11-11,95750
 "",Vietnam,2020-11-11,1252
 "",West Bank and Gaza,2020-11-11,60065
-"",Yemen,2020-11-11,2071
+"",Yemen,2020-11-11,2063
 "",Zambia,2020-11-11,17036
 "",Zimbabwe,2020-11-11,8667
 "",Afghanistan,2020-11-12,42795
@@ -80212,7 +80212,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-12,716
 "",Venezuela,2020-11-12,96140
 "",Vietnam,2020-11-12,1253
 "",West Bank and Gaza,2020-11-12,60784
-"",Yemen,2020-11-12,2071
+"",Yemen,2020-11-12,2068
 "",Zambia,2020-11-12,17056
 "",Zimbabwe,2020-11-12,8696
 "",Afghanistan,2020-11-13,42969
@@ -80483,7 +80483,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-13,716
 "",Venezuela,2020-11-13,96441
 "",Vietnam,2020-11-13,1256
 "",West Bank and Gaza,2020-11-13,61514
-"",Yemen,2020-11-13,2072
+"",Yemen,2020-11-13,2068
 "",Zambia,2020-11-13,17093
 "",Zimbabwe,2020-11-13,8765
 "",Afghanistan,2020-11-14,43035
@@ -80754,7 +80754,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-14,720
 "",Venezuela,2020-11-14,96933
 "",Vietnam,2020-11-14,1265
 "",West Bank and Gaza,2020-11-14,62167
-"",Yemen,2020-11-14,2072
+"",Yemen,2020-11-14,2068
 "",Zambia,2020-11-14,17097
 "",Zimbabwe,2020-11-14,8786
 "",Afghanistan,2020-11-15,43240
@@ -81025,7 +81025,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-15,720
 "",Venezuela,2020-11-15,97352
 "",Vietnam,2020-11-15,1281
 "",West Bank and Gaza,2020-11-15,63031
-"",Yemen,2020-11-15,2072
+"",Yemen,2020-11-15,2068
 "",Zambia,2020-11-15,17123
 "",Zimbabwe,2020-11-15,8829
 "",Afghanistan,2020-11-16,43468
@@ -81296,7 +81296,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-16,720
 "",Venezuela,2020-11-16,97739
 "",Vietnam,2020-11-16,1283
 "",West Bank and Gaza,2020-11-16,63867
-"",Yemen,2020-11-16,2078
+"",Yemen,2020-11-16,2068
 "",Zambia,2020-11-16,17187
 "",Zimbabwe,2020-11-16,8897
 "",Afghanistan,2020-11-17,43681
@@ -81567,7 +81567,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-17,720
 "",Venezuela,2020-11-17,98050
 "",Vietnam,2020-11-17,1288
 "",West Bank and Gaza,2020-11-17,64935
-"",Yemen,2020-11-17,2081
+"",Yemen,2020-11-17,2068
 "",Zambia,2020-11-17,17243
 "",Zimbabwe,2020-11-17,8945
 "",Afghanistan,2020-11-18,43924
@@ -81838,7 +81838,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-18,720
 "",Venezuela,2020-11-18,98350
 "",Vietnam,2020-11-18,1300
 "",West Bank and Gaza,2020-11-18,66186
-"",Yemen,2020-11-18,2083
+"",Yemen,2020-11-18,2068
 "",Zambia,2020-11-18,17280
 "",Zimbabwe,2020-11-18,8981
 "",Afghanistan,2020-11-19,44177
@@ -82109,7 +82109,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-19,721
 "",Venezuela,2020-11-19,98665
 "",Vietnam,2020-11-19,1304
 "",West Bank and Gaza,2020-11-19,67296
-"",Yemen,2020-11-19,2086
+"",Yemen,2020-11-19,2068
 "",Zambia,2020-11-19,17350
 "",Zimbabwe,2020-11-19,9046
 "",Afghanistan,2020-11-20,44363
@@ -82354,7 +82354,7 @@ Sint Maarten,Netherlands,2020-11-20,983
 "",Taiwan,2020-11-20,611
 "",Tajikistan,2020-11-20,11815
 "",Tanzania,2020-11-20,509
-"",Thailand,2020-11-20,3902
+"",Thailand,2020-11-20,3899
 "",Timor-Leste,2020-11-20,30
 "",Togo,2020-11-20,2796
 "",Trinidad and Tobago,2020-11-20,6261
@@ -82380,7 +82380,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-20,726
 "",Venezuela,2020-11-20,99017
 "",Vietnam,2020-11-20,1305
 "",West Bank and Gaza,2020-11-20,68768
-"",Yemen,2020-11-20,2090
+"",Yemen,2020-11-20,2069
 "",Zambia,2020-11-20,17373
 "",Zimbabwe,2020-11-20,9120
 "",Afghanistan,2020-11-21,44503
@@ -82625,7 +82625,7 @@ Sint Maarten,Netherlands,2020-11-21,996
 "",Taiwan,2020-11-21,611
 "",Tajikistan,2020-11-21,11854
 "",Tanzania,2020-11-21,509
-"",Thailand,2020-11-21,3913
+"",Thailand,2020-11-21,3922
 "",Timor-Leste,2020-11-21,30
 "",Togo,2020-11-21,2829
 "",Trinidad and Tobago,2020-11-21,6324
@@ -82651,7 +82651,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-21,746
 "",Venezuela,2020-11-21,99435
 "",Vietnam,2020-11-21,1306
 "",West Bank and Gaza,2020-11-21,70254
-"",Yemen,2020-11-21,2093
+"",Yemen,2020-11-21,2069
 "",Zambia,2020-11-21,17394
 "",Zimbabwe,2020-11-21,9172
 "",Afghanistan,2020-11-22,44706
@@ -82922,7 +82922,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-22,746
 "",Venezuela,2020-11-22,99835
 "",Vietnam,2020-11-22,1307
 "",West Bank and Gaza,2020-11-22,71644
-"",Yemen,2020-11-22,2099
+"",Yemen,2020-11-22,2069
 "",Zambia,2020-11-22,17424
 "",Zimbabwe,2020-11-22,9220
 "",Afghanistan,2020-11-23,44988
@@ -83167,7 +83167,7 @@ Sint Maarten,Netherlands,2020-11-23,1012
 "",Taiwan,2020-11-23,618
 "",Tajikistan,2020-11-23,11932
 "",Tanzania,2020-11-23,509
-"",Thailand,2020-11-23,3922
+"",Thailand,2020-11-23,3910
 "",Timor-Leste,2020-11-23,30
 "",Togo,2020-11-23,2854
 "",Trinidad and Tobago,2020-11-23,6475
@@ -83193,7 +83193,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-23,746
 "",Venezuela,2020-11-23,100143
 "",Vietnam,2020-11-23,1312
 "",West Bank and Gaza,2020-11-23,73196
-"",Yemen,2020-11-23,2107
+"",Yemen,2020-11-23,2072
 "",Zambia,2020-11-23,17454
 "",Zimbabwe,2020-11-23,9308
 "",Afghanistan,2020-11-24,45174
@@ -83464,7 +83464,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-24,746
 "",Venezuela,2020-11-24,100498
 "",Vietnam,2020-11-24,1316
 "",West Bank and Gaza,2020-11-24,75007
-"",Yemen,2020-11-24,2114
+"",Yemen,2020-11-24,2073
 "",Zambia,2020-11-24,17466
 "",Zimbabwe,2020-11-24,9398
 "",Afghanistan,2020-11-25,45384
@@ -83735,7 +83735,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-25,746
 "",Venezuela,2020-11-25,100817
 "",Vietnam,2020-11-25,1321
 "",West Bank and Gaza,2020-11-25,76727
-"",Yemen,2020-11-25,2124
+"",Yemen,2020-11-25,2073
 "",Zambia,2020-11-25,17535
 "",Zimbabwe,2020-11-25,9508
 "",Afghanistan,2020-11-26,45600
@@ -84006,7 +84006,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-26,746
 "",Venezuela,2020-11-26,101215
 "",Vietnam,2020-11-26,1331
 "",West Bank and Gaza,2020-11-26,78493
-"",Yemen,2020-11-26,2137
+"",Yemen,2020-11-26,2074
 "",Zambia,2020-11-26,17553
 "",Zimbabwe,2020-11-26,9623
 "",Afghanistan,2020-11-27,45723
@@ -84277,7 +84277,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-27,748
 "",Venezuela,2020-11-27,101524
 "",Vietnam,2020-11-27,1339
 "",West Bank and Gaza,2020-11-27,80429
-"",Yemen,2020-11-27,2148
+"",Yemen,2020-11-27,2074
 "",Zambia,2020-11-27,17569
 "",Zimbabwe,2020-11-27,9714
 "",Afghanistan,2020-11-28,45844
@@ -84548,7 +84548,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-28,748
 "",Venezuela,2020-11-28,101760
 "",Vietnam,2020-11-28,1341
 "",West Bank and Gaza,2020-11-28,81890
-"",Yemen,2020-11-28,2160
+"",Yemen,2020-11-28,2074
 "",Zambia,2020-11-28,17589
 "",Zimbabwe,2020-11-28,9822
 "",Afghanistan,2020-11-29,46116
@@ -84819,7 +84819,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-29,748
 "",Venezuela,2020-11-29,102040
 "",Vietnam,2020-11-29,1343
 "",West Bank and Gaza,2020-11-29,83585
-"",Yemen,2020-11-29,2177
+"",Yemen,2020-11-29,2077
 "",Zambia,2020-11-29,17608
 "",Zimbabwe,2020-11-29,9822
 "",Afghanistan,2020-11-30,46274
@@ -85090,7 +85090,7 @@ Turks and Caicos Islands,United Kingdom,2020-11-30,748
 "",Venezuela,2020-11-30,102394
 "",Vietnam,2020-11-30,1347
 "",West Bank and Gaza,2020-11-30,85647
-"",Yemen,2020-11-30,2191
+"",Yemen,2020-11-30,2077
 "",Zambia,2020-11-30,17647
 "",Zimbabwe,2020-11-30,9950
 "",Afghanistan,2020-12-01,46516
@@ -85361,7 +85361,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-01,750
 "",Venezuela,2020-12-01,102621
 "",Vietnam,2020-12-01,1351
 "",West Bank and Gaza,2020-12-01,88004
-"",Yemen,2020-12-01,2197
+"",Yemen,2020-12-01,2077
 "",Zambia,2020-12-01,17665
 "",Zimbabwe,2020-12-01,10129
 "",Afghanistan,2020-12-02,46718
@@ -85606,7 +85606,7 @@ Sint Maarten,Netherlands,2020-12-02,1072
 "",Taiwan,2020-12-02,685
 "",Tajikistan,2020-12-02,12269
 "",Tanzania,2020-12-02,509
-"",Thailand,2020-12-02,4026
+"",Thailand,2020-12-02,4039
 "",Timor-Leste,2020-12-02,31
 "",Togo,2020-12-02,3014
 "",Trinidad and Tobago,2020-12-02,6704
@@ -85632,7 +85632,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-02,750
 "",Venezuela,2020-12-02,103067
 "",Vietnam,2020-12-02,1358
 "",West Bank and Gaza,2020-12-02,90192
-"",Yemen,2020-12-02,2217
+"",Yemen,2020-12-02,2077
 "",Zambia,2020-12-02,17700
 "",Zimbabwe,2020-12-02,10129
 "",Afghanistan,2020-12-03,46837
@@ -85903,7 +85903,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-03,751
 "",Venezuela,2020-12-03,103548
 "",Vietnam,2020-12-03,1361
 "",West Bank and Gaza,2020-12-03,92708
-"",Yemen,2020-12-03,2239
+"",Yemen,2020-12-03,2077
 "",Zambia,2020-12-03,17730
 "",Zimbabwe,2020-12-03,10424
 "",Afghanistan,2020-12-04,46837
@@ -86174,7 +86174,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-04,755
 "",Venezuela,2020-12-04,103877
 "",Vietnam,2020-12-04,1361
 "",West Bank and Gaza,2020-12-04,94676
-"",Yemen,2020-12-04,2267
+"",Yemen,2020-12-04,2077
 "",Zambia,2020-12-04,17857
 "",Zimbabwe,2020-12-04,10547
 "",Afghanistan,2020-12-05,47072
@@ -86445,7 +86445,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-05,756
 "",Venezuela,2020-12-05,104177
 "",Vietnam,2020-12-05,1365
 "",West Bank and Gaza,2020-12-05,96098
-"",Yemen,2020-12-05,2304
+"",Yemen,2020-12-05,2077
 "",Zambia,2020-12-05,17898
 "",Zimbabwe,2020-12-05,10617
 "",Afghanistan,2020-12-06,47306
@@ -86716,7 +86716,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-06,756
 "",Venezuela,2020-12-06,104442
 "",Vietnam,2020-12-06,1366
 "",West Bank and Gaza,2020-12-06,98038
-"",Yemen,2020-12-06,2337
+"",Yemen,2020-12-06,2078
 "",Zambia,2020-12-06,17916
 "",Zimbabwe,2020-12-06,10718
 "",Afghanistan,2020-12-07,47516
@@ -86987,7 +86987,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-07,756
 "",Venezuela,2020-12-07,104904
 "",Vietnam,2020-12-07,1367
 "",West Bank and Gaza,2020-12-07,99758
-"",Yemen,2020-12-07,2383
+"",Yemen,2020-12-07,2078
 "",Zambia,2020-12-07,17931
 "",Zimbabwe,2020-12-07,10839
 "",Afghanistan,2020-12-08,47716
@@ -87258,7 +87258,7 @@ Turks and Caicos Islands,United Kingdom,2020-12-08,761
 "",Venezuela,2020-12-08,105384
 "",Vietnam,2020-12-08,1377
 "",West Bank and Gaza,2020-12-08,101109
-"",Yemen,2020-12-08,2078
+"",Yemen,2020-12-08,2079
 "",Zambia,2020-12-08,17963
 "",Zimbabwe,2020-12-08,10912
 "",Afghanistan,2020-12-09,47851
@@ -90484,7 +90484,7 @@ Sint Maarten,Netherlands,2020-12-20,1328
 "",Taiwan,2020-12-20,766
 "",Tajikistan,2020-12-20,12960
 "",Tanzania,2020-12-20,509
-"",Thailand,2020-12-20,4907
+"",Thailand,2020-12-20,5289
 "",Timor-Leste,2020-12-20,31
 "",Togo,2020-12-20,3416
 "",Trinidad and Tobago,2020-12-20,7000
@@ -91026,7 +91026,7 @@ Sint Maarten,Netherlands,2020-12-22,1362
 "",Taiwan,2020-12-22,770
 "",Tajikistan,2020-12-22,13034
 "",Tanzania,2020-12-22,509
-"",Thailand,2020-12-22,5716
+"",Thailand,2020-12-22,5762
 "",Timor-Leste,2020-12-22,31
 "",Togo,2020-12-22,3467
 "",Trinidad and Tobago,2020-12-22,7024
@@ -91297,7 +91297,7 @@ Sint Maarten,Netherlands,2020-12-23,1370
 "",Taiwan,2020-12-23,776
 "",Tajikistan,2020-12-23,13071
 "",Tanzania,2020-12-23,509
-"",Thailand,2020-12-23,5762
+"",Thailand,2020-12-23,5829
 "",Timor-Leste,2020-12-23,33
 "",Togo,2020-12-23,3494
 "",Trinidad and Tobago,2020-12-23,7071
@@ -92110,7 +92110,7 @@ Sint Maarten,Netherlands,2020-12-26,1393
 "",Taiwan,2020-12-26,783
 "",Tajikistan,2020-12-26,13172
 "",Tanzania,2020-12-26,509
-"",Thailand,2020-12-26,6123
+"",Thailand,2020-12-26,6141
 "",Timor-Leste,2020-12-26,41
 "",Togo,2020-12-26,3555
 "",Trinidad and Tobago,2020-12-26,7104
@@ -92381,7 +92381,7 @@ Sint Maarten,Netherlands,2020-12-27,1393
 "",Taiwan,2020-12-27,785
 "",Tajikistan,2020-12-27,13205
 "",Tanzania,2020-12-27,509
-"",Thailand,2020-12-27,6141
+"",Thailand,2020-12-27,6285
 "",Timor-Leste,2020-12-27,41
 "",Togo,2020-12-27,3555
 "",Trinidad and Tobago,2020-12-27,7112
@@ -93194,7 +93194,7 @@ Sint Maarten,Netherlands,2020-12-30,1434
 "",Taiwan,2020-12-30,797
 "",Tajikistan,2020-12-30,13296
 "",Tanzania,2020-12-30,509
-"",Thailand,2020-12-30,6690
+"",Thailand,2020-12-30,6884
 "",Timor-Leste,2020-12-30,44
 "",Togo,2020-12-30,3611
 "",Trinidad and Tobago,2020-12-30,7132
@@ -95633,7 +95633,7 @@ Sint Maarten,Netherlands,2021-01-08,1554
 "",Taiwan,2021-01-08,825
 "",Tajikistan,2021-01-08,13305
 "",Tanzania,2021-01-08,509
-"",Thailand,2021-01-08,9841
+"",Thailand,2021-01-08,10053
 "",Timor-Leste,2021-01-08,49
 "",Togo,2021-01-08,3894
 "",Trinidad and Tobago,2021-01-08,7219
@@ -95904,7 +95904,7 @@ Sint Maarten,Netherlands,2021-01-09,1554
 "",Taiwan,2021-01-09,828
 "",Tajikistan,2021-01-09,13305
 "",Tanzania,2021-01-09,509
-"",Thailand,2021-01-09,10053
+"",Thailand,2021-01-09,10298
 "",Timor-Leste,2021-01-09,49
 "",Togo,2021-01-09,3932
 "",Trinidad and Tobago,2021-01-09,7244
@@ -96175,7 +96175,7 @@ Sint Maarten,Netherlands,2021-01-10,1555
 "",Taiwan,2021-01-10,828
 "",Tajikistan,2021-01-10,13308
 "",Tanzania,2021-01-10,509
-"",Thailand,2021-01-10,10298
+"",Thailand,2021-01-10,10547
 "",Timor-Leste,2021-01-10,49
 "",Togo,2021-01-10,3957
 "",Trinidad and Tobago,2021-01-10,7265
@@ -96746,6 +96746,277 @@ Turks and Caicos Islands,United Kingdom,2021-01-12,1011
 "",Yemen,2021-01-12,2107
 "",Zambia,2021-01-12,29757
 "",Zimbabwe,2021-01-12,23239
+"",Afghanistan,2021-01-13,53584
+"",Albania,2021-01-13,65334
+"",Algeria,2021-01-13,102860
+"",Andorra,2021-01-13,8818
+"",Angola,2021-01-13,18425
+"",Antigua and Barbuda,2021-01-13,176
+"",Argentina,2021-01-13,1757429
+"",Armenia,2021-01-13,163128
+Australian Capital Territory,Australia,2021-01-13,118
+New South Wales,Australia,2021-01-13,5043
+Northern Territory,Australia,2021-01-13,93
+Queensland,Australia,2021-01-13,1287
+South Australia,Australia,2021-01-13,590
+Tasmania,Australia,2021-01-13,234
+Victoria,Australia,2021-01-13,20414
+Western Australia,Australia,2021-01-13,881
+"",Austria,2021-01-13,385750
+"",Azerbaijan,2021-01-13,225820
+"",Bahamas,2021-01-13,8011
+"",Bahrain,2021-01-13,96470
+"",Bangladesh,2021-01-13,524910
+"",Barbados,2021-01-13,1007
+"",Belarus,2021-01-13,217696
+"",Belgium,2021-01-13,670249
+"",Belize,2021-01-13,11419
+"",Benin,2021-01-13,3413
+"",Bhutan,2021-01-13,833
+"",Bolivia,2021-01-13,178818
+"",Bosnia and Herzegovina,2021-01-13,116668
+"",Botswana,2021-01-13,16768
+"",Brazil,2021-01-13,8256536
+"",Brunei,2021-01-13,174
+"",Bulgaria,2021-01-13,210416
+"",Burkina Faso,2021-01-13,8546
+"",Burma,2021-01-13,132260
+"",Burundi,2021-01-13,1062
+"",Cabo Verde,2021-01-13,12592
+"",Cambodia,2021-01-13,411
+"",Cameroon,2021-01-13,27336
+Alberta,Canada,2021-01-13,113618
+British Columbia,Canada,2021-01-13,59072
+Diamond Princess,Canada,2021-01-13,0
+Grand Princess,Canada,2021-01-13,13
+Manitoba,Canada,2021-01-13,26695
+New Brunswick,Canada,2021-01-13,836
+Newfoundland and Labrador,Canada,2021-01-13,393
+Northwest Territories,Canada,2021-01-13,24
+Nova Scotia,Canada,2021-01-13,1542
+Nunavut,Canada,2021-01-13,266
+Ontario,Canada,2021-01-13,229854
+Prince Edward Island,Canada,2021-01-13,103
+Quebec,Canada,2021-01-13,234695
+Repatriated Travellers,Canada,2021-01-13,13
+Saskatchewan,Canada,2021-01-13,19017
+Yukon,Canada,2021-01-13,70
+"",Central African Republic,2021-01-13,4973
+"",Chad,2021-01-13,2709
+"",Chile,2021-01-13,652525
+Anhui,China,2021-01-13,993
+Beijing,China,2021-01-13,999
+Chongqing,China,2021-01-13,590
+Fujian,China,2021-01-13,529
+Gansu,China,2021-01-13,182
+Guangdong,China,2021-01-13,2081
+Guangxi,China,2021-01-13,265
+Guizhou,China,2021-01-13,147
+Hainan,China,2021-01-13,171
+Hebei,China,2021-01-13,851
+Heilongjiang,China,2021-01-13,1031
+Henan,China,2021-01-13,1303
+Hong Kong,Hong Kong,2021-01-13,9385
+Hubei,China,2021-01-13,68149
+Hunan,China,2021-01-13,1022
+Inner Mongolia,China,2021-01-13,366
+Jiangsu,China,2021-01-13,687
+Jiangxi,China,2021-01-13,935
+Jilin,China,2021-01-13,157
+Liaoning,China,2021-01-13,396
+Macau,China,2021-01-13,46
+Ningxia,China,2021-01-13,75
+Qinghai,China,2021-01-13,18
+Shaanxi,China,2021-01-13,524
+Shandong,China,2021-01-13,864
+Shanghai,China,2021-01-13,1581
+Shanxi,China,2021-01-13,227
+Sichuan,China,2021-01-13,857
+Tianjin,China,2021-01-13,324
+Tibet,China,2021-01-13,1
+Xinjiang,China,2021-01-13,980
+Yunnan,China,2021-01-13,231
+Zhejiang,China,2021-01-13,1308
+"",Colombia,2021-01-13,1831980
+"",Comoros,2021-01-13,1169
+"",Congo (Brazzaville),2021-01-13,7160
+"",Congo (Kinshasa),2021-01-13,20003
+"",Costa Rica,2021-01-13,182156
+"",Cote d'Ivoire,2021-01-13,24369
+"",Croatia,2021-01-13,222117
+"",Cuba,2021-01-13,16044
+"",Cyprus,2021-01-13,28124
+"",Czechia,2021-01-13,855600
+Faroe Islands,Denmark,2021-01-13,647
+Greenland,Denmark,2021-01-13,29
+"",Denmark,2021-01-13,185159
+"",Diamond Princess,2021-01-13,712
+"",Djibouti,2021-01-13,5891
+"",Dominica,2021-01-13,109
+"",Dominican Republic,2021-01-13,186383
+"",Ecuador,2021-01-13,224315
+"",Egypt,2021-01-13,152719
+"",El Salvador,2021-01-13,49539
+"",Equatorial Guinea,2021-01-13,5316
+"",Eritrea,2021-01-13,1596
+"",Estonia,2021-01-13,34991
+"",Eswatini,2021-01-13,12124
+"",Ethiopia,2021-01-13,129455
+"",Fiji,2021-01-13,53
+"",Finland,2021-01-13,39335
+French Guiana,France,2021-01-13,14370
+French Polynesia,France,2021-01-13,17483
+Guadeloupe,France,2021-01-13,8834
+Martinique,France,2021-01-13,6227
+Mayotte,France,2021-01-13,6255
+New Caledonia,France,2021-01-13,40
+Reunion,France,2021-01-13,9359
+Saint Barthelemy,France,2021-01-13,206
+Saint Pierre and Miquelon,France,2021-01-13,16
+St Martin,France,2021-01-13,1025
+Wallis and Futuna,France,2021-01-13,4
+"",France,2021-01-13,2824473
+"",Gabon,2021-01-13,9819
+"",Gambia,2021-01-13,3885
+"",Georgia,2021-01-13,243255
+"",Germany,2021-01-13,1993892
+"",Ghana,2021-01-13,56981
+"",Greece,2021-01-13,146688
+"",Grenada,2021-01-13,132
+"",Guatemala,2021-01-13,145986
+"",Guinea,2021-01-13,14051
+"",Guinea-Bissau,2021-01-13,2478
+"",Guyana,2021-01-13,6696
+"",Haiti,2021-01-13,10569
+"",Holy See,2021-01-13,27
+"",Honduras,2021-01-13,131009
+"",Hungary,2021-01-13,345710
+"",Iceland,2021-01-13,5935
+"",India,2021-01-13,10512093
+"",Indonesia,2021-01-13,858043
+"",Iran,2021-01-13,1305339
+"",Iraq,2021-01-13,605416
+"",Ireland,2021-01-13,159144
+"",Israel,2021-01-13,520060
+"",Italy,2021-01-13,2319036
+"",Jamaica,2021-01-13,13852
+"",Japan,2021-01-13,304140
+"",Jordan,2021-01-13,310968
+"",Kazakhstan,2021-01-13,211901
+"",Kenya,2021-01-13,98555
+"",South Korea,2021-01-13,70728
+"",Kosovo,2021-01-13,54560
+"",Kuwait,2021-01-13,155874
+"",Kyrgyzstan,2021-01-13,82587
+"",Laos,2021-01-13,41
+"",Latvia,2021-01-13,52032
+"",Lebanon,2021-01-13,231936
+"",Lesotho,2021-01-13,6241
+"",Liberia,2021-01-13,1877
+"",Libya,2021-01-13,106670
+"",Liechtenstein,2021-01-13,2370
+"",Lithuania,2021-01-13,163042
+"",Luxembourg,2021-01-13,48372
+"",MS Zaandam,2021-01-13,9
+"",Madagascar,2021-01-13,18001
+"",Malawi,2021-01-13,9400
+"",Malaysia,2021-01-13,144518
+"",Maldives,2021-01-13,14277
+"",Mali,2021-01-13,7738
+"",Malta,2021-01-13,14958
+"",Marshall Islands,2021-01-13,4
+"",Mauritania,2021-01-13,15794
+"",Mauritius,2021-01-13,547
+"",Mexico,2021-01-13,1571901
+"",Moldova,2021-01-13,150946
+"",Monaco,2021-01-13,1128
+"",Mongolia,2021-01-13,1479
+"",Montenegro,2021-01-13,53840
+"",Morocco,2021-01-13,455055
+"",Mozambique,2021-01-13,23726
+"",Namibia,2021-01-13,29183
+"",Nepal,2021-01-13,266143
+Aruba,Netherlands,2021-01-13,6228
+"Bonaire, Sint Eustatius and Saba",Netherlands,2021-01-13,196
+Curacao,Netherlands,2021-01-13,4488
+Sint Maarten,Netherlands,2021-01-13,1607
+"",Netherlands,2021-01-13,889221
+"",New Zealand,2021-01-13,2228
+"",Nicaragua,2021-01-13,6152
+"",Niger,2021-01-13,3998
+"",Nigeria,2021-01-13,103999
+"",North Macedonia,2021-01-13,87590
+"",Norway,2021-01-13,57282
+"",Oman,2021-01-13,131086
+"",Pakistan,2021-01-13,511921
+"",Panama,2021-01-13,288408
+"",Papua New Guinea,2021-01-13,833
+"",Paraguay,2021-01-13,118592
+"",Peru,2021-01-13,1040231
+"",Philippines,2021-01-13,492700
+"",Poland,2021-01-13,1404905
+"",Portugal,2021-01-13,507108
+"",Qatar,2021-01-13,146480
+"",Romania,2021-01-13,681392
+"",Russia,2021-01-13,3434934
+"",Rwanda,2021-01-13,10122
+"",Saint Kitts and Nevis,2021-01-13,34
+"",Saint Lucia,2021-01-13,502
+"",Saint Vincent and the Grenadines,2021-01-13,284
+"",Samoa,2021-01-13,2
+"",San Marino,2021-01-13,2723
+"",Sao Tome and Principe,2021-01-13,1105
+"",Saudi Arabia,2021-01-13,364271
+"",Senegal,2021-01-13,21883
+"",Serbia,2021-01-13,366191
+"",Seychelles,2021-01-13,612
+"",Sierra Leone,2021-01-13,2887
+"",Singapore,2021-01-13,58984
+"",Slovakia,2021-01-13,215055
+"",Slovenia,2021-01-13,143679
+"",Solomon Islands,2021-01-13,17
+"",Somalia,2021-01-13,4726
+"",South Africa,2021-01-13,1278303
+"",South Sudan,2021-01-13,3670
+"",Spain,2021-01-13,2176089
+"",Sri Lanka,2021-01-13,50229
+"",Sudan,2021-01-13,25730
+"",Suriname,2021-01-13,7247
+"",Sweden,2021-01-13,512203
+"",Switzerland,2021-01-13,490358
+"",Syria,2021-01-13,12660
+"",Taiwan,2021-01-13,842
+"",Tajikistan,2021-01-13,13308
+"",Tanzania,2021-01-13,509
+"",Thailand,2021-01-13,10991
+"",Timor-Leste,2021-01-13,51
+"",Togo,2021-01-13,4109
+"",Trinidad and Tobago,2021-01-13,7305
+"",Tunisia,2021-01-13,168568
+"",Turkey,2021-01-13,2355839
+"",Uganda,2021-01-13,38085
+"",Ukraine,2021-01-13,1166958
+"",United Arab Emirates,2021-01-13,239587
+Anguilla,United Kingdom,2021-01-13,15
+Bermuda,United Kingdom,2021-01-13,661
+British Virgin Islands,United Kingdom,2021-01-13,114
+Cayman Islands,United Kingdom,2021-01-13,362
+Channel Islands,United Kingdom,2021-01-13,3324
+Falkland Islands (Malvinas),United Kingdom,2021-01-13,32
+Gibraltar,United Kingdom,2021-01-13,3431
+Isle of Man,United Kingdom,2021-01-13,414
+Montserrat,United Kingdom,2021-01-13,13
+Turks and Caicos Islands,United Kingdom,2021-01-13,1011
+"",United Kingdom,2021-01-13,3211576
+"",Uruguay,2021-01-13,28475
+"",Uzbekistan,2021-01-13,77716
+"",Vanuatu,2021-01-13,1
+"",Venezuela,2021-01-13,117811
+"",Vietnam,2021-01-13,1521
+"",West Bank and Gaza,2021-01-13,149769
+"",Yemen,2021-01-13,2109
+"",Zambia,2021-01-13,31100
+"",Zimbabwe,2021-01-13,24256
 Alabama,United States,2020-01-22,0
 Alabama,United States,2020-01-23,0
 Alabama,United States,2020-01-24,0
@@ -97103,6 +97374,7 @@ Alabama,United States,2021-01-09,399150
 Alabama,United States,2021-01-10,401900
 Alabama,United States,2021-01-11,404000
 Alabama,United States,2021-01-12,407848
+Alabama,United States,2021-01-13,410995
 Alaska,United States,2020-01-22,0
 Alaska,United States,2020-01-23,0
 Alaska,United States,2020-01-24,0
@@ -97460,6 +97732,7 @@ Alaska,United States,2021-01-09,49958
 Alaska,United States,2021-01-10,50218
 Alaska,United States,2021-01-11,50394
 Alaska,United States,2021-01-12,50522
+Alaska,United States,2021-01-13,50816
 American Samoa,United States,2020-01-22,0
 American Samoa,United States,2020-01-23,0
 American Samoa,United States,2020-01-24,0
@@ -97817,6 +98090,7 @@ American Samoa,United States,2021-01-09,0
 American Samoa,United States,2021-01-10,0
 American Samoa,United States,2021-01-11,0
 American Samoa,United States,2021-01-12,0
+American Samoa,United States,2021-01-13,0
 Arizona,United States,2020-01-22,0
 Arizona,United States,2020-01-23,0
 Arizona,United States,2020-01-24,0
@@ -98174,6 +98448,7 @@ Arizona,United States,2021-01-09,607345
 Arizona,United States,2021-01-10,618546
 Arizona,United States,2021-01-11,627541
 Arizona,United States,2021-01-12,636100
+Arizona,United States,2021-01-13,641729
 Arkansas,United States,2020-01-22,0
 Arkansas,United States,2020-01-23,0
 Arkansas,United States,2020-01-24,0
@@ -98531,6 +98806,7 @@ Arkansas,United States,2021-01-09,251746
 Arkansas,United States,2021-01-10,255076
 Arkansas,United States,2021-01-11,256344
 Arkansas,United States,2021-01-12,259553
+Arkansas,United States,2021-01-13,262020
 California,United States,2020-01-22,0
 California,United States,2020-01-23,0
 California,United States,2020-01-24,0
@@ -98888,6 +99164,7 @@ California,United States,2021-01-09,2675262
 California,United States,2021-01-10,2717862
 California,United States,2021-01-11,2758021
 California,United States,2021-01-12,2804663
+California,United States,2021-01-13,2843062
 Colorado,United States,2020-01-22,0
 Colorado,United States,2020-01-23,0
 Colorado,United States,2020-01-24,0
@@ -99245,6 +99522,7 @@ Colorado,United States,2021-01-09,358947
 Colorado,United States,2021-01-10,361148
 Colorado,United States,2021-01-11,362825
 Colorado,United States,2021-01-12,364336
+Colorado,United States,2021-01-13,366774
 Connecticut,United States,2020-01-22,0
 Connecticut,United States,2020-01-23,0
 Connecticut,United States,2020-01-24,0
@@ -99602,6 +99880,7 @@ Connecticut,United States,2021-01-09,205994
 Connecticut,United States,2021-01-10,205994
 Connecticut,United States,2021-01-11,213358
 Connecticut,United States,2021-01-12,217047
+Connecticut,United States,2021-01-13,220576
 Delaware,United States,2020-01-22,0
 Delaware,United States,2020-01-23,0
 Delaware,United States,2020-01-24,0
@@ -99959,6 +100238,7 @@ Delaware,United States,2021-01-09,64475
 Delaware,United States,2021-01-10,65273
 Delaware,United States,2021-01-11,65827
 Delaware,United States,2021-01-12,66446
+Delaware,United States,2021-01-13,67173
 Diamond Princess,United States,2020-01-22,0
 Diamond Princess,United States,2020-01-23,0
 Diamond Princess,United States,2020-01-24,0
@@ -100316,6 +100596,7 @@ Diamond Princess,United States,2021-01-09,49
 Diamond Princess,United States,2021-01-10,49
 Diamond Princess,United States,2021-01-11,49
 Diamond Princess,United States,2021-01-12,49
+Diamond Princess,United States,2021-01-13,49
 District of Columbia,United States,2020-01-22,0
 District of Columbia,United States,2020-01-23,0
 District of Columbia,United States,2020-01-24,0
@@ -100673,6 +100954,7 @@ District of Columbia,United States,2021-01-09,31457
 District of Columbia,United States,2021-01-10,31791
 District of Columbia,United States,2021-01-11,31993
 District of Columbia,United States,2021-01-12,32423
+District of Columbia,United States,2021-01-13,32600
 Florida,United States,2020-01-22,0
 Florida,United States,2020-01-23,0
 Florida,United States,2020-01-24,0
@@ -101030,6 +101312,7 @@ Florida,United States,2021-01-09,1464697
 Florida,United States,2021-01-10,1477010
 Florida,United States,2021-01-11,1488586
 Florida,United States,2021-01-12,1503482
+Florida,United States,2021-01-13,1517472
 Georgia,United States,2020-01-22,0
 Georgia,United States,2020-01-23,0
 Georgia,United States,2020-01-24,0
@@ -101387,6 +101670,7 @@ Georgia,United States,2021-01-09,748852
 Georgia,United States,2021-01-10,757045
 Georgia,United States,2021-01-11,764499
 Georgia,United States,2021-01-12,773692
+Georgia,United States,2021-01-13,782288
 Grand Princess,United States,2020-01-22,0
 Grand Princess,United States,2020-01-23,0
 Grand Princess,United States,2020-01-24,0
@@ -101744,6 +102028,7 @@ Grand Princess,United States,2021-01-09,103
 Grand Princess,United States,2021-01-10,103
 Grand Princess,United States,2021-01-11,103
 Grand Princess,United States,2021-01-12,103
+Grand Princess,United States,2021-01-13,103
 Guam,United States,2020-01-22,0
 Guam,United States,2020-01-23,0
 Guam,United States,2020-01-24,0
@@ -102101,6 +102386,7 @@ Guam,United States,2021-01-09,7399
 Guam,United States,2021-01-10,7399
 Guam,United States,2021-01-11,7423
 Guam,United States,2021-01-12,7429
+Guam,United States,2021-01-13,7444
 Hawaii,United States,2020-01-22,0
 Hawaii,United States,2020-01-23,0
 Hawaii,United States,2020-01-24,0
@@ -102458,6 +102744,7 @@ Hawaii,United States,2021-01-09,23408
 Hawaii,United States,2021-01-10,23586
 Hawaii,United States,2021-01-11,23748
 Hawaii,United States,2021-01-12,23856
+Hawaii,United States,2021-01-13,23949
 Idaho,United States,2020-01-22,0
 Idaho,United States,2020-01-23,0
 Idaho,United States,2020-01-24,0
@@ -102815,6 +103102,7 @@ Idaho,United States,2021-01-09,149235
 Idaho,United States,2021-01-10,149667
 Idaho,United States,2021-01-11,150239
 Idaho,United States,2021-01-12,151273
+Idaho,United States,2021-01-13,152364
 Illinois,United States,2020-01-22,0
 Illinois,United States,2020-01-23,0
 Illinois,United States,2020-01-24,1
@@ -103172,6 +103460,7 @@ Illinois,United States,2021-01-09,1024039
 Illinois,United States,2021-01-10,1028750
 Illinois,United States,2021-01-11,1033526
 Illinois,United States,2021-01-12,1040168
+Illinois,United States,2021-01-13,1046030
 Indiana,United States,2020-01-22,0
 Indiana,United States,2020-01-23,0
 Indiana,United States,2020-01-24,0
@@ -103529,6 +103818,7 @@ Indiana,United States,2021-01-09,558560
 Indiana,United States,2021-01-10,563653
 Indiana,United States,2021-01-11,567338
 Indiana,United States,2021-01-12,570477
+Indiana,United States,2021-01-13,574119
 Iowa,United States,2020-01-22,0
 Iowa,United States,2020-01-23,0
 Iowa,United States,2020-01-24,0
@@ -103886,6 +104176,7 @@ Iowa,United States,2021-01-09,296171
 Iowa,United States,2021-01-10,296682
 Iowa,United States,2021-01-11,297774
 Iowa,United States,2021-01-12,299255
+Iowa,United States,2021-01-13,301161
 Kansas,United States,2020-01-22,0
 Kansas,United States,2020-01-23,0
 Kansas,United States,2020-01-24,0
@@ -104243,6 +104534,7 @@ Kansas,United States,2021-01-09,243648
 Kansas,United States,2021-01-10,243648
 Kansas,United States,2021-01-11,248646
 Kansas,United States,2021-01-12,248646
+Kansas,United States,2021-01-13,252990
 Kentucky,United States,2020-01-22,0
 Kentucky,United States,2020-01-23,0
 Kentucky,United States,2020-01-24,0
@@ -104600,6 +104892,7 @@ Kentucky,United States,2021-01-09,300397
 Kentucky,United States,2021-01-10,303624
 Kentucky,United States,2021-01-11,305706
 Kentucky,United States,2021-01-12,308728
+Kentucky,United States,2021-01-13,313281
 Louisiana,United States,2020-01-22,0
 Louisiana,United States,2020-01-23,0
 Louisiana,United States,2020-01-24,0
@@ -104957,6 +105250,7 @@ Louisiana,United States,2021-01-09,341431
 Louisiana,United States,2021-01-10,346829
 Louisiana,United States,2021-01-11,348234
 Louisiana,United States,2021-01-12,352939
+Louisiana,United States,2021-01-13,355835
 Maine,United States,2020-01-22,0
 Maine,United States,2020-01-23,0
 Maine,United States,2020-01-24,0
@@ -105314,6 +105608,7 @@ Maine,United States,2021-01-09,29019
 Maine,United States,2021-01-10,29298
 Maine,United States,2021-01-11,29611
 Maine,United States,2021-01-12,30326
+Maine,United States,2021-01-13,31150
 Maryland,United States,2020-01-22,0
 Maryland,United States,2020-01-23,0
 Maryland,United States,2020-01-24,0
@@ -105671,6 +105966,7 @@ Maryland,United States,2021-01-09,303364
 Maryland,United States,2021-01-10,306674
 Maryland,United States,2021-01-11,309686
 Maryland,United States,2021-01-12,312351
+Maryland,United States,2021-01-13,314867
 Massachusetts,United States,2020-01-22,0
 Massachusetts,United States,2020-01-23,0
 Massachusetts,United States,2020-01-24,0
@@ -106028,6 +106324,7 @@ Massachusetts,United States,2021-01-09,427135
 Massachusetts,United States,2021-01-10,432791
 Massachusetts,United States,2021-01-11,437042
 Massachusetts,United States,2021-01-12,442529
+Massachusetts,United States,2021-01-13,448447
 Michigan,United States,2020-01-22,0
 Michigan,United States,2020-01-23,0
 Michigan,United States,2020-01-24,0
@@ -106385,6 +106682,7 @@ Michigan,United States,2021-01-09,562553
 Michigan,United States,2021-01-10,562553
 Michigan,United States,2021-01-11,567682
 Michigan,United States,2021-01-12,570150
+Michigan,United States,2021-01-13,573278
 Minnesota,United States,2020-01-22,0
 Minnesota,United States,2020-01-23,0
 Minnesota,United States,2020-01-24,0
@@ -106742,6 +107040,7 @@ Minnesota,United States,2021-01-09,434413
 Minnesota,United States,2021-01-10,436572
 Minnesota,United States,2021-01-11,437552
 Minnesota,United States,2021-01-12,438867
+Minnesota,United States,2021-01-13,440354
 Mississippi,United States,2020-01-22,0
 Mississippi,United States,2020-01-23,0
 Mississippi,United States,2020-01-24,0
@@ -107099,6 +107398,7 @@ Mississippi,United States,2021-01-09,236868
 Mississippi,United States,2021-01-10,239082
 Mississippi,United States,2021-01-11,240309
 Mississippi,United States,2021-01-12,241957
+Mississippi,United States,2021-01-13,243899
 Missouri,United States,2020-01-22,0
 Missouri,United States,2020-01-23,0
 Missouri,United States,2020-01-24,0
@@ -107456,6 +107756,7 @@ Missouri,United States,2021-01-09,431943
 Missouri,United States,2021-01-10,434711
 Missouri,United States,2021-01-11,436461
 Missouri,United States,2021-01-12,438663
+Missouri,United States,2021-01-13,440849
 Montana,United States,2020-01-22,0
 Montana,United States,2020-01-23,0
 Montana,United States,2020-01-24,0
@@ -107813,6 +108114,7 @@ Montana,United States,2021-01-09,86102
 Montana,United States,2021-01-10,86324
 Montana,United States,2021-01-11,86653
 Montana,United States,2021-01-12,87077
+Montana,United States,2021-01-13,87653
 Nebraska,United States,2020-01-22,0
 Nebraska,United States,2020-01-23,0
 Nebraska,United States,2020-01-24,0
@@ -108170,6 +108472,7 @@ Nebraska,United States,2021-01-09,175620
 Nebraska,United States,2021-01-10,176026
 Nebraska,United States,2021-01-11,176670
 Nebraska,United States,2021-01-12,177670
+Nebraska,United States,2021-01-13,179199
 Nevada,United States,2020-01-22,0
 Nevada,United States,2020-01-23,0
 Nevada,United States,2020-01-24,0
@@ -108527,6 +108830,7 @@ Nevada,United States,2021-01-09,246309
 Nevada,United States,2021-01-10,248569
 Nevada,United States,2021-01-11,250249
 Nevada,United States,2021-01-12,252842
+Nevada,United States,2021-01-13,253985
 New Hampshire,United States,2020-01-22,0
 New Hampshire,United States,2020-01-23,0
 New Hampshire,United States,2020-01-24,0
@@ -108884,6 +109188,7 @@ New Hampshire,United States,2021-01-09,50871
 New Hampshire,United States,2021-01-10,51600
 New Hampshire,United States,2021-01-11,52307
 New Hampshire,United States,2021-01-12,53149
+New Hampshire,United States,2021-01-13,54125
 New Jersey,United States,2020-01-22,0
 New Jersey,United States,2020-01-23,0
 New Jersey,United States,2020-01-24,0
@@ -109241,6 +109546,7 @@ New Jersey,United States,2021-01-09,579250
 New Jersey,United States,2021-01-10,584828
 New Jersey,United States,2021-01-11,590162
 New Jersey,United States,2021-01-12,594749
+New Jersey,United States,2021-01-13,602629
 New Mexico,United States,2020-01-22,0
 New Mexico,United States,2020-01-23,0
 New Mexico,United States,2020-01-24,0
@@ -109598,6 +109904,7 @@ New Mexico,United States,2021-01-09,154954
 New Mexico,United States,2021-01-10,156157
 New Mexico,United States,2021-01-11,157087
 New Mexico,United States,2021-01-12,157974
+New Mexico,United States,2021-01-13,159119
 New York,United States,2020-01-22,0
 New York,United States,2020-01-23,0
 New York,United States,2020-01-24,0
@@ -109955,6 +110262,7 @@ New York,United States,2021-01-09,1119284
 New York,United States,2021-01-10,1135592
 New York,United States,2021-01-11,1149771
 New York,United States,2021-01-12,1164562
+New York,United States,2021-01-13,1179266
 North Carolina,United States,2020-01-22,0
 North Carolina,United States,2020-01-23,0
 North Carolina,United States,2020-01-24,0
@@ -110312,6 +110620,7 @@ North Carolina,United States,2021-01-09,614355
 North Carolina,United States,2021-01-10,623188
 North Carolina,United States,2021-01-11,629124
 North Carolina,United States,2021-01-12,635975
+North Carolina,United States,2021-01-13,641073
 North Dakota,United States,2020-01-22,0
 North Dakota,United States,2020-01-23,0
 North Dakota,United States,2020-01-24,0
@@ -110669,6 +110978,7 @@ North Dakota,United States,2021-01-09,94558
 North Dakota,United States,2021-01-10,94716
 North Dakota,United States,2021-01-11,94830
 North Dakota,United States,2021-01-12,94968
+North Dakota,United States,2021-01-13,95135
 Northern Mariana Islands,United States,2020-01-22,0
 Northern Mariana Islands,United States,2020-01-23,0
 Northern Mariana Islands,United States,2020-01-24,0
@@ -111026,6 +111336,7 @@ Northern Mariana Islands,United States,2021-01-09,125
 Northern Mariana Islands,United States,2021-01-10,125
 Northern Mariana Islands,United States,2021-01-11,128
 Northern Mariana Islands,United States,2021-01-12,128
+Northern Mariana Islands,United States,2021-01-13,128
 Ohio,United States,2020-01-22,0
 Ohio,United States,2020-01-23,0
 Ohio,United States,2020-01-24,0
@@ -111383,6 +111694,7 @@ Ohio,United States,2021-01-09,770977
 Ohio,United States,2021-01-10,777065
 Ohio,United States,2021-01-11,784957
 Ohio,United States,2021-01-12,792938
+Ohio,United States,2021-01-13,799639
 Oklahoma,United States,2020-01-22,0
 Oklahoma,United States,2020-01-23,0
 Oklahoma,United States,2020-01-24,0
@@ -111740,6 +112052,7 @@ Oklahoma,United States,2021-01-09,324875
 Oklahoma,United States,2021-01-10,331362
 Oklahoma,United States,2021-01-11,335247
 Oklahoma,United States,2021-01-12,337457
+Oklahoma,United States,2021-01-13,341364
 Oregon,United States,2020-01-22,0
 Oregon,United States,2020-01-23,0
 Oregon,United States,2020-01-24,0
@@ -112097,6 +112410,7 @@ Oregon,United States,2021-01-09,124476
 Oregon,United States,2021-01-10,125683
 Oregon,United States,2021-01-11,126607
 Oregon,United States,2021-01-12,127780
+Oregon,United States,2021-01-13,129109
 Pennsylvania,United States,2020-01-22,0
 Pennsylvania,United States,2020-01-23,0
 Pennsylvania,United States,2020-01-24,0
@@ -112454,6 +112768,7 @@ Pennsylvania,United States,2021-01-09,717277
 Pennsylvania,United States,2021-01-10,723865
 Pennsylvania,United States,2021-01-11,730773
 Pennsylvania,United States,2021-01-12,737994
+Pennsylvania,United States,2021-01-13,746002
 Puerto Rico,United States,2020-01-22,0
 Puerto Rico,United States,2020-01-23,0
 Puerto Rico,United States,2020-01-24,0
@@ -112811,6 +113126,7 @@ Puerto Rico,United States,2021-01-09,82630
 Puerto Rico,United States,2021-01-10,83119
 Puerto Rico,United States,2021-01-11,83468
 Puerto Rico,United States,2021-01-12,84427
+Puerto Rico,United States,2021-01-13,84639
 Rhode Island,United States,2020-01-22,0
 Rhode Island,United States,2020-01-23,0
 Rhode Island,United States,2020-01-24,0
@@ -113168,6 +113484,7 @@ Rhode Island,United States,2021-01-09,97614
 Rhode Island,United States,2021-01-10,97614
 Rhode Island,United States,2021-01-11,100607
 Rhode Island,United States,2021-01-12,101393
+Rhode Island,United States,2021-01-13,102485
 South Carolina,United States,2020-01-22,0
 South Carolina,United States,2020-01-23,0
 South Carolina,United States,2020-01-24,0
@@ -113525,6 +113842,7 @@ South Carolina,United States,2021-01-09,350084
 South Carolina,United States,2021-01-10,354525
 South Carolina,United States,2021-01-11,357654
 South Carolina,United States,2021-01-12,359357
+South Carolina,United States,2021-01-13,365378
 South Dakota,United States,2020-01-22,0
 South Dakota,United States,2020-01-23,0
 South Dakota,United States,2020-01-24,0
@@ -113882,6 +114200,7 @@ South Dakota,United States,2021-01-09,102901
 South Dakota,United States,2021-01-10,103318
 South Dakota,United States,2021-01-11,103499
 South Dakota,United States,2021-01-12,103743
+South Dakota,United States,2021-01-13,104195
 Tennessee,United States,2020-01-22,0
 Tennessee,United States,2020-01-23,0
 Tennessee,United States,2020-01-24,0
@@ -114239,6 +114558,7 @@ Tennessee,United States,2021-01-09,646450
 Tennessee,United States,2021-01-10,653869
 Tennessee,United States,2021-01-11,657396
 Tennessee,United States,2021-01-12,660874
+Tennessee,United States,2021-01-13,665499
 Texas,United States,2020-01-22,0
 Texas,United States,2020-01-23,0
 Texas,United States,2020-01-24,0
@@ -114596,6 +114916,7 @@ Texas,United States,2021-01-09,1951915
 Texas,United States,2021-01-10,1968189
 Texas,United States,2021-01-11,1990204
 Texas,United States,2021-01-12,2014645
+Texas,United States,2021-01-13,2040751
 Utah,United States,2020-01-22,0
 Utah,United States,2020-01-23,0
 Utah,United States,2020-01-24,0
@@ -114953,6 +115274,7 @@ Utah,United States,2021-01-09,303723
 Utah,United States,2021-01-10,305999
 Utah,United States,2021-01-11,307483
 Utah,United States,2021-01-12,309629
+Utah,United States,2021-01-13,314817
 Vermont,United States,2020-01-22,0
 Vermont,United States,2020-01-23,0
 Vermont,United States,2020-01-24,0
@@ -115310,6 +115632,7 @@ Vermont,United States,2021-01-09,8790
 Vermont,United States,2021-01-10,8967
 Vermont,United States,2021-01-11,9078
 Vermont,United States,2021-01-12,9247
+Vermont,United States,2021-01-13,9368
 Virgin Islands,United States,2020-01-22,0
 Virgin Islands,United States,2020-01-23,0
 Virgin Islands,United States,2020-01-24,0
@@ -115667,6 +115990,7 @@ Virgin Islands,United States,2021-01-09,2143
 Virgin Islands,United States,2021-01-10,2143
 Virgin Islands,United States,2021-01-11,2143
 Virgin Islands,United States,2021-01-12,2166
+Virgin Islands,United States,2021-01-13,2166
 Virginia,United States,2020-01-22,0
 Virginia,United States,2020-01-23,0
 Virginia,United States,2020-01-24,0
@@ -116024,6 +116348,7 @@ Virginia,United States,2021-01-09,393715
 Virginia,United States,2021-01-10,398856
 Virginia,United States,2021-01-11,403386
 Virginia,United States,2021-01-12,407947
+Virginia,United States,2021-01-13,412545
 Washington,United States,2020-01-22,1
 Washington,United States,2020-01-23,1
 Washington,United States,2020-01-24,1
@@ -116381,6 +116706,7 @@ Washington,United States,2021-01-09,271595
 Washington,United States,2021-01-10,271595
 Washington,United States,2021-01-11,276686
 Washington,United States,2021-01-12,278544
+Washington,United States,2021-01-13,281202
 West Virginia,United States,2020-01-22,0
 West Virginia,United States,2020-01-23,0
 West Virginia,United States,2020-01-24,0
@@ -116738,6 +117064,7 @@ West Virginia,United States,2021-01-09,99778
 West Virginia,United States,2021-01-10,101212
 West Virginia,United States,2021-01-11,102282
 West Virginia,United States,2021-01-12,103203
+West Virginia,United States,2021-01-13,104392
 Wisconsin,United States,2020-01-22,0
 Wisconsin,United States,2020-01-23,0
 Wisconsin,United States,2020-01-24,0
@@ -117095,6 +117422,7 @@ Wisconsin,United States,2021-01-09,548134
 Wisconsin,United States,2021-01-10,550260
 Wisconsin,United States,2021-01-11,551942
 Wisconsin,United States,2021-01-12,555249
+Wisconsin,United States,2021-01-13,558020
 Wyoming,United States,2020-01-22,0
 Wyoming,United States,2020-01-23,0
 Wyoming,United States,2020-01-24,0
@@ -117452,3 +117780,4 @@ Wyoming,United States,2021-01-09,46719
 Wyoming,United States,2021-01-10,46832
 Wyoming,United States,2021-01-11,47395
 Wyoming,United States,2021-01-12,48072
+Wyoming,United States,2021-01-13,48289
