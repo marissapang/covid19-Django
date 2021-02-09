@@ -100964,7 +100964,7 @@ Ontario,Canada,2021-01-27,265150
 Prince Edward Island,Canada,2021-01-27,110
 Quebec,Canada,2021-01-27,257330
 Repatriated Travellers,Canada,2021-01-27,13
-Saskatchewan,Canada,2021-01-27,22646
+Saskatchewan,Canada,2021-01-27,22794
 Yukon,Canada,2021-01-27,70
 "",Central African Republic,2021-01-27,4980
 "",Chad,2021-01-27,3269
@@ -101236,7 +101236,7 @@ Ontario,Canada,2021-01-28,267173
 Prince Edward Island,Canada,2021-01-28,110
 Quebec,Canada,2021-01-28,258698
 Repatriated Travellers,Canada,2021-01-28,13
-Saskatchewan,Canada,2021-01-28,22646
+Saskatchewan,Canada,2021-01-28,23038
 Yukon,Canada,2021-01-28,70
 "",Central African Republic,2021-01-28,4981
 "",Chad,2021-01-28,3296
@@ -101508,7 +101508,7 @@ Ontario,Canada,2021-01-29,269142
 Prince Edward Island,Canada,2021-01-29,111
 Quebec,Canada,2021-01-29,259993
 Repatriated Travellers,Canada,2021-01-29,13
-Saskatchewan,Canada,2021-01-29,22646
+Saskatchewan,Canada,2021-01-29,23366
 Yukon,Canada,2021-01-29,70
 "",Central African Republic,2021-01-29,4981
 "",Chad,2021-01-29,3321
@@ -101780,7 +101780,7 @@ Ontario,Canada,2021-01-30,271060
 Prince Edward Island,Canada,2021-01-30,111
 Quebec,Canada,2021-01-30,261360
 Repatriated Travellers,Canada,2021-01-30,13
-Saskatchewan,Canada,2021-01-30,22646
+Saskatchewan,Canada,2021-01-30,23626
 Yukon,Canada,2021-01-30,70
 "",Central African Republic,2021-01-30,4981
 "",Chad,2021-01-30,3347
@@ -102052,7 +102052,7 @@ Ontario,Canada,2021-01-31,272917
 Prince Edward Island,Canada,2021-01-31,111
 Quebec,Canada,2021-01-31,262583
 Repatriated Travellers,Canada,2021-01-31,13
-Saskatchewan,Canada,2021-01-31,22646
+Saskatchewan,Canada,2021-01-31,23864
 Yukon,Canada,2021-01-31,70
 "",Central African Republic,2021-01-31,4981
 "",Chad,2021-01-31,3376
@@ -103903,6 +103903,278 @@ Turks and Caicos Islands,United Kingdom,2021-02-06,1654
 "",Yemen,2021-02-06,2127
 "",Zambia,2021-02-06,61427
 "",Zimbabwe,2021-02-06,34487
+"",Afghanistan,2021-02-07,55335
+"",Albania,2021-02-07,85336
+"",Algeria,2021-02-07,109088
+"",Andorra,2021-02-07,10251
+"",Angola,2021-02-07,20086
+"",Antigua and Barbuda,2021-02-07,299
+"",Argentina,2021-02-07,1980347
+"",Armenia,2021-02-07,168088
+Australian Capital Territory,Australia,2021-02-07,118
+New South Wales,Australia,2021-02-07,5123
+Northern Territory,Australia,2021-02-07,102
+Queensland,Australia,2021-02-07,1314
+South Australia,Australia,2021-02-07,603
+Tasmania,Australia,2021-02-07,234
+Victoria,Australia,2021-02-07,20456
+Western Australia,Australia,2021-02-07,907
+"",Austria,2021-02-07,423839
+"",Azerbaijan,2021-02-07,231154
+"",Bahamas,2021-02-07,8256
+"",Bahrain,2021-02-07,107329
+"",Bangladesh,2021-02-07,538062
+"",Barbados,2021-02-07,1709
+"",Belarus,2021-02-07,258691
+"",Belgium,2021-02-07,725610
+"",Belize,2021-02-07,12037
+"",Benin,2021-02-07,4193
+"",Bhutan,2021-02-07,861
+"",Bolivia,2021-02-07,227967
+"",Bosnia and Herzegovina,2021-02-07,123434
+"",Botswana,2021-02-07,23503
+"",Brazil,2021-02-07,9524640
+"",Brunei,2021-02-07,181
+"",Bulgaria,2021-02-07,223734
+"",Burkina Faso,2021-02-07,11285
+"",Burma,2021-02-07,141304
+"",Burundi,2021-02-07,1723
+"",Cabo Verde,2021-02-07,14423
+"",Cambodia,2021-02-07,474
+"",Cameroon,2021-02-07,31394
+Alberta,Canada,2021-02-07,126767
+British Columbia,Canada,2021-02-07,69716
+Diamond Princess,Canada,2021-02-07,0
+Grand Princess,Canada,2021-02-07,13
+Manitoba,Canada,2021-02-07,30237
+New Brunswick,Canada,2021-02-07,1344
+Newfoundland and Labrador,Canada,2021-02-07,416
+Northwest Territories,Canada,2021-02-07,36
+Nova Scotia,Canada,2021-02-07,1585
+Nunavut,Canada,2021-02-07,299
+Ontario,Canada,2021-02-07,282932
+Prince Edward Island,Canada,2021-02-07,112
+Quebec,Canada,2021-02-07,270058
+Repatriated Travellers,Canada,2021-02-07,13
+Saskatchewan,Canada,2021-02-07,25403
+Yukon,Canada,2021-02-07,70
+"",Central African Republic,2021-02-07,4989
+"",Chad,2021-02-07,3497
+"",Chile,2021-02-07,751886
+Anhui,China,2021-02-07,994
+Beijing,China,2021-02-07,1046
+Chongqing,China,2021-02-07,591
+Fujian,China,2021-02-07,545
+Gansu,China,2021-02-07,187
+Guangdong,China,2021-02-07,2144
+Guangxi,China,2021-02-07,267
+Guizhou,China,2021-02-07,147
+Hainan,China,2021-02-07,171
+Hebei,China,2021-02-07,1316
+Heilongjiang,China,2021-02-07,1609
+Henan,China,2021-02-07,1303
+Hong Kong,Hong Kong,2021-02-07,10635
+Hubei,China,2021-02-07,68150
+Hunan,China,2021-02-07,1033
+Inner Mongolia,China,2021-02-07,366
+Jiangsu,China,2021-02-07,701
+Jiangxi,China,2021-02-07,935
+Jilin,China,2021-02-07,573
+Liaoning,China,2021-02-07,402
+Macau,China,2021-02-07,48
+Ningxia,China,2021-02-07,75
+Qinghai,China,2021-02-07,18
+Shaanxi,China,2021-02-07,542
+Shandong,China,2021-02-07,866
+Shanghai,China,2021-02-07,1739
+Shanxi,China,2021-02-07,239
+Sichuan,China,2021-02-07,873
+Tianjin,China,2021-02-07,346
+Tibet,China,2021-02-07,1
+Xinjiang,China,2021-02-07,980
+Yunnan,China,2021-02-07,231
+Zhejiang,China,2021-02-07,1316
+"",Colombia,2021-02-07,2157216
+"",Comoros,2021-02-07,3086
+"",Congo (Brazzaville),2021-02-07,8060
+"",Congo (Kinshasa),2021-02-07,23599
+"",Costa Rica,2021-02-07,196438
+"",Cote d'Ivoire,2021-02-07,29825
+"",Croatia,2021-02-07,235402
+"",Cuba,2021-02-07,32831
+"",Cyprus,2021-02-07,31759
+"",Czechia,2021-02-07,1034975
+Faroe Islands,Denmark,2021-02-07,656
+Greenland,Denmark,2021-02-07,30
+"",Denmark,2021-02-07,201621
+"",Diamond Princess,2021-02-07,712
+"",Djibouti,2021-02-07,5947
+"",Dominica,2021-02-07,121
+"",Dominican Republic,2021-02-07,223398
+"",Ecuador,2021-02-07,258282
+"",Egypt,2021-02-07,169640
+"",El Salvador,2021-02-07,56237
+"",Equatorial Guinea,2021-02-07,5578
+"",Eritrea,2021-02-07,2326
+"",Estonia,2021-02-07,47928
+"",Eswatini,2021-02-07,16204
+"",Ethiopia,2021-02-07,142338
+"",Fiji,2021-02-07,56
+"",Finland,2021-02-07,47616
+French Guiana,France,2021-02-07,16296
+French Polynesia,France,2021-02-07,18185
+Guadeloupe,France,2021-02-07,9156
+Martinique,France,2021-02-07,6442
+Mayotte,France,2021-02-07,10755
+New Caledonia,France,2021-02-07,49
+Reunion,France,2021-02-07,10487
+Saint Barthelemy,France,2021-02-07,360
+Saint Pierre and Miquelon,France,2021-02-07,24
+St Martin,France,2021-02-07,1234
+Wallis and Futuna,France,2021-02-07,5
+"",France,2021-02-07,3322988
+"",Gabon,2021-02-07,11457
+"",Gambia,2021-02-07,4237
+"",Georgia,2021-02-07,262024
+"",Germany,2021-02-07,2291673
+"",Ghana,2021-02-07,70768
+"",Greece,2021-02-07,163946
+"",Grenada,2021-02-07,148
+"",Guatemala,2021-02-07,163137
+"",Guinea,2021-02-07,14687
+"",Guinea-Bissau,2021-02-07,2780
+"",Guyana,2021-02-07,7982
+"",Haiti,2021-02-07,11806
+"",Holy See,2021-02-07,27
+"",Honduras,2021-02-07,154568
+"",Hungary,2021-02-07,376495
+"",Iceland,2021-02-07,6021
+"",India,2021-02-07,10838194
+"",Indonesia,2021-02-07,1157837
+"",Iran,2021-02-07,1466435
+"",Iraq,2021-02-07,628550
+"",Ireland,2021-02-07,203568
+"",Israel,2021-02-07,692101
+"",Italy,2021-02-07,2636738
+"",Jamaica,2021-02-07,17085
+"",Japan,2021-02-07,405765
+"",Jordan,2021-02-07,335154
+"",Kazakhstan,2021-02-07,244428
+"",Kenya,2021-02-07,101819
+"",South Korea,2021-02-07,81185
+"",Kosovo,2021-02-07,61688
+"",Kuwait,2021-02-07,170998
+"",Kyrgyzstan,2021-02-07,85071
+"",Laos,2021-02-07,45
+"",Latvia,2021-02-07,71800
+"",Lebanon,2021-02-07,319917
+"",Lesotho,2021-02-07,9380
+"",Liberia,2021-02-07,1956
+"",Libya,2021-02-07,124026
+"",Liechtenstein,2021-02-07,2523
+"",Lithuania,2021-02-07,186770
+"",Luxembourg,2021-02-07,51512
+"",MS Zaandam,2021-02-07,9
+"",Madagascar,2021-02-07,19360
+"",Malawi,2021-02-07,27195
+"",Malaysia,2021-02-07,242452
+"",Maldives,2021-02-07,16783
+"",Mali,2021-02-07,8176
+"",Malta,2021-02-07,18676
+"",Marshall Islands,2021-02-07,4
+"",Mauritania,2021-02-07,16807
+"",Mauritius,2021-02-07,584
+"",Mexico,2021-02-07,1932145
+"",Micronesia,2021-02-07,1
+"",Moldova,2021-02-07,164569
+"",Monaco,2021-02-07,1655
+"",Mongolia,2021-02-07,2073
+"",Montenegro,2021-02-07,65227
+"",Morocco,2021-02-07,475355
+"",Mozambique,2021-02-07,44600
+"",Namibia,2021-02-07,34973
+"",Nepal,2021-02-07,271925
+Aruba,Netherlands,2021-02-07,7223
+"Bonaire, Sint Eustatius and Saba",Netherlands,2021-02-07,196
+Curacao,Netherlands,2021-02-07,4613
+Sint Maarten,Netherlands,2021-02-07,1928
+"",Netherlands,2021-02-07,1005760
+"",New Zealand,2021-02-07,2320
+"",Nicaragua,2021-02-07,6299
+"",Niger,2021-02-07,4612
+"",Nigeria,2021-02-07,139748
+"",North Macedonia,2021-02-07,94798
+"",Norway,2021-02-07,64772
+"",Oman,2021-02-07,135674
+"",Pakistan,2021-02-07,555511
+"",Panama,2021-02-07,327091
+"",Papua New Guinea,2021-02-07,895
+"",Paraguay,2021-02-07,138118
+"",Peru,2021-02-07,1186698
+"",Philippines,2021-02-07,537310
+"",Poland,2021-02-07,1550255
+"",Portugal,2021-02-07,765414
+"",Qatar,2021-02-07,154098
+"",Romania,2021-02-07,745318
+"",Russia,2021-02-07,3923461
+"",Rwanda,2021-02-07,16451
+"",Saint Kitts and Nevis,2021-02-07,40
+"",Saint Lucia,2021-02-07,1813
+"",Saint Vincent and the Grenadines,2021-02-07,1269
+"",Samoa,2021-02-07,2
+"",San Marino,2021-02-07,3127
+"",Sao Tome and Principe,2021-02-07,1351
+"",Saudi Arabia,2021-02-07,370278
+"",Senegal,2021-02-07,28760
+"",Serbia,2021-02-07,407881
+"",Seychelles,2021-02-07,1513
+"",Sierra Leone,2021-02-07,3785
+"",Singapore,2021-02-07,59699
+"",Slovakia,2021-02-07,263326
+"",Slovenia,2021-02-07,173702
+"",Solomon Islands,2021-02-07,17
+"",Somalia,2021-02-07,4862
+"",South Africa,2021-02-07,1476135
+"",South Sudan,2021-02-07,4355
+"",Spain,2021-02-07,2941990
+"",Sri Lanka,2021-02-07,69348
+"",Sudan,2021-02-07,29634
+"",Suriname,2021-02-07,8671
+"",Sweden,2021-02-07,588062
+"",Switzerland,2021-02-07,531873
+"",Syria,2021-02-07,14477
+"",Taiwan,2021-02-07,927
+"",Tajikistan,2021-02-07,13308
+"",Tanzania,2021-02-07,509
+"",Thailand,2021-02-07,23557
+"",Timor-Leste,2021-02-07,80
+"",Togo,2021-02-07,5483
+"",Trinidad and Tobago,2021-02-07,7616
+"",Tunisia,2021-02-07,217086
+"",Turkey,2021-02-07,2531456
+"",Uganda,2021-02-07,39848
+"",Ukraine,2021-02-07,1288669
+"",United Arab Emirates,2021-02-07,326495
+Anguilla,United Kingdom,2021-02-07,17
+Bermuda,United Kingdom,2021-02-07,692
+British Virgin Islands,United Kingdom,2021-02-07,114
+Cayman Islands,United Kingdom,2021-02-07,405
+Channel Islands,United Kingdom,2021-02-07,3896
+Falkland Islands (Malvinas),United Kingdom,2021-02-07,45
+Gibraltar,United Kingdom,2021-02-07,4182
+Isle of Man,United Kingdom,2021-02-07,434
+Montserrat,United Kingdom,2021-02-07,17
+Turks and Caicos Islands,United Kingdom,2021-02-07,1695
+"",United Kingdom,2021-02-07,3945680
+"",Uruguay,2021-02-07,45311
+"",Uzbekistan,2021-02-07,79098
+"",Vanuatu,2021-02-07,1
+"",Venezuela,2021-02-07,130116
+"",Vietnam,2021-02-07,2001
+"",West Bank and Gaza,2021-02-07,162601
+"",Yemen,2021-02-07,2127
+"",Zambia,2021-02-07,62633
+"",Zimbabwe,2021-02-07,34552
 Alabama,United States,2020-01-22,0
 Alabama,United States,2020-01-23,0
 Alabama,United States,2020-01-24,0
@@ -104285,6 +104557,7 @@ Alabama,United States,2021-02-03,465056
 Alabama,United States,2021-02-04,467823
 Alabama,United States,2021-02-05,469319
 Alabama,United States,2021-02-06,471311
+Alabama,United States,2021-02-07,472423
 Alaska,United States,2020-01-22,0
 Alaska,United States,2020-01-23,0
 Alaska,United States,2020-01-24,0
@@ -104667,6 +104940,7 @@ Alaska,United States,2021-02-03,54820
 Alaska,United States,2021-02-04,55005
 Alaska,United States,2021-02-05,55259
 Alaska,United States,2021-02-06,55259
+Alaska,United States,2021-02-07,55259
 American Samoa,United States,2020-01-22,0
 American Samoa,United States,2020-01-23,0
 American Samoa,United States,2020-01-24,0
@@ -105049,6 +105323,7 @@ American Samoa,United States,2021-02-03,0
 American Samoa,United States,2021-02-04,0
 American Samoa,United States,2021-02-05,0
 American Samoa,United States,2021-02-06,0
+American Samoa,United States,2021-02-07,0
 Arizona,United States,2020-01-22,0
 Arizona,United States,2020-01-23,0
 Arizona,United States,2020-01-24,0
@@ -105431,6 +105706,7 @@ Arizona,United States,2021-02-03,767379
 Arizona,United States,2021-02-04,771796
 Arizona,United States,2021-02-05,775622
 Arizona,United States,2021-02-06,779093
+Arizona,United States,2021-02-07,780637
 Arkansas,United States,2020-01-22,0
 Arkansas,United States,2020-01-23,0
 Arkansas,United States,2020-01-24,0
@@ -105813,6 +106089,7 @@ Arkansas,United States,2021-02-03,300430
 Arkansas,United States,2021-02-04,302899
 Arkansas,United States,2021-02-05,304723
 Arkansas,United States,2021-02-06,306064
+Arkansas,United States,2021-02-07,306736
 California,United States,2020-01-22,0
 California,United States,2020-01-23,0
 California,United States,2020-01-24,0
@@ -106195,6 +106472,7 @@ California,United States,2021-02-03,3368281
 California,United States,2021-02-04,3382932
 California,United States,2021-02-05,3399745
 California,United States,2021-02-06,3408241
+California,United States,2021-02-07,3417982
 Colorado,United States,2020-01-22,0
 Colorado,United States,2020-01-23,0
 Colorado,United States,2020-01-24,0
@@ -106577,6 +106855,7 @@ Colorado,United States,2021-02-03,399267
 Colorado,United States,2021-02-04,400851
 Colorado,United States,2021-02-05,402754
 Colorado,United States,2021-02-06,404256
+Colorado,United States,2021-02-07,405330
 Connecticut,United States,2020-01-22,0
 Connecticut,United States,2020-01-23,0
 Connecticut,United States,2020-01-24,0
@@ -106959,6 +107238,7 @@ Connecticut,United States,2021-02-03,257004
 Connecticut,United States,2021-02-04,257941
 Connecticut,United States,2021-02-05,259372
 Connecticut,United States,2021-02-06,259372
+Connecticut,United States,2021-02-07,259372
 Delaware,United States,2020-01-22,0
 Delaware,United States,2020-01-23,0
 Delaware,United States,2020-01-24,0
@@ -107341,6 +107621,7 @@ Delaware,United States,2021-02-03,78982
 Delaware,United States,2021-02-04,79225
 Delaware,United States,2021-02-05,79546
 Delaware,United States,2021-02-06,79832
+Delaware,United States,2021-02-07,80594
 Diamond Princess,United States,2020-01-22,0
 Diamond Princess,United States,2020-01-23,0
 Diamond Princess,United States,2020-01-24,0
@@ -107723,6 +108004,7 @@ Diamond Princess,United States,2021-02-03,49
 Diamond Princess,United States,2021-02-04,49
 Diamond Princess,United States,2021-02-05,49
 Diamond Princess,United States,2021-02-06,49
+Diamond Princess,United States,2021-02-07,49
 District of Columbia,United States,2020-01-22,0
 District of Columbia,United States,2020-01-23,0
 District of Columbia,United States,2020-01-24,0
@@ -108105,6 +108387,7 @@ District of Columbia,United States,2021-02-03,37199
 District of Columbia,United States,2021-02-04,37365
 District of Columbia,United States,2021-02-05,37634
 District of Columbia,United States,2021-02-06,37877
+District of Columbia,United States,2021-02-07,38035
 Florida,United States,2020-01-22,0
 Florida,United States,2020-01-23,0
 Florida,United States,2020-01-24,0
@@ -108487,6 +108770,7 @@ Florida,United States,2021-02-03,1744619
 Florida,United States,2021-02-04,1752330
 Florida,United States,2021-02-05,1763873
 Florida,United States,2021-02-06,1771359
+Florida,United States,2021-02-07,1777983
 Georgia,United States,2020-01-22,0
 Georgia,United States,2020-01-23,0
 Georgia,United States,2020-01-24,0
@@ -108869,6 +109153,7 @@ Georgia,United States,2021-02-03,922364
 Georgia,United States,2021-02-04,928070
 Georgia,United States,2021-02-05,932912
 Georgia,United States,2021-02-06,937402
+Georgia,United States,2021-02-07,940991
 Grand Princess,United States,2020-01-22,0
 Grand Princess,United States,2020-01-23,0
 Grand Princess,United States,2020-01-24,0
@@ -109251,6 +109536,7 @@ Grand Princess,United States,2021-02-03,103
 Grand Princess,United States,2021-02-04,103
 Grand Princess,United States,2021-02-05,103
 Grand Princess,United States,2021-02-06,103
+Grand Princess,United States,2021-02-07,103
 Guam,United States,2020-01-22,0
 Guam,United States,2020-01-23,0
 Guam,United States,2020-01-24,0
@@ -109633,6 +109919,7 @@ Guam,United States,2021-02-03,7618
 Guam,United States,2021-02-04,7622
 Guam,United States,2021-02-05,7636
 Guam,United States,2021-02-06,7636
+Guam,United States,2021-02-07,7636
 Hawaii,United States,2020-01-22,0
 Hawaii,United States,2020-01-23,0
 Hawaii,United States,2020-01-24,0
@@ -110015,6 +110302,7 @@ Hawaii,United States,2021-02-03,26286
 Hawaii,United States,2021-02-04,26387
 Hawaii,United States,2021-02-05,26507
 Hawaii,United States,2021-02-06,26611
+Hawaii,United States,2021-02-07,26684
 Idaho,United States,2020-01-22,0
 Idaho,United States,2020-01-23,0
 Idaho,United States,2020-01-24,0
@@ -110397,6 +110685,7 @@ Idaho,United States,2021-02-03,164163
 Idaho,United States,2021-02-04,164565
 Idaho,United States,2021-02-05,164969
 Idaho,United States,2021-02-06,165209
+Idaho,United States,2021-02-07,165209
 Illinois,United States,2020-01-22,0
 Illinois,United States,2020-01-23,0
 Illinois,United States,2020-01-24,1
@@ -110779,6 +111068,7 @@ Illinois,United States,2021-02-03,1134231
 Illinois,United States,2021-02-04,1137559
 Illinois,United States,2021-02-05,1141219
 Illinois,United States,2021-02-06,1144281
+Illinois,United States,2021-02-07,1146346
 Indiana,United States,2020-01-22,0
 Indiana,United States,2020-01-23,0
 Indiana,United States,2020-01-24,0
@@ -111161,6 +111451,7 @@ Indiana,United States,2021-02-03,631331
 Indiana,United States,2021-02-04,633667
 Indiana,United States,2021-02-05,635171
 Indiana,United States,2021-02-06,637987
+Indiana,United States,2021-02-07,639711
 Iowa,United States,2020-01-22,0
 Iowa,United States,2020-01-23,0
 Iowa,United States,2020-01-24,0
@@ -111543,6 +111834,7 @@ Iowa,United States,2021-02-03,322308
 Iowa,United States,2021-02-04,323216
 Iowa,United States,2021-02-05,323797
 Iowa,United States,2021-02-06,324306
+Iowa,United States,2021-02-07,324590
 Kansas,United States,2020-01-22,0
 Kansas,United States,2020-01-23,0
 Kansas,United States,2020-01-24,0
@@ -111925,6 +112217,7 @@ Kansas,United States,2021-02-03,281322
 Kansas,United States,2021-02-04,281363
 Kansas,United States,2021-02-05,283926
 Kansas,United States,2021-02-06,283926
+Kansas,United States,2021-02-07,283926
 Kentucky,United States,2020-01-22,0
 Kentucky,United States,2020-01-23,0
 Kentucky,United States,2020-01-24,0
@@ -112307,6 +112600,7 @@ Kentucky,United States,2021-02-03,369510
 Kentucky,United States,2021-02-04,372003
 Kentucky,United States,2021-02-05,374259
 Kentucky,United States,2021-02-06,376253
+Kentucky,United States,2021-02-07,377790
 Louisiana,United States,2020-01-22,0
 Louisiana,United States,2020-01-23,0
 Louisiana,United States,2020-01-24,0
@@ -112689,6 +112983,7 @@ Louisiana,United States,2021-02-03,406235
 Louisiana,United States,2021-02-04,408995
 Louisiana,United States,2021-02-05,409861
 Louisiana,United States,2021-02-06,409861
+Louisiana,United States,2021-02-07,411812
 Maine,United States,2020-01-22,0
 Maine,United States,2020-01-23,0
 Maine,United States,2020-01-24,0
@@ -113071,6 +113366,7 @@ Maine,United States,2021-02-03,40233
 Maine,United States,2021-02-04,40534
 Maine,United States,2021-02-05,40799
 Maine,United States,2021-02-06,41065
+Maine,United States,2021-02-07,41219
 Maryland,United States,2020-01-22,0
 Maryland,United States,2020-01-23,0
 Maryland,United States,2020-01-24,0
@@ -113453,6 +113749,7 @@ Maryland,United States,2021-02-03,357483
 Maryland,United States,2021-02-04,359037
 Maryland,United States,2021-02-05,360584
 Maryland,United States,2021-02-06,362084
+Maryland,United States,2021-02-07,363650
 Massachusetts,United States,2020-01-22,0
 Massachusetts,United States,2020-01-23,0
 Massachusetts,United States,2020-01-24,0
@@ -113835,6 +114132,7 @@ Massachusetts,United States,2021-02-03,531117
 Massachusetts,United States,2021-02-04,533921
 Massachusetts,United States,2021-02-05,537208
 Massachusetts,United States,2021-02-06,540827
+Massachusetts,United States,2021-02-07,543934
 Michigan,United States,2020-01-22,0
 Michigan,United States,2020-01-23,0
 Michigan,United States,2020-01-24,0
@@ -114217,6 +114515,7 @@ Michigan,United States,2021-02-03,615860
 Michigan,United States,2021-02-04,617745
 Michigan,United States,2021-02-05,619499
 Michigan,United States,2021-02-06,620685
+Michigan,United States,2021-02-07,620685
 Minnesota,United States,2020-01-22,0
 Minnesota,United States,2020-01-23,0
 Minnesota,United States,2020-01-24,0
@@ -114599,6 +114898,7 @@ Minnesota,United States,2021-02-03,463766
 Minnesota,United States,2021-02-04,465176
 Minnesota,United States,2021-02-05,466224
 Minnesota,United States,2021-02-06,467217
+Minnesota,United States,2021-02-07,468118
 Mississippi,United States,2020-01-22,0
 Mississippi,United States,2020-01-23,0
 Mississippi,United States,2020-01-24,0
@@ -114981,6 +115281,7 @@ Mississippi,United States,2021-02-03,277322
 Mississippi,United States,2021-02-04,278532
 Mississippi,United States,2021-02-05,279742
 Mississippi,United States,2021-02-06,280778
+Mississippi,United States,2021-02-07,281678
 Missouri,United States,2020-01-22,0
 Missouri,United States,2020-01-23,0
 Missouri,United States,2020-01-24,0
@@ -115363,6 +115664,7 @@ Missouri,United States,2021-02-03,477228
 Missouri,United States,2021-02-04,478750
 Missouri,United States,2021-02-05,480086
 Missouri,United States,2021-02-06,481183
+Missouri,United States,2021-02-07,481929
 Montana,United States,2020-01-22,0
 Montana,United States,2020-01-23,0
 Montana,United States,2020-01-24,0
@@ -115745,6 +116047,7 @@ Montana,United States,2021-02-03,94810
 Montana,United States,2021-02-04,95111
 Montana,United States,2021-02-05,95458
 Montana,United States,2021-02-06,95717
+Montana,United States,2021-02-07,95790
 Nebraska,United States,2020-01-22,0
 Nebraska,United States,2020-01-23,0
 Nebraska,United States,2020-01-24,0
@@ -116127,6 +116430,7 @@ Nebraska,United States,2021-02-03,192042
 Nebraska,United States,2021-02-04,192549
 Nebraska,United States,2021-02-05,193069
 Nebraska,United States,2021-02-06,193421
+Nebraska,United States,2021-02-07,193722
 Nevada,United States,2020-01-22,0
 Nevada,United States,2020-01-23,0
 Nevada,United States,2020-01-24,0
@@ -116509,6 +116813,7 @@ Nevada,United States,2021-02-03,280707
 Nevada,United States,2021-02-04,281596
 Nevada,United States,2021-02-05,282493
 Nevada,United States,2021-02-06,283391
+Nevada,United States,2021-02-07,284042
 New Hampshire,United States,2020-01-22,0
 New Hampshire,United States,2020-01-23,0
 New Hampshire,United States,2020-01-24,0
@@ -116891,6 +117196,7 @@ New Hampshire,United States,2021-02-03,66721
 New Hampshire,United States,2021-02-04,67117
 New Hampshire,United States,2021-02-05,67595
 New Hampshire,United States,2021-02-06,68061
+New Hampshire,United States,2021-02-07,68379
 New Jersey,United States,2020-01-22,0
 New Jersey,United States,2020-01-23,0
 New Jersey,United States,2020-01-24,0
@@ -117273,6 +117579,7 @@ New Jersey,United States,2021-02-03,705807
 New Jersey,United States,2021-02-04,709096
 New Jersey,United States,2021-02-05,713324
 New Jersey,United States,2021-02-06,717835
+New Jersey,United States,2021-02-07,722167
 New Mexico,United States,2020-01-22,0
 New Mexico,United States,2020-01-23,0
 New Mexico,United States,2020-01-24,0
@@ -117655,6 +117962,7 @@ New Mexico,United States,2021-02-03,175652
 New Mexico,United States,2021-02-04,176211
 New Mexico,United States,2021-02-05,176793
 New Mexico,United States,2021-02-06,177214
+New Mexico,United States,2021-02-07,177556
 New York,United States,2020-01-22,0
 New York,United States,2020-01-23,0
 New York,United States,2020-01-24,0
@@ -118037,6 +118345,7 @@ New York,United States,2021-02-03,1443942
 New York,United States,2021-02-04,1450912
 New York,United States,2021-02-05,1458809
 New York,United States,2021-02-06,1470301
+New York,United States,2021-02-07,1480224
 North Carolina,United States,2020-01-22,0
 North Carolina,United States,2020-01-23,0
 North Carolina,United States,2020-01-24,0
@@ -118419,6 +118728,7 @@ North Carolina,United States,2021-02-03,776307
 North Carolina,United States,2021-02-04,781802
 North Carolina,United States,2021-02-05,787349
 North Carolina,United States,2021-02-06,791521
+North Carolina,United States,2021-02-07,796195
 North Dakota,United States,2020-01-22,0
 North Dakota,United States,2020-01-23,0
 North Dakota,United States,2020-01-24,0
@@ -118801,6 +119111,7 @@ North Dakota,United States,2021-02-03,97936
 North Dakota,United States,2021-02-04,98034
 North Dakota,United States,2021-02-05,98095
 North Dakota,United States,2021-02-06,98106
+North Dakota,United States,2021-02-07,98155
 Northern Mariana Islands,United States,2020-01-22,0
 Northern Mariana Islands,United States,2020-01-23,0
 Northern Mariana Islands,United States,2020-01-24,0
@@ -119183,6 +119494,7 @@ Northern Mariana Islands,United States,2021-02-03,133
 Northern Mariana Islands,United States,2021-02-04,133
 Northern Mariana Islands,United States,2021-02-05,133
 Northern Mariana Islands,United States,2021-02-06,133
+Northern Mariana Islands,United States,2021-02-07,133
 Ohio,United States,2020-01-22,0
 Ohio,United States,2020-01-23,0
 Ohio,United States,2020-01-24,0
@@ -119565,6 +119877,7 @@ Ohio,United States,2021-02-03,906727
 Ohio,United States,2021-02-04,910847
 Ohio,United States,2021-02-05,914530
 Ohio,United States,2021-02-06,918079
+Ohio,United States,2021-02-07,920217
 Oklahoma,United States,2020-01-22,0
 Oklahoma,United States,2020-01-23,0
 Oklahoma,United States,2020-01-24,0
@@ -119947,6 +120260,7 @@ Oklahoma,United States,2021-02-03,394283
 Oklahoma,United States,2021-02-04,397065
 Oklahoma,United States,2021-02-05,399727
 Oklahoma,United States,2021-02-06,401780
+Oklahoma,United States,2021-02-07,403954
 Oregon,United States,2020-01-22,0
 Oregon,United States,2020-01-23,0
 Oregon,United States,2020-01-24,0
@@ -120329,6 +120643,7 @@ Oregon,United States,2021-02-03,144605
 Oregon,United States,2021-02-04,145320
 Oregon,United States,2021-02-05,146137
 Oregon,United States,2021-02-06,146741
+Oregon,United States,2021-02-07,147122
 Pennsylvania,United States,2020-01-22,0
 Pennsylvania,United States,2020-01-23,0
 Pennsylvania,United States,2020-01-24,0
@@ -120711,6 +121026,7 @@ Pennsylvania,United States,2021-02-03,857332
 Pennsylvania,United States,2021-02-04,860721
 Pennsylvania,United States,2021-02-05,865448
 Pennsylvania,United States,2021-02-06,869222
+Pennsylvania,United States,2021-02-07,873146
 Puerto Rico,United States,2020-01-22,0
 Puerto Rico,United States,2020-01-23,0
 Puerto Rico,United States,2020-01-24,0
@@ -121093,6 +121409,7 @@ Puerto Rico,United States,2021-02-03,94662
 Puerto Rico,United States,2021-02-04,94984
 Puerto Rico,United States,2021-02-05,95064
 Puerto Rico,United States,2021-02-06,95355
+Puerto Rico,United States,2021-02-07,95839
 Rhode Island,United States,2020-01-22,0
 Rhode Island,United States,2020-01-23,0
 Rhode Island,United States,2020-01-24,0
@@ -121475,6 +121792,7 @@ Rhode Island,United States,2021-02-03,116704
 Rhode Island,United States,2021-02-04,117291
 Rhode Island,United States,2021-02-05,117891
 Rhode Island,United States,2021-02-06,117891
+Rhode Island,United States,2021-02-07,117891
 South Carolina,United States,2020-01-22,0
 South Carolina,United States,2020-01-23,0
 South Carolina,United States,2020-01-24,0
@@ -121857,6 +122175,7 @@ South Carolina,United States,2021-02-03,450794
 South Carolina,United States,2021-02-04,453878
 South Carolina,United States,2021-02-05,459974
 South Carolina,United States,2021-02-06,462981
+South Carolina,United States,2021-02-07,466373
 South Dakota,United States,2020-01-22,0
 South Dakota,United States,2020-01-23,0
 South Dakota,United States,2020-01-24,0
@@ -122239,6 +122558,7 @@ South Dakota,United States,2021-02-03,108639
 South Dakota,United States,2021-02-04,108813
 South Dakota,United States,2021-02-05,108944
 South Dakota,United States,2021-02-06,109132
+South Dakota,United States,2021-02-07,109229
 Tennessee,United States,2020-01-22,0
 Tennessee,United States,2020-01-23,0
 Tennessee,United States,2020-01-24,0
@@ -122621,6 +122941,7 @@ Tennessee,United States,2021-02-03,733216
 Tennessee,United States,2021-02-04,736370
 Tennessee,United States,2021-02-05,739031
 Tennessee,United States,2021-02-06,742213
+Tennessee,United States,2021-02-07,744600
 Texas,United States,2020-01-22,0
 Texas,United States,2020-01-23,0
 Texas,United States,2020-01-24,0
@@ -123003,6 +123324,7 @@ Texas,United States,2021-02-03,2449535
 Texas,United States,2021-02-04,2463424
 Texas,United States,2021-02-05,2478003
 Texas,United States,2021-02-06,2486505
+Texas,United States,2021-02-07,2494861
 Utah,United States,2020-01-22,0
 Utah,United States,2020-01-23,0
 Utah,United States,2020-01-24,0
@@ -123385,6 +123707,7 @@ Utah,United States,2021-02-03,350000
 Utah,United States,2021-02-04,351273
 Utah,United States,2021-02-05,352489
 Utah,United States,2021-02-06,353700
+Utah,United States,2021-02-07,354608
 Vermont,United States,2020-01-22,0
 Vermont,United States,2020-01-23,0
 Vermont,United States,2020-01-24,0
@@ -123767,6 +124090,7 @@ Vermont,United States,2021-02-03,12329
 Vermont,United States,2021-02-04,12503
 Vermont,United States,2021-02-05,12612
 Vermont,United States,2021-02-06,12766
+Vermont,United States,2021-02-07,12900
 Virgin Islands,United States,2020-01-22,0
 Virgin Islands,United States,2020-01-23,0
 Virgin Islands,United States,2020-01-24,0
@@ -124149,6 +124473,7 @@ Virgin Islands,United States,2021-02-03,2430
 Virgin Islands,United States,2021-02-04,2440
 Virgin Islands,United States,2021-02-05,2449
 Virgin Islands,United States,2021-02-06,2449
+Virgin Islands,United States,2021-02-07,2466
 Virginia,United States,2020-01-22,0
 Virginia,United States,2020-01-23,0
 Virginia,United States,2020-01-24,0
@@ -124531,6 +124856,7 @@ Virginia,United States,2021-02-03,513339
 Virginia,United States,2021-02-04,516398
 Virginia,United States,2021-02-05,521467
 Virginia,United States,2021-02-06,526176
+Virginia,United States,2021-02-07,529125
 Washington,United States,2020-01-22,1
 Washington,United States,2020-01-23,1
 Washington,United States,2020-01-24,1
@@ -124913,6 +125239,7 @@ Washington,United States,2021-02-03,316294
 Washington,United States,2021-02-04,317878
 Washington,United States,2021-02-05,319371
 Washington,United States,2021-02-06,320146
+Washington,United States,2021-02-07,320146
 West Virginia,United States,2020-01-22,0
 West Virginia,United States,2020-01-23,0
 West Virginia,United States,2020-01-24,0
@@ -125295,6 +125622,7 @@ West Virginia,United States,2021-02-03,122470
 West Virginia,United States,2021-02-04,123044
 West Virginia,United States,2021-02-05,123641
 West Virginia,United States,2021-02-06,124190
+West Virginia,United States,2021-02-07,124708
 Wisconsin,United States,2020-01-22,0
 Wisconsin,United States,2020-01-23,0
 Wisconsin,United States,2020-01-24,0
@@ -125677,6 +126005,7 @@ Wisconsin,United States,2021-02-03,595756
 Wisconsin,United States,2021-02-04,597475
 Wisconsin,United States,2021-02-05,598902
 Wisconsin,United States,2021-02-06,600016
+Wisconsin,United States,2021-02-07,600782
 Wyoming,United States,2020-01-22,0
 Wyoming,United States,2020-01-23,0
 Wyoming,United States,2020-01-24,0
@@ -126059,3 +126388,4 @@ Wyoming,United States,2021-02-03,52288
 Wyoming,United States,2021-02-04,52468
 Wyoming,United States,2021-02-05,52576
 Wyoming,United States,2021-02-06,52618
+Wyoming,United States,2021-02-07,52627
